@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSimple from "../components/HeroSimple.astro";
+import CTA from "../components/CTA.astro";
+import { brand } from "../data/site";
+---
+<BaseLayout
+  title="Terms"
+  description="Website terms for Boon Chye Renovation & Construction service enquiries and quotations."
+  path="/terms-and-condition"
+>
+  <HeroSimple label="terms" title="Terms and Conditions" subtitle="Basic website terms for Boon Chye service enquiries." />
+  <section class="service-details-section section-padding">
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="service-rich-text w-richtext">
+        <h3>Website Information</h3>
+        <p>This website consolidates service information from Boon Chye-related source websites into one umbrella presentation. Final scope, price and timing depend on inspection and written quotation.</p>
+        <h3>Quotations and Site Visits</h3>
+        <p>Free consultation or inspection messaging is based on the source websites. Availability can vary by location, urgency, service type and site condition.</p>
+        <h3>Service Responsibility</h3>
+        <p>Customers should confirm company details, quotation terms, warranty coverage and payment arrangements before work begins.</p>
+        <h3>Contact</h3>
+        <p>{brand.name}, {brand.address}</p>
+      </div>
+    </div>
+  </section>
+  <CTA />
+</BaseLayout>

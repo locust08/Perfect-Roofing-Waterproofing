@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /blogs
+Disallow: /reviews
+Disallow: /teams
+Disallow: /appointment
+Disallow: /license
+Disallow: /changelog
+Disallow: /styleguide
+
+Sitemap: https://bcplumbingroofleaking.com.my/sitemap.xml

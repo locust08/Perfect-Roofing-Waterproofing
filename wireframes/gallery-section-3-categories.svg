@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430">
+  <defs>
+    <style>
+      .bg{fill:#fff}.panel{fill:#fff;stroke:#111;stroke-width:1.6}.card{fill:#fafafa;stroke:#111;stroke-width:1.4}.active{fill:#f2f2f2;stroke:#111;stroke-width:2}.label{fill:#050505}.labelText{font-family:Arial,sans-serif;font-size:22px;font-weight:700;fill:#fff}.h2{font-family:Arial,sans-serif;font-size:34px;font-weight:800;fill:#111}.p{font-family:Arial,sans-serif;font-size:17px;fill:#444}.h3{font-family:Arial,sans-serif;font-size:20px;font-weight:800;fill:#111}.small{font-family:Arial,sans-serif;font-size:13px;fill:#555}.circle{fill:#fff;stroke:#111;stroke-width:1.5}.line{stroke:#111;stroke-width:1.5;fill:none}.muted{stroke:#aaa;stroke-width:1.2;fill:none}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="430"/>
+  <rect class="label" x="18" y="24" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="48" text-anchor="middle">3</text>
+
+  <rect class="panel" x="64" y="24" width="1086" height="355" rx="6"/>
+  <text class="h2" x="607" y="82" text-anchor="middle">Gallery Categories</text>
+  <text class="p" x="607" y="116" text-anchor="middle">Let customers filter the portfolio by the type of work they need.</text>
+
+  <g transform="translate(92 164)">
+    <rect class="active" width="188" height="135" rx="8"/>
+    <circle class="circle" cx="42" cy="42" r="24"/>
+    <path class="line" d="M31 48c14-30 28-30 42 0M30 54h25M59 54h25"/>
+    <text class="h3" x="82" y="38">Roof Leaking /</text>
+    <text class="h3" x="82" y="63">Waterproofing</text>
+    <text class="small" x="20" y="104">Roof leak, ceiling leak,</text>
+    <text class="small" x="20" y="123">membrane, PU injection.</text>
+  </g>
+
+  <g transform="translate(300 164)">
+    <rect class="card" width="188" height="135" rx="8"/>
+    <circle class="circle" cx="42" cy="42" r="24"/>
+    <path class="line" d="M28 42h28v18M56 42h28M69 28v28M34 60h44"/>
+    <text class="h3" x="82" y="38">Plumbing /</text>
+    <text class="h3" x="82" y="63">Water Pump</text>
+    <text class="small" x="20" y="104">Leaks, pipe repair,</text>
+    <text class="small" x="20" y="123">water tank and pump.</text>
+  </g>
+
+  <g transform="translate(508 164)">
+    <rect class="card" width="160" height="135" rx="8"/>
+    <circle class="circle" cx="42" cy="42" r="24"/>
+    <path class="line" d="M42 24v22h18L38 66V44H24z"/>
+    <text class="h3" x="20" y="92">Electrical</text>
+    <text class="small" x="20" y="116">Wiring, lighting,</text>
+    <text class="small" x="20" y="132">fuse box.</text>
+  </g>
+
+  <g transform="translate(688 164)">
+    <rect class="card" width="175" height="135" rx="8"/>
+    <circle class="circle" cx="42" cy="42" r="24"/>
+    <path class="line" d="M28 36h35v28H28zM63 43h12v21H63M31 33l31-14 20 14"/>
+    <text class="h3" x="20" y="92">Renovation</text>
+    <text class="small" x="20" y="116">Kitchen, bathroom,</text>
+    <text class="small" x="20" y="132">extension works.</text>
+  </g>
+
+  <g transform="translate(883 164)">
+    <rect class="card" width="210" height="135" rx="8"/>
+    <circle class="circle" cx="42" cy="42" r="24"/>
+    <path class="line" d="M26 55c18-20 36 20 54 0M26 42c18-20 36 20 54 0M36 25v54M69 25v54"/>
+    <text class="h3" x="82" y="38">Sewerage /</text>
+    <text class="h3" x="82" y="63">Drainage</text>
+    <text class="small" x="20" y="104">Blockage, grease trap,</text>
+    <text class="small" x="20" y="123">jetting, CCTV inspection.</text>
+  </g>
+
+  <text class="small" x="607" y="345" text-anchor="middle">Interaction idea: clicking a card filters the portfolio grid below. Default active category can be Roof Leaking / Waterproofing.</text>
+</svg>

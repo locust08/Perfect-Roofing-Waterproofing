@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="3000" viewBox="0 0 1200 3000">
+  <defs>
+    <style>
+      .bg{fill:#fff}.panel{fill:#fff;stroke:#111;stroke-width:1.5}.soft{fill:#fafafa;stroke:#111;stroke-width:1.2}.dash{fill:#fff;stroke:#777;stroke-width:1.2;stroke-dasharray:7 6}.sky{fill:#f5fbff;stroke:#111;stroke-width:1.2}.label{fill:#050505}.labelText{font-family:Arial,sans-serif;font-size:22px;font-weight:700;fill:#fff}.h1{font-family:Arial,sans-serif;font-size:44px;font-weight:800;fill:#111}.h2{font-family:Arial,sans-serif;font-size:28px;font-weight:800;fill:#111}.h3{font-family:Arial,sans-serif;font-size:20px;font-weight:800;fill:#111}.p{font-family:Arial,sans-serif;font-size:16px;fill:#333}.small{font-family:Arial,sans-serif;font-size:13px;fill:#444}.tiny{font-family:Arial,sans-serif;font-size:11px;fill:#555}.nav{font-family:Arial,sans-serif;font-size:14px;fill:#111}.btn{fill:#fff;stroke:#111;stroke-width:1.2}.btnDark{fill:#222;stroke:#222}.white{font-family:Arial,sans-serif;font-size:14px;font-weight:700;fill:#fff}.line{stroke:#222;stroke-width:1.2;fill:none}.thin{stroke:#aaa;stroke-width:1;fill:none}.dot{fill:#ddd}.dark{fill:#111}.pill{fill:#fff;stroke:#ddd;stroke-width:1.2}.accent{fill:#f4f4f4;stroke:#111;stroke-width:1.1}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="3000"/>
+
+  <!-- 1 Header -->
+  <rect class="label" x="18" y="18" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="42" text-anchor="middle">1</text>
+  <rect class="panel" x="64" y="18" width="1086" height="74" rx="5"/>
+  <rect class="soft" x="88" y="34" width="74" height="42"/>
+  <path class="line" d="M88 34l74 42M162 34L88 76"/>
+  <text class="h3" x="182" y="61">Boon Chye</text>
+  <text class="nav" x="414" y="61">Home</text>
+  <text class="nav" x="496" y="61">About</text>
+  <text class="nav" x="578" y="61">Services</text>
+  <text class="nav" x="686" y="61">Gallery</text>
+  <text class="nav" x="790" y="61">Contact</text>
+  <rect class="btn" x="946" y="36" width="168" height="38" rx="6"/>
+  <text class="nav" x="1030" y="61" text-anchor="middle">Get a free quote</text>
+
+  <!-- 2 Hero: original Service Details style -->
+  <rect class="label" x="18" y="120" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="144" text-anchor="middle">2</text>
+  <rect class="sky" x="64" y="120" width="1086" height="760" rx="5"/>
+  <path class="thin" d="M64 420c180-68 320-54 488-12 208 52 392 24 598-72"/>
+  <path class="thin" d="M64 500c170-52 336-38 512 12 172 48 356 26 574-58"/>
+  <text class="small" x="92" y="200">OUR SERVICES</text>
+  <text class="h1" x="92" y="266">Roof Leak &amp; Waterproofing</text>
+  <rect class="pill" x="92" y="306" width="390" height="42" rx="21"/>
+  <text class="small" x="116" y="332">Timeframe: inspection first, timing depends on scope</text>
+  <rect class="pill" x="500" y="306" width="310" height="42" rx="21"/>
+  <text class="small" x="524" y="332">Budget Range: quotation after inspection</text>
+  <rect class="dash" x="92" y="430" width="988" height="360" rx="18"/>
+  <path class="thin" d="M130 742l160-128 120 92 98-130 160 166"/>
+  <circle class="dot" cx="1018" cy="488" r="34"/>
+  <text class="small" x="586" y="820" text-anchor="middle">large service image / project photo</text>
+
+  <!-- 3 Problem signs: image cards, minimal copy -->
+  <rect class="label" x="18" y="920" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="944" text-anchor="middle">3</text>
+  <rect class="panel" x="64" y="920" width="1086" height="480" rx="5"/>
+  <text class="h2" x="92" y="990">Common Signs You Need Help</text>
+  <text class="p" x="92" y="1032">Image-first cards. Keep text to labels and one short support line.</text>
+  <g transform="translate(92 1080)">
+    <rect class="soft" width="242" height="250" rx="8"/>
+    <rect class="dash" x="18" y="18" width="206" height="128" rx="8"/>
+    <path class="thin" d="M40 124l52-46 44 34 34-50 40 62"/>
+    <text class="h3" x="24" y="184">Ceiling Stains</text>
+    <text class="small" x="24" y="214">Water marks after rain.</text>
+  </g>
+  <g transform="translate(366 1080)">
+    <rect class="soft" width="242" height="250" rx="8"/>
+    <rect class="dash" x="18" y="18" width="206" height="128" rx="8"/>
+    <path class="thin" d="M42 112h168M62 82h126M82 52h86"/>
+    <text class="h3" x="24" y="184">Cracked Tiles</text>
+    <text class="small" x="24" y="214">Loose or damaged roof tiles.</text>
+  </g>
+  <g transform="translate(640 1080)">
+    <rect class="soft" width="242" height="250" rx="8"/>
+    <rect class="dash" x="18" y="18" width="206" height="128" rx="8"/>
+    <path class="thin" d="M54 64h132v28c0 36-26 52-66 52s-66-16-66-52z"/>
+    <text class="h3" x="24" y="184">Gutter Leaks</text>
+    <text class="small" x="24" y="214">Water spilling at roof edge.</text>
+  </g>
+  <g transform="translate(914 1080)">
+    <rect class="soft" width="196" height="250" rx="8"/>
+    <rect class="dash" x="18" y="18" width="160" height="128" rx="8"/>
+    <path class="thin" d="M40 98c34-26 74-26 118 0M40 122c34-20 74-20 118 0"/>
+    <text class="h3" x="24" y="184">Seepage</text>
+    <text class="small" x="24" y="214">Flat roof or wet areas.</text>
+  </g>
+
+  <!-- 4 Repair method cards -->
+  <rect class="label" x="18" y="1440" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="1464" text-anchor="middle">4</text>
+  <rect class="panel" x="64" y="1440" width="1086" height="390" rx="5"/>
+  <text class="h2" x="92" y="1510">Possible Repair Methods</text>
+  <text class="p" x="92" y="1552">Small visual tiles replace paragraphs. Final method depends on inspection.</text>
+  <g transform="translate(92 1602)">
+    <rect class="accent" width="236" height="150" rx="8"/>
+    <circle class="soft" cx="52" cy="54" r="30"/>
+    <text class="h3" x="98" y="54">Patch Repair</text>
+    <text class="small" x="98" y="84">For localised damage.</text>
+  </g>
+  <g transform="translate(352 1602)">
+    <rect class="accent" width="236" height="150" rx="8"/>
+    <circle class="soft" cx="52" cy="54" r="30"/>
+    <text class="h3" x="98" y="54">Waterproofing</text>
+    <text class="small" x="98" y="84">Membrane or coating.</text>
+  </g>
+  <g transform="translate(612 1602)">
+    <rect class="accent" width="236" height="150" rx="8"/>
+    <circle class="soft" cx="52" cy="54" r="30"/>
+    <text class="h3" x="98" y="54">PU Injection</text>
+    <text class="small" x="98" y="84">For seepage paths.</text>
+  </g>
+  <g transform="translate(872 1602)">
+    <rect class="accent" width="236" height="150" rx="8"/>
+    <circle class="soft" cx="52" cy="54" r="30"/>
+    <text class="h3" x="98" y="54">Recoating</text>
+    <text class="small" x="98" y="84">Protective roof layer.</text>
+  </g>
+
+  <!-- 5 Visual process -->
+  <rect class="label" x="18" y="1870" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="1894" text-anchor="middle">5</text>
+  <rect class="panel" x="64" y="1870" width="1086" height="560" rx="5"/>
+  <text class="h2" x="600" y="1946" text-anchor="middle">Our Process</text>
+  <text class="p" x="600" y="1986" text-anchor="middle">Three steps with strong visual rhythm. No long article copy here.</text>
+  <g transform="translate(120 2062)">
+    <line class="thin" x1="28" y1="28" x2="28" y2="250"/>
+    <circle class="soft" cx="28" cy="28" r="28"/><text class="h3" x="28" y="36" text-anchor="middle">1</text>
+    <text class="h3" x="82" y="22">Inspect leak source</text>
+    <text class="p" x="82" y="52">Check roof, stains, gutters and seepage path.</text>
+    <circle class="soft" cx="28" cy="140" r="28"/><text class="h3" x="28" y="148" text-anchor="middle">2</text>
+    <text class="h3" x="82" y="134">Confirm repair scope</text>
+    <text class="p" x="82" y="164">Choose patch, waterproofing, injection or recoating.</text>
+    <circle class="soft" cx="28" cy="252" r="28"/><text class="h3" x="28" y="260" text-anchor="middle">3</text>
+    <text class="h3" x="82" y="246">Repair and protect</text>
+    <text class="p" x="82" y="276">Complete work and reduce repeat leaks.</text>
+  </g>
+  <rect class="dash" x="716" y="2040" width="360" height="270" rx="8"/>
+  <path class="thin" d="M744 2274l86-86 70 50 58-94 94 130"/>
+  <circle class="dot" cx="1026" cy="2090" r="26"/>
+  <text class="small" x="896" y="2310" text-anchor="middle">process image</text>
+
+  <!-- 6 Short FAQ -->
+  <rect class="label" x="18" y="2470" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="2494" text-anchor="middle">6</text>
+  <rect class="panel" x="64" y="2470" width="1086" height="250" rx="5"/>
+  <text class="h2" x="92" y="2542">Quick Questions</text>
+  <text class="p" x="92" y="2582">Reduce FAQ to 3 key items on service detail pages.</text>
+  <rect class="soft" x="560" y="2512" width="510" height="50" rx="6"/><text class="p" x="586" y="2544">Do you handle urgent roof leaks?</text>
+  <rect class="soft" x="560" y="2574" width="510" height="50" rx="6"/><text class="p" x="586" y="2606">Do you provide inspection and quotation?</text>
+  <rect class="soft" x="560" y="2636" width="510" height="50" rx="6"/><text class="p" x="586" y="2668">Which areas do you cover?</text>
+
+  <!-- 7 CTA -->
+  <rect class="label" x="18" y="2760" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="2784" text-anchor="middle">7</text>
+  <rect class="panel" x="64" y="2760" width="1086" height="180" rx="5"/>
+  <text class="h2" x="92" y="2828">Need roof leak &amp; waterproofing help?</text>
+  <text class="p" x="92" y="2868">Final action: WhatsApp/call and short quote form.</text>
+  <rect class="soft" x="690" y="2796" width="380" height="104" rx="8"/>
+  <text class="h3" x="718" y="2834">Get a free quote</text>
+  <rect class="btn" x="718" y="2856" width="300" height="28" rx="4"/>
+  <rect class="btn" x="718" y="2892" width="300" height="28" rx="4"/>
+</svg>

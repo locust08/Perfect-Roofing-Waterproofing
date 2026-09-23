@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="3000" viewBox="0 0 1200 3000">
+  <defs>
+    <style>
+      .bg{fill:#fff}.panel{fill:#fff;stroke:#111;stroke-width:1.5}.soft{fill:#fafafa;stroke:#111;stroke-width:1.2}.dash{fill:#fff;stroke:#777;stroke-width:1.2;stroke-dasharray:7 6}.label{fill:#050505}.labelText{font-family:Arial,sans-serif;font-size:22px;font-weight:700;fill:#fff}.h1{font-family:Arial,sans-serif;font-size:48px;font-weight:800;fill:#111}.h2{font-family:Arial,sans-serif;font-size:30px;font-weight:800;fill:#111}.h3{font-family:Arial,sans-serif;font-size:20px;font-weight:800;fill:#111}.p{font-family:Arial,sans-serif;font-size:16px;fill:#333}.small{font-family:Arial,sans-serif;font-size:13px;fill:#444}.tiny{font-family:Arial,sans-serif;font-size:11px;fill:#555}.nav{font-family:Arial,sans-serif;font-size:14px;fill:#111}.btn{fill:#fff;stroke:#111;stroke-width:1.2}.btnDark{fill:#222;stroke:#222}.btnDarkText{font-family:Arial,sans-serif;font-size:14px;font-weight:700;fill:#fff}.line{stroke:#222;stroke-width:1.2;fill:none}.thin{stroke:#aaa;stroke-width:1;fill:none}.dot{fill:#ddd}.iconCircle{fill:#fff;stroke:#111;stroke-width:1.2}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="3000"/>
+
+  <!-- 1 Header: current Header.astro layout -->
+  <rect class="label" x="18" y="18" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="42" text-anchor="middle">1</text>
+  <rect class="panel" x="64" y="18" width="1086" height="74" rx="5"/>
+  <rect class="soft" x="88" y="34" width="74" height="42"/>
+  <path class="line" d="M88 34l74 42M162 34L88 76"/>
+  <text class="h3" x="182" y="61">Boon Chye logo</text>
+  <text class="nav" x="414" y="61">Home</text>
+  <text class="nav" x="496" y="61">About</text>
+  <text class="nav" x="578" y="61">Services v</text>
+  <text class="nav" x="686" y="61">Gallery</text>
+  <text class="nav" x="790" y="61">Contact Us</text>
+  <rect class="btn" x="946" y="36" width="168" height="38" rx="6"/>
+  <text class="nav" x="1030" y="61" text-anchor="middle">Get a free quote</text>
+
+  <!-- 2 HeroSimple: current service page hero -->
+  <rect class="label" x="18" y="122" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="146" text-anchor="middle">2</text>
+  <rect class="panel" x="64" y="122" width="1086" height="430" rx="5"/>
+  <rect class="dash" x="84" y="142" width="1046" height="390" rx="8"/>
+  <text class="small" x="607" y="228" text-anchor="middle">our services</text>
+  <text class="h1" x="607" y="296" text-anchor="middle">Consolidated Services</text>
+  <text class="p" x="607" y="342" text-anchor="middle">Useful content from all nine source sites has been grouped</text>
+  <text class="p" x="607" y="368" text-anchor="middle">into one practical service menu.</text>
+  <path class="thin" d="M120 500q220-110 420 0t420 0t150-25"/>
+
+  <!-- 3 ServiceList: current row-based service menu -->
+  <rect class="label" x="18" y="590" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="614" text-anchor="middle">3</text>
+  <rect class="panel" x="64" y="590" width="1086" height="650" rx="5"/>
+  <text class="h2" x="92" y="652">Service list component</text>
+  <text class="p" x="92" y="684">Five horizontal service rows with number, title, excerpt, View more button and hover image.</text>
+  <g transform="translate(92 730)">
+    <rect class="soft" width="1020" height="86" rx="8"/>
+    <text class="small" x="24" y="34">01</text>
+    <text class="h3" x="82" y="34">Roof Leak &amp; Waterproofing</text>
+    <text class="small" x="82" y="60">Inspection and repair for roof leaks, ceiling leaks, gutters, flat roofs and coatings.</text>
+    <rect class="btn" x="870" y="24" width="110" height="38" rx="6"/>
+    <text class="nav" x="925" y="48" text-anchor="middle">View more</text>
+
+    <rect class="soft" y="104" width="1020" height="86" rx="8"/>
+    <text class="small" x="24" y="138">02</text>
+    <text class="h3" x="82" y="138">Plumbing &amp; Water Pump</text>
+    <text class="small" x="82" y="164">Leak repairs, repiping, drain cleaning, water heaters, tanks and pump works.</text>
+    <rect class="btn" x="870" y="128" width="110" height="38" rx="6"/>
+    <text class="nav" x="925" y="152" text-anchor="middle">View more</text>
+
+    <rect class="soft" y="208" width="1020" height="86" rx="8"/>
+    <text class="small" x="24" y="242">03</text>
+    <text class="h3" x="82" y="242">Electrical</text>
+    <text class="small" x="82" y="268">Wiring, maintenance, plug points, lighting, fuse boxes and lightning protection.</text>
+    <rect class="btn" x="870" y="232" width="110" height="38" rx="6"/>
+    <text class="nav" x="925" y="256" text-anchor="middle">View more</text>
+
+    <rect class="soft" y="312" width="1020" height="86" rx="8"/>
+    <text class="small" x="24" y="346">04</text>
+    <text class="h3" x="82" y="346">Renovation</text>
+    <text class="small" x="82" y="372">Kitchens, bathrooms, plaster ceilings, painting, doors, windows and extensions.</text>
+    <rect class="btn" x="870" y="336" width="110" height="38" rx="6"/>
+    <text class="nav" x="925" y="360" text-anchor="middle">View more</text>
+
+    <rect class="soft" y="416" width="1020" height="86" rx="8"/>
+    <text class="small" x="24" y="450">05</text>
+    <text class="h3" x="82" y="450">Sewerage &amp; Drainage</text>
+    <text class="small" x="82" y="476">Blockages, grease traps, desludging, water jetting and CCTV drain inspections.</text>
+    <rect class="btn" x="870" y="440" width="110" height="38" rx="6"/>
+    <text class="nav" x="925" y="464" text-anchor="middle">View more</text>
+  </g>
+
+  <!-- 4 Service Coverage: current roof-product card section -->
+  <rect class="label" x="18" y="1278" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="1302" text-anchor="middle">4</text>
+  <rect class="panel" x="64" y="1278" width="1086" height="610" rx="5"/>
+  <text class="h2" x="92" y="1340">Service Coverage</text>
+  <text class="p" x="92" y="1372">Grouped by the work customers actually search for, not by the old microsite structure.</text>
+  <g transform="translate(92 1422)">
+    <rect class="soft" width="320" height="190" rx="8"/>
+    <rect class="dash" x="18" y="18" width="284" height="82" rx="7"/>
+    <text class="small" x="22" y="128">01</text>
+    <text class="h3" x="62" y="128">Roof Leak &amp; Waterproofing</text>
+    <text class="tiny" x="62" y="152">image + title + excerpt + Details</text>
+    <rect class="soft" x="350" width="320" height="190" rx="8"/>
+    <rect class="dash" x="368" y="18" width="284" height="82" rx="7"/>
+    <text class="small" x="372" y="128">02</text>
+    <text class="h3" x="412" y="128">Plumbing &amp; Water Pump</text>
+    <text class="tiny" x="412" y="152">image + title + excerpt + Details</text>
+    <rect class="soft" x="700" width="320" height="190" rx="8"/>
+    <rect class="dash" x="718" y="18" width="284" height="82" rx="7"/>
+    <text class="small" x="722" y="128">03</text>
+    <text class="h3" x="762" y="128">Electrical</text>
+    <text class="tiny" x="762" y="152">image + title + excerpt + Details</text>
+
+    <rect class="soft" x="175" y="230" width="320" height="190" rx="8"/>
+    <rect class="dash" x="193" y="248" width="284" height="82" rx="7"/>
+    <text class="small" x="197" y="358">04</text>
+    <text class="h3" x="237" y="358">Renovation</text>
+    <text class="tiny" x="237" y="382">image + title + excerpt + Details</text>
+    <rect class="soft" x="525" y="230" width="320" height="190" rx="8"/>
+    <rect class="dash" x="543" y="248" width="284" height="82" rx="7"/>
+    <text class="small" x="547" y="358">05</text>
+    <text class="h3" x="587" y="358">Sewerage &amp; Drainage</text>
+    <text class="tiny" x="587" y="382">image + title + excerpt + Details</text>
+  </g>
+
+  <!-- 5 All Absorbed Services: current why-choose card grid -->
+  <rect class="label" x="18" y="1926" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="1950" text-anchor="middle">5</text>
+  <rect class="panel" x="64" y="1926" width="1086" height="500" rx="5"/>
+  <text class="h2" x="607" y="1990" text-anchor="middle">All Absorbed Services</text>
+  <text class="p" x="607" y="2020" text-anchor="middle">Individual services consolidated from the 9 old websites.</text>
+  <g transform="translate(92 2076)">
+    <rect class="soft" width="300" height="82" rx="8"/>
+    <text class="h3" x="22" y="34">Roofing</text>
+    <text class="tiny" x="22" y="56">leak / tile / flat roof / gutter / downpipe</text>
+    <rect class="soft" x="360" width="300" height="82" rx="8"/>
+    <text class="h3" x="382" y="34">Waterproofing</text>
+    <text class="tiny" x="382" y="56">membrane / PU injection / epoxy / seepage</text>
+    <rect class="soft" x="720" width="300" height="82" rx="8"/>
+    <text class="h3" x="742" y="34">Plumbing</text>
+    <text class="tiny" x="742" y="56">repair / taps / repiping / unclogging</text>
+    <rect class="soft" y="110" width="300" height="82" rx="8"/>
+    <text class="h3" x="22" y="144">Water Pump / Tank</text>
+    <text class="tiny" x="22" y="166">pump install / tank repair / toilet support</text>
+    <rect class="soft" x="360" y="110" width="300" height="82" rx="8"/>
+    <text class="h3" x="382" y="144">Electrical</text>
+    <text class="tiny" x="382" y="166">wiring / fuse box / plug point / lighting</text>
+    <rect class="soft" x="720" y="110" width="300" height="82" rx="8"/>
+    <text class="h3" x="742" y="144">Renovation</text>
+    <text class="tiny" x="742" y="166">kitchen / bathroom / ceiling / extension</text>
+    <rect class="soft" x="180" y="220" width="660" height="82" rx="8"/>
+    <text class="h3" x="204" y="254">Sewerage / Drainage</text>
+    <text class="tiny" x="204" y="276">blockage / grease trap / desludging / water jetting / CCTV drain inspection</text>
+  </g>
+
+  <!-- 6 CTA: current CTA component -->
+  <rect class="label" x="18" y="2464" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="2488" text-anchor="middle">6</text>
+  <rect class="panel" x="64" y="2464" width="1086" height="280" rx="5"/>
+  <text class="h2" x="92" y="2530">Not sure which service you need?</text>
+  <text class="p" x="92" y="2568">Call or WhatsApp Boon Chye. The team can inspect the issue and route it to the right trade service.</text>
+  <rect class="soft" x="92" y="2616" width="300" height="78" rx="8"/>
+  <circle class="iconCircle" cx="132" cy="2655" r="22"/>
+  <text class="h3" x="170" y="2650">Call / WhatsApp</text>
+  <text class="small" x="170" y="2674">+6012 796 0061</text>
+  <rect class="soft" x="690" y="2508" width="380" height="190" rx="8"/>
+  <text class="h3" x="718" y="2544">Get a free quote</text>
+  <rect class="dash" x="718" y="2568" width="324" height="34" rx="5"/>
+  <rect class="dash" x="718" y="2618" width="324" height="34" rx="5"/>
+  <rect class="dash" x="718" y="2668" width="324" height="38" rx="5"/>
+
+  <!-- 7 Footer: current BaseLayout footer follows CTA -->
+  <rect class="label" x="18" y="2782" width="34" height="34" rx="5"/>
+  <text class="labelText" x="35" y="2806" text-anchor="middle">7</text>
+  <rect class="panel" x="64" y="2782" width="1086" height="184" rx="5"/>
+  <g transform="translate(92 2830)">
+    <rect class="soft" width="220" height="96" rx="8"/>
+    <text class="h3" x="20" y="34">About Us</text>
+    <text class="small" x="20" y="60">logo + short copy</text>
+    <rect class="soft" x="260" width="220" height="96" rx="8"/>
+    <text class="h3" x="280" y="34">Our Services</text>
+    <text class="small" x="280" y="60">service links</text>
+    <rect class="soft" x="520" width="220" height="96" rx="8"/>
+    <text class="h3" x="540" y="34">Contact Directory</text>
+    <text class="small" x="540" y="60">phone rows</text>
+    <rect class="soft" x="780" width="240" height="96" rx="8"/>
+    <text class="h3" x="800" y="34">Get In Touch</text>
+    <text class="small" x="800" y="60">address / email / phone</text>
+  </g>
+</svg>

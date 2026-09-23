@@ -1,0 +1,17 @@
+---
+const { label, title, subtitle } = Astro.props;
+---
+<section class="hero-section">
+  <img alt="Sky background" class="sky-bg" loading="lazy" src="/images/Sky.svg" />
+  <div class="w-layout-blockcontainer container-large padding w-container">
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="hero-content-wrapper style-02">
+        <h5 class="section-label">{label}</h5>
+        <div class="title-wrapper align-center">
+          <h1 class="hero-title">{title}</h1>
+          <p class="hero-subtitle style-03">{subtitle}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

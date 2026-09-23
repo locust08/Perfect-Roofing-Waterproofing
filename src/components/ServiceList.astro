@@ -1,0 +1,30 @@
+---
+import { services } from "../data/site";
+const limit = Astro.props.limit ?? services.length;
+---
+<div class="w-dyn-list">
+  <div class="service-list w-dyn-items" role="list">
+    {services.slice(0, limit).map((service) => (
+      <div class="w-dyn-item" role="listitem">
+        <div class="single-service" data-w-id="52ca6c80-044d-e7a0-139b-3e972dac8bc4">
+          <div class="service-top">
+            <p class="service-number">{service.number}</p>
+            <div class="service-title-wrapper">
+              <h4 class="service-title">{service.title}</h4>
+              <p class="service-excerpt">{service.excerpt}</p>
+            </div>
+          </div>
+          <a class="service-button w-button" href={service.href}>View more</a>
+          <img
+            alt={`${service.title} icon`}
+            class="service-hover-image"
+            loading="lazy"
+            sizes="100vw"
+            src={service.hoverImage ?? service.image}
+            srcset={service.hoverImageSet ?? service.imageSet}
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+</div>

@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="3650" viewBox="0 0 1200 3650">
+  <defs>
+    <style>
+      .bg{fill:#fff}.panel{fill:#fff;stroke:#111;stroke-width:1.5}.soft{fill:#fafafa;stroke:#111;stroke-width:1.2}.dash{fill:#fff;stroke:#777;stroke-width:1.2;stroke-dasharray:7 6}.label{fill:#050505}.labelText{font-family:Arial,sans-serif;font-size:22px;font-weight:700;fill:#fff}.h1{font-family:Arial,sans-serif;font-size:48px;font-weight:800;fill:#111}.h2{font-family:Arial,sans-serif;font-size:28px;font-weight:800;fill:#111}.h3{font-family:Arial,sans-serif;font-size:20px;font-weight:800;fill:#111}.p{font-family:Arial,sans-serif;font-size:16px;fill:#333}.small{font-family:Arial,sans-serif;font-size:13px;fill:#444}.tiny{font-family:Arial,sans-serif;font-size:11px;fill:#555}.nav{font-family:Arial,sans-serif;font-size:14px;fill:#111}.btn{fill:#fff;stroke:#111;stroke-width:1.2}.btnDark{fill:#222;stroke:#222}.btnDarkText{font-family:Arial,sans-serif;font-size:14px;font-weight:700;fill:#fff}.line{stroke:#222;stroke-width:1.2;fill:none}.thin{stroke:#aaa;stroke-width:1;fill:none}.dot{fill:#ddd}.iconCircle{fill:#fff;stroke:#111;stroke-width:1.2}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="3650"/>
+
+  <!-- 1 Header -->
+  <rect class="label" x="18" y="18" width="34" height="34" rx="5"/><text class="labelText" x="35" y="42" text-anchor="middle">1</text>
+  <rect class="panel" x="64" y="18" width="1086" height="74" rx="5"/>
+  <rect class="soft" x="88" y="34" width="74" height="42"/><path class="line" d="M88 34l74 42M162 34L88 76"/>
+  <text class="h3" x="182" y="61">Boon Chye</text>
+  <text class="nav" x="414" y="61">Home</text>
+  <text class="nav" x="496" y="61">About</text>
+  <text class="nav" x="578" y="61">Services</text>
+  <text class="nav" x="686" y="61">Gallery</text>
+  <text class="nav" x="790" y="61">Contact</text>
+  <rect class="btn" x="946" y="36" width="168" height="38" rx="6"/><text class="nav" x="1030" y="61" text-anchor="middle">Get a free quote</text>
+
+  <!-- 2 Hero -->
+  <rect class="label" x="18" y="114" width="34" height="34" rx="5"/><text class="labelText" x="35" y="138" text-anchor="middle">2</text>
+  <rect class="panel" x="64" y="114" width="1086" height="520" rx="5"/>
+  <text class="small" x="92" y="166">ONE-STOP CONTRACTOR IN KL &amp; SELANGOR</text>
+  <text class="h1" x="92" y="226">Boon Chye Renovation</text>
+  <text class="p" x="92" y="264">Roof leaking, waterproofing, plumbing, electrical, renovation, sewerage and</text>
+  <text class="p" x="92" y="288">drainage services consolidated under one trusted contractor brand.</text>
+  <rect class="btnDark" x="92" y="326" width="145" height="44" rx="6"/><text class="btnDarkText" x="164" y="353" text-anchor="middle">Get a free quote</text>
+  <rect class="btn" x="252" y="326" width="145" height="44" rx="6"/><text class="nav" x="324" y="353" text-anchor="middle">Explore services</text>
+  <rect class="soft" x="92" y="410" width="290" height="88" rx="7"/>
+  <circle class="iconCircle" cx="130" cy="454" r="22"/><text class="h3" x="166" y="448">Call / WhatsApp</text><text class="p" x="166" y="476">+6012 796 0061</text>
+  <rect class="dash" x="620" y="150" width="455" height="320" rx="10"/>
+  <path class="thin" d="M640 430h410M654 430v-72h52v72M727 430v-118h72v118M830 430v-82h92v82M956 430v-148h62v148"/>
+  <path class="thin" d="M688 260q50-82 128 0h-128M880 230q70-110 166 0h-166"/>
+  <rect class="soft" x="820" y="482" width="210" height="90" rx="8"/>
+  <circle class="iconCircle" cx="858" cy="527" r="24"/><text class="h2" x="895" y="520">20+</text><text class="small" x="895" y="546">Years of trade experience</text>
+
+  <!-- 3 Service ticker -->
+  <rect class="label" x="18" y="660" width="34" height="34" rx="5"/><text class="labelText" x="35" y="684" text-anchor="middle">3</text>
+  <rect class="panel" x="64" y="660" width="1086" height="110" rx="5"/>
+  <g transform="translate(96 700)">
+    <rect class="soft" width="180" height="36" rx="18"/><text class="small" x="90" y="23" text-anchor="middle">Roof Waterproofing</text>
+    <rect class="soft" x="204" width="142" height="36" rx="18"/><text class="small" x="275" y="23" text-anchor="middle">Plumbing</text>
+    <rect class="soft" x="370" width="132" height="36" rx="18"/><text class="small" x="436" y="23" text-anchor="middle">Electrical</text>
+    <rect class="soft" x="526" width="150" height="36" rx="18"/><text class="small" x="601" y="23" text-anchor="middle">Renovation</text>
+    <rect class="soft" x="700" width="190" height="36" rx="18"/><text class="small" x="795" y="23" text-anchor="middle">Sewerage / Drainage</text>
+  </g>
+
+  <!-- 4 About -->
+  <rect class="label" x="18" y="798" width="34" height="34" rx="5"/><text class="labelText" x="35" y="822" text-anchor="middle">4</text>
+  <rect class="panel" x="64" y="798" width="1086" height="420" rx="5"/>
+  <rect class="dash" x="92" y="852" width="480" height="300" rx="8"/>
+  <path class="thin" d="M122 1115l130-118 92 72 70-98 126 144"/><circle class="dot" cx="494" cy="900" r="26"/>
+  <text class="h2" x="626" y="880">One umbrella contractor</text>
+  <text class="h2" x="626" y="916">for property repairs.</text>
+  <text class="p" x="626" y="956">Consolidated site keeps useful services and trust signals,</text>
+  <text class="p" x="626" y="980">removes repeated microsite copy, and presents one clear flow.</text>
+  <rect class="soft" x="626" y="1030" width="450" height="82" rx="8"/><circle class="iconCircle" cx="666" cy="1071" r="23"/><text class="h3" x="705" y="1064">Free Inspection</text><text class="small" x="705" y="1088">Inspection, consultation or site visit before quotation.</text>
+  <rect class="soft" x="626" y="1128" width="450" height="82" rx="8"/><circle class="iconCircle" cx="666" cy="1169" r="23"/><text class="h3" x="705" y="1162">No Hidden Costs</text><text class="small" x="705" y="1186">Clear scope and transparent pricing before work begins.</text>
+
+  <!-- 5 Consolidated services -->
+  <rect class="label" x="18" y="1246" width="34" height="34" rx="5"/><text class="labelText" x="35" y="1270" text-anchor="middle">5</text>
+  <rect class="panel" x="64" y="1246" width="1086" height="570" rx="5"/>
+  <text class="h2" x="92" y="1308">Consolidated Services</text>
+  <text class="p" x="92" y="1338">Five service families deduped from the source websites.</text>
+  <rect class="btn" x="990" y="1282" width="100" height="38" rx="6"/><text class="nav" x="1040" y="1306" text-anchor="middle">View all</text>
+  <g transform="translate(92 1388)">
+    <rect class="soft" width="320" height="160" rx="8"/><text class="small" x="22" y="30">01</text><text class="h3" x="22" y="64">Roof Leaking / Waterproofing</text><rect class="dash" x="22" y="92" width="276" height="44" rx="6"/>
+    <rect class="soft" x="350" width="320" height="160" rx="8"/><text class="small" x="372" y="30">02</text><text class="h3" x="372" y="64">Plumbing / Water Pump</text><rect class="dash" x="372" y="92" width="276" height="44" rx="6"/>
+    <rect class="soft" x="700" width="320" height="160" rx="8"/><text class="small" x="722" y="30">03</text><text class="h3" x="722" y="64">Electrical</text><rect class="dash" x="722" y="92" width="276" height="44" rx="6"/>
+  </g>
+  <g transform="translate(250 1582)">
+    <rect class="soft" width="320" height="160" rx="8"/><text class="small" x="22" y="30">04</text><text class="h3" x="22" y="64">Renovation</text><rect class="dash" x="22" y="92" width="276" height="44" rx="6"/>
+    <rect class="soft" x="350" width="320" height="160" rx="8"/><text class="small" x="372" y="30">05</text><text class="h3" x="372" y="64">Sewerage / Drainage</text><rect class="dash" x="372" y="92" width="276" height="44" rx="6"/>
+  </g>
+
+  <!-- 6 Why choose -->
+  <rect class="label" x="18" y="1844" width="34" height="34" rx="5"/><text class="labelText" x="35" y="1868" text-anchor="middle">6</text>
+  <rect class="panel" x="64" y="1844" width="1086" height="430" rx="5"/>
+  <text class="h2" x="607" y="1902" text-anchor="middle">Why Choose Boon Chye?</text>
+  <text class="p" x="607" y="1932" text-anchor="middle">Trust points rewritten once for the umbrella brand.</text>
+  <g transform="translate(92 1982)">
+    <rect class="soft" width="320" height="100" rx="8"/><text class="h3" x="22" y="40">20+ Years in Market</text><text class="small" x="22" y="68">Established teams across KL and Selangor.</text>
+    <rect class="soft" x="350" width="320" height="100" rx="8"/><text class="h3" x="372" y="40">Free Site Visit</text><text class="small" x="372" y="68">Inspection before quotation.</text>
+    <rect class="soft" x="700" width="320" height="100" rx="8"/><text class="h3" x="722" y="40">No Hidden Costs</text><text class="small" x="722" y="68">Clear quotation before work begins.</text>
+    <rect class="soft" y="126" width="320" height="100" rx="8"/><text class="h3" x="22" y="166">Workmanship Support</text><text class="small" x="22" y="194">After-sales support where applicable.</text>
+    <rect class="soft" x="350" y="126" width="320" height="100" rx="8"/><text class="h3" x="372" y="166">One-Stop Contractor</text><text class="small" x="372" y="194">Roofing, plumbing, renovation and more.</text>
+    <rect class="soft" x="700" y="126" width="320" height="100" rx="8"/><text class="h3" x="722" y="166">KL &amp; Selangor</text><text class="small" x="722" y="194">Klang Valley service coverage.</text>
+  </g>
+
+  <!-- 7 Gallery and metrics -->
+  <rect class="label" x="18" y="2302" width="34" height="34" rx="5"/><text class="labelText" x="35" y="2326" text-anchor="middle">7</text>
+  <rect class="panel" x="64" y="2302" width="1086" height="430" rx="5"/>
+  <text class="h2" x="607" y="2360" text-anchor="middle">Gallery / Projects</text>
+  <text class="p" x="607" y="2390" text-anchor="middle">Project slider with roofing, waterproofing, renovation and repair visuals.</text>
+  <rect class="dash" x="180" y="2432" width="840" height="180" rx="8"/>
+  <path class="thin" d="M220 2582l140-90 90 60 88-78 126 108 90-64 200 64"/><circle class="dot" cx="910" cy="2476" r="24"/>
+  <g transform="translate(176 2646)">
+    <rect class="soft" width="190" height="56" rx="7"/><text class="h2" x="95" y="35" text-anchor="middle">20+</text><text class="tiny" x="95" y="50" text-anchor="middle">years in repairs</text>
+    <rect class="soft" x="214" width="190" height="56" rx="7"/><text class="h2" x="309" y="35" text-anchor="middle">28+</text><text class="tiny" x="309" y="50" text-anchor="middle">renovation experience</text>
+    <rect class="soft" x="428" width="190" height="56" rx="7"/><text class="h2" x="523" y="35" text-anchor="middle">24/7</text><text class="tiny" x="523" y="50" text-anchor="middle">urgent messaging</text>
+    <rect class="soft" x="642" width="190" height="56" rx="7"/><text class="h2" x="737" y="35" text-anchor="middle">1</text><text class="tiny" x="737" y="50" text-anchor="middle">umbrella site</text>
+  </g>
+
+  <!-- 8 How it works -->
+  <rect class="label" x="18" y="2760" width="34" height="34" rx="5"/><text class="labelText" x="35" y="2784" text-anchor="middle">8</text>
+  <rect class="panel" x="64" y="2760" width="1086" height="420" rx="5"/>
+  <text class="h2" x="607" y="2818" text-anchor="middle">How Boon Chye Works</text>
+  <text class="p" x="607" y="2848" text-anchor="middle">Simple process adapted from renovation, plumbing, roofing and sewerage flows.</text>
+  <g transform="translate(120 2900)">
+    <circle class="iconCircle" cx="24" cy="24" r="24"/><text class="h3" x="70" y="20">Share the Problem</text><text class="small" x="70" y="46">Call or WhatsApp photos, location and service type.</text>
+    <circle class="iconCircle" cx="24" cy="104" r="24"/><text class="h3" x="70" y="100">Inspect &amp; Quote</text><text class="small" x="70" y="126">Team checks conditions and explains the repair path.</text>
+    <circle class="iconCircle" cx="24" cy="184" r="24"/><text class="h3" x="70" y="180">Repair &amp; Support</text><text class="small" x="70" y="206">Relevant trade team completes work with support.</text>
+    <path class="thin" d="M24 48v32M24 128v32"/>
+  </g>
+  <rect class="dash" x="690" y="2900" width="360" height="220" rx="8"/><path class="thin" d="M720 3070l90-80 70 58 56-82 96 104"/><circle class="dot" cx="995" cy="2945" r="22"/>
+
+  <!-- 9 Testimonials and FAQ -->
+  <rect class="label" x="18" y="3208" width="34" height="34" rx="5"/><text class="labelText" x="35" y="3232" text-anchor="middle">9</text>
+  <rect class="panel" x="64" y="3208" width="1086" height="300" rx="5"/>
+  <text class="h2" x="92" y="3264">What Clients Say</text>
+  <rect class="btn" x="990" y="3234" width="100" height="38" rx="6"/><text class="nav" x="1040" y="3258" text-anchor="middle">Contact us</text>
+  <g transform="translate(92 3304)">
+    <rect class="soft" width="310" height="148" rx="8"/><text class="small" x="22" y="34">★★★★★</text><text class="h3" x="22" y="66">Quick roof leak response</text><text class="small" x="22" y="94">Review copy preview...</text><circle class="iconCircle" cx="46" cy="122" r="18"/><text class="tiny" x="74" y="127">Customer + role</text>
+    <rect class="soft" x="355" width="310" height="148" rx="8"/><text class="small" x="377" y="34">★★★★★</text><text class="h3" x="377" y="66">Detailed roofing advice</text><text class="small" x="377" y="94">Review copy preview...</text><circle class="iconCircle" cx="401" cy="122" r="18"/><text class="tiny" x="429" y="127">Customer + role</text>
+    <rect class="soft" x="710" width="310" height="148" rx="8"/><text class="small" x="732" y="34">★★★★★</text><text class="h3" x="732" y="66">Free inspection and repair</text><text class="small" x="732" y="94">Review copy preview...</text><circle class="iconCircle" cx="756" cy="122" r="18"/><text class="tiny" x="784" y="127">Customer + role</text>
+  </g>
+
+  <!-- 10 FAQ + CTA -->
+  <rect class="label" x="18" y="3532" width="34" height="34" rx="5"/><text class="labelText" x="35" y="3556" text-anchor="middle">10</text>
+  <rect class="panel" x="64" y="3532" width="1086" height="92" rx="5"/>
+  <text class="h2" x="92" y="3588">FAQ accordions + final CTA</text>
+  <text class="p" x="430" y="3588">Questions answered, contact prompt, footer follows from BaseLayout.</text>
+</svg>

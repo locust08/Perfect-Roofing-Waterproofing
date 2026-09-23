@@ -1,0 +1,196 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { faqs, services } from "../../data/site";
+
+export function getStaticPaths() {
+  return services.map((service) => ({
+    params: { slug: service.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+const detailCopy = service.detailCopy ?? {};
+const process = service.process ?? {};
+const processSteps = process.steps ?? [
+  {
+    title: "Inspect",
+    text: "Identify the cause, affected area and urgency before recommending the next step.",
+  },
+  {
+    title: "Quote",
+    text: "Explain scope, materials, timing and cost so there are no hidden surprises.",
+  },
+  {
+    title: "Complete",
+    text: "Carry out the work with the correct trade crew and provide after-sales support where applicable.",
+  },
+];
+const processImage = process.image ?? "/images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam.png";
+const processImageSet = process.imageSet ?? "/images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam-p-500.png 500w, /images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam-p-800.png 800w, /images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam-p-1080.png 1080w, /images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam.png 1100w";
+const article = service.detailArticle;
+const serviceFaqs = service.detailFaqs ?? faqs;
+const visualSigns = service.visualSigns ?? (article?.signs ?? service.details).slice(0, 4).map((item) => ({
+  title: item.split(/[,.(-]/)[0].trim(),
+  text: "Check this during inspection.",
+  image: service.image,
+}));
+const repairMethods = service.repairMethods ?? service.details.slice(0, 4).map((item) => ({
+  title: item.split(/[,.(-]/)[0].trim(),
+  text: "Quoted after inspection.",
+  icon: service.hoverImage || service.image,
+}));
+const visibleFaqs = serviceFaqs.slice(0, 3);
+---
+<BaseLayout
+  title={service.title}
+  description={service.excerpt}
+  path={`/service/${service.slug}`}
+>
+  <section class="hero-section">
+    <img alt="Sky background" class="sky-bg" loading="lazy" src="/images/Sky.svg" />
+    <div class="w-layout-blockcontainer container-large padding w-container">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="service-hero-content">
+          <div class="hero-title-wrapper" style="opacity:1">
+            <h5 class="section-label">our services</h5>
+            <div class="title-wrapper">
+              <h1 class="hero-title">{service.title}</h1>
+              <div class="service-duration-wrapper">
+                <div class="service-time-content-wrapper">
+                  <p class="service-time-title"><span class="service-meta-icon" aria-hidden="true">📅</span> Timeframe:</p>
+                  <p class="service-time-text">{service.timeframe ?? "Inspection and quotation before work begins"}</p>
+                </div>
+                <div class="service-budget-wrapper">
+                  <p class="service-budget-title"><span class="service-meta-icon" aria-hidden="true">💰</span> Budget Range:</p>
+                  <p class="service-budget">{service.budgetRange ?? "Quoted after site assessment"}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img alt={`${service.title} by Boon Chye`} class="service-thumbnail" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" src={service.image} srcset={service.imageSet} style="opacity:1" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-visual-section section-padding">
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="section-content-wrapper">
+        <div class="title-wrapper style-02" style="opacity:1">
+          <h2 class="section-title">{article?.introTitle ?? "Common Signs You Need Help"}</h2>
+          <p class="section-subtitle">{detailCopy.coverageIntro ?? service.excerpt}</p>
+        </div>
+        <div class="service-visual-card-grid" style="opacity:1">
+          {visualSigns.map((item) => (
+            <article class="service-visual-card">
+              <div class="service-visual-image-wrapper">
+                <img alt={`${item.title} example`} class="service-visual-image" loading="lazy" src={item.image} />
+              </div>
+              <div class="service-visual-card-content">
+                <h3 class="service-visual-card-title">{item.title}</h3>
+                <p class="service-visual-card-text">{item.text}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-method-section section-padding">
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="section-content-wrapper">
+        <div class="title-wrapper style-02" style="opacity:1">
+          <h2 class="section-title">Possible Repair Methods</h2>
+          <p class="section-subtitle">The final method depends on the site inspection, but these are the common ways Boon Chye can approach the issue.</p>
+        </div>
+        <div class="service-method-grid" style="opacity:1">
+          {repairMethods.map((method) => (
+            <article class="service-method-card">
+              <div class="service-method-icon-wrapper">
+                <img alt="" class="service-method-icon" loading="lazy" src={method.icon} />
+              </div>
+              <div>
+                <h3 class="service-method-title">{method.title}</h3>
+                <p class="service-method-text">{method.text}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works-section section-padding">
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="section-content-wrapper">
+        <div class="title-wrapper style-02" style="opacity:1">
+          <h2 class="section-title">Our Process</h2>
+          <p class="section-subtitle">{process.subtitle ?? "The template process layout is preserved and adapted to this service family."}</p>
+        </div>
+        <div class="how-it-works-content-wrapper" style="opacity:1">
+          <div class="how-it-works-content-left">
+            {processSteps.map((step) => (
+              <div class="single-process">
+                <div class="point-wrapper">
+                  <div class="circle-point">
+                    <img alt="Process step icon" class="point-icon" loading="lazy" src="/images/Group-1597884498-1.svg" />
+                  </div>
+                </div>
+                <div class="process-title-wrapper">
+                  <h4 class="process-title">{step.title}</h4>
+                  <p class="process-subtitle">{step.text}</p>
+                </div>
+              </div>
+            ))}
+            <div class="border-line"></div>
+          </div>
+          <div class="process-image-wrapper">
+            <img alt={`${service.title} inspection`} class="process-image" loading="lazy" sizes="100vw" src={processImage} srcset={processImageSet} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section padding-bottom">
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="faq-content-wrapper">
+        <div class="faq-content-left" style="opacity:1">
+          <div class="title-wrapper testimonial">
+            <h2 class="section-title">Your Questions Answered</h2>
+            <p class="section-subtitle style-03">Quick answers before you book an inspection, request a quotation or arrange repair work.</p>
+          </div>
+          <div class="faq-bottom-content">
+            <div class="faq-bottom-title-wrapper">
+              <p class="faq-contact-title">Got more questions?</p>
+              <p>Contact Boon Chye with your photos, location and service needed.</p>
+            </div>
+            <a class="button-style-01 w-button" href="/contact">Contact us</a>
+          </div>
+        </div>
+        <div class="faq-s" style="opacity:1">
+          {visibleFaqs.map((faq) => (
+            <div class="single-faq w-dropdown" data-delay="0" data-hover="false">
+              <div class="question w-dropdown-toggle">
+                <div class="question-content-wrapper">
+                  <h4 class="question-title">{faq.question}</h4>
+                  <img alt="Open answer" class="faq-icon" loading="lazy" src="/images/arrow-down.svg" />
+                </div>
+              </div>
+              <nav class="answer w-dropdown-list">
+                <div class="answer-content-wrapper">
+                  <p class="answer-content">{faq.answer}</p>
+                </div>
+              </nav>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA title={`Need ${service.title.toLowerCase()} help?`} text={detailCopy.ctaText ?? "Call or WhatsApp Boon Chye with your property location and photos for inspection or quotation guidance."} />
+</BaseLayout>

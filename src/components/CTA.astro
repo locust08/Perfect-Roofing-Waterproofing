@@ -1,0 +1,53 @@
+---
+import { brand } from "../data/site";
+const title = Astro.props.title ?? "Need roof, plumbing, electrical, renovation or sewerage support?";
+const text = Astro.props.text ?? "Call Boon Chye for a free inspection, consultation or transparent quotation across KL and Selangor.";
+const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
+---
+<section class="cta-section padding">
+  <div class="w-layout-blockcontainer container w-container">
+    <div class="cta-content-wrapper">
+      <div class="cta-content-left">
+        <div class="hero-top-content">
+          <div class="title-wrapper">
+            <h2 class="cta-title">{title}</h2>
+            <p class="section-subtitle">{text}</p>
+          </div>
+        </div>
+        <div class="hero-bottom-content">
+          <div class="call-wrapper">
+            <div class="call-title-wrapper">
+              <img alt="Call icon" class="call-icon" loading="lazy" src="/images/phone-call-1.svg" />
+              <p class="call-title">Call / WhatsApp</p>
+            </div>
+            <a class="link-block w-inline-block whatsapp-contact" href={whatsappHref} target="_blank" rel="noopener">
+              <h3 class="link-text">{brand.phone}</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="cta-contact-area">
+        <p class="cta-contact-title">Get a free quote</p>
+        <div class="contact-form-area w-form">
+          <form class="cta-contact-form" data-name="Quote Form" method="get" name="quote-form" action="/contact">
+            <div class="single-form-field-wrapper">
+              <label class="field-label" for="quote-email">Email address</label>
+              <input class="field w-input" id="quote-email" maxlength="256" name="email" placeholder="Enter email address" required type="email" />
+            </div>
+            <div class="single-form-field-wrapper">
+              <label class="field-label" for="quote-phone">Phone number</label>
+              <input class="field w-input" id="quote-phone" maxlength="256" name="phone" placeholder="Enter phone number" required type="tel" />
+            </div>
+            <div class="single-form-field-wrapper">
+              <label class="field-label" for="quote-message">Message</label>
+              <textarea class="field text-area w-input" id="quote-message" maxlength="5000" name="message" placeholder="Tell us what you need"></textarea>
+            </div>
+            <input class="form-button w-button" data-wait="Please wait..." type="submit" value="Submit" />
+          </form>
+          <div class="w-form-done"><div>Thank you. Your message is ready to send.</div></div>
+          <div class="w-form-fail"><div>Please call us directly if the form does not submit.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

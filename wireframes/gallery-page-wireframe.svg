@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="2460" viewBox="0 0 1200 2460">
+  <defs>
+    <style>
+      .bg{fill:#fff}.panel{fill:#fff;stroke:#111;stroke-width:1.5}.soft{fill:#fafafa;stroke:#111;stroke-width:1.2}.dash{fill:#fff;stroke:#777;stroke-width:1.2;stroke-dasharray:7 6}.muted{fill:#666}.line{stroke:#222;stroke-width:1.2;fill:none}.thin{stroke:#aaa;stroke-width:1;fill:none}.dot{fill:#ddd}.label{fill:#050505}.labelText{font-family:Arial,sans-serif;font-size:22px;font-weight:700;fill:#fff}.h1{font-family:Arial,sans-serif;font-size:52px;font-weight:800;fill:#111}.h2{font-family:Arial,sans-serif;font-size:28px;font-weight:800;fill:#111}.h3{font-family:Arial,sans-serif;font-size:20px;font-weight:800;fill:#111}.p{font-family:Arial,sans-serif;font-size:16px;fill:#333}.small{font-family:Arial,sans-serif;font-size:13px;fill:#444}.tiny{font-family:Arial,sans-serif;font-size:11px;fill:#555}.nav{font-family:Arial,sans-serif;font-size:14px;fill:#111}.btn{fill:#fff;stroke:#111;stroke-width:1.2}.btnDark{fill:#222;stroke:#222}.btnDarkText{font-family:Arial,sans-serif;font-size:14px;font-weight:700;fill:#fff}.tag{fill:#f6f6f6;stroke:#aaa;stroke-width:1}.iconCircle{fill:#fff;stroke:#111;stroke-width:1.2}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="2460"/>
+
+  <!-- 1 Header -->
+  <rect class="label" x="18" y="18" width="34" height="34" rx="5"/><text class="labelText" x="35" y="42" text-anchor="middle">1</text>
+  <rect class="panel" x="64" y="18" width="1086" height="74" rx="5"/>
+  <rect class="soft" x="88" y="34" width="74" height="42"/><path class="line" d="M88 34l74 42M162 34L88 76"/>
+  <text class="h3" x="182" y="61">Boon Chye Services</text>
+  <text class="nav" x="414" y="61">Home</text>
+  <text class="nav" x="496" y="61">About</text>
+  <text class="nav" x="578" y="61">Services</text><path class="line" d="M648 56l7 7 7-7"/>
+  <text class="nav" x="720" y="61">Gallery</text><path class="line" d="M717 72h58"/>
+  <text class="nav" x="826" y="61">Contact Us</text>
+  <rect class="btn" x="946" y="36" width="168" height="38" rx="6"/><text class="nav" x="1030" y="61" text-anchor="middle">Get a free quote</text>
+
+  <!-- 2 Hero -->
+  <rect class="label" x="18" y="110" width="34" height="34" rx="5"/><text class="labelText" x="35" y="134" text-anchor="middle">2</text>
+  <rect class="panel" x="64" y="110" width="1086" height="255" rx="5"/>
+  <text class="nav" x="607" y="168" text-anchor="middle">GALLERY</text>
+  <text class="h1" x="607" y="226" text-anchor="middle">Our Project Gallery</text>
+  <text class="p" x="607" y="262" text-anchor="middle">Explore Boon Chye roofing, waterproofing, renovation, plumbing, electrical, sewerage and drainage work references.</text>
+  <path class="thin" d="M87 326h1040M96 326v-38h35v38M148 326v-58h58v58M226 326v-32h74v32M325 326v-68h96v68M451 326v-42h86v42M570 326v-56h118v56M722 326v-66h84v66M842 326v-88h54v88M912 326v-118h44v118M974 326v-77h68v77M1066 326v-50h36v50"/>
+  <path class="thin" d="M151 172q16-28 40 0h-40M968 163q22-36 60 0h-60M1090 236q15-25 36 0h-36"/>
+
+  <!-- 3 Gallery category filters -->
+  <rect class="label" x="18" y="390" width="34" height="34" rx="5"/><text class="labelText" x="35" y="414" text-anchor="middle">3</text>
+  <rect class="panel" x="64" y="390" width="1086" height="240" rx="5"/>
+  <text class="h2" x="607" y="434" text-anchor="middle">Gallery Categories</text>
+  <text class="p" x="607" y="462" text-anchor="middle">Service filters consolidated from the 9 source websites.</text>
+  <g transform="translate(92 500)">
+    <rect class="soft" width="180" height="90" rx="7"/><circle class="iconCircle" cx="30" cy="30" r="20"/><text class="h3" x="62" y="33">Roof Leaking /</text><text class="h3" x="62" y="56">Waterproofing</text>
+  </g>
+  <g transform="translate(292 500)">
+    <rect class="soft" width="180" height="90" rx="7"/><circle class="iconCircle" cx="30" cy="30" r="20"/><text class="h3" x="62" y="33">Plumbing /</text><text class="h3" x="62" y="56">Water Pump</text>
+  </g>
+  <g transform="translate(492 500)">
+    <rect class="soft" width="160" height="90" rx="7"/><circle class="iconCircle" cx="30" cy="30" r="20"/><text class="h3" x="62" y="43">Electrical</text>
+  </g>
+  <g transform="translate(672 500)">
+    <rect class="soft" width="170" height="90" rx="7"/><circle class="iconCircle" cx="30" cy="30" r="20"/><text class="h3" x="62" y="43">Renovation</text>
+  </g>
+  <g transform="translate(862 500)">
+    <rect class="soft" width="230" height="90" rx="7"/><circle class="iconCircle" cx="30" cy="30" r="20"/><text class="h3" x="62" y="33">Sewerage /</text><text class="h3" x="62" y="56">Drainage</text>
+  </g>
+
+  <!-- 4 Featured gallery -->
+  <rect class="label" x="18" y="652" width="34" height="34" rx="5"/><text class="labelText" x="35" y="676" text-anchor="middle">4</text>
+  <rect class="panel" x="64" y="652" width="1086" height="590" rx="5"/>
+  <text class="h2" x="607" y="696" text-anchor="middle">Featured Project Gallery</text>
+  <text class="p" x="607" y="724" text-anchor="middle">Image cards show the type of work customers can send photos for quotation.</text>
+  <g transform="translate(92 760)">
+    <rect class="soft" width="310" height="200" rx="5"/><rect class="dash" x="18" y="18" width="274" height="112"/><path class="thin" d="M45 113l70-52 52 38 44-28 60 42"/><circle class="dot" cx="242" cy="49" r="17"/>
+    <text class="small" x="20" y="158">ROOF LEAKING / WATERPROOFING</text><text class="h3" x="20" y="184">Roof Leak Repair</text><text class="tiny" x="20" y="207">Source: Roofing, Waterproofing, AquaProof, Pakar Bumbung</text>
+  </g>
+  <g transform="translate(445 760)">
+    <rect class="soft" width="310" height="200" rx="5"/><rect class="dash" x="18" y="18" width="274" height="112"/><path class="thin" d="M45 113l48-46 45 35 42-56 90 67"/><circle class="dot" cx="230" cy="50" r="17"/>
+    <text class="small" x="20" y="158">WATERPROOFING</text><text class="h3" x="20" y="184">Membrane / PU Injection</text><text class="tiny" x="20" y="207">Source: AquaProof Membrane, Total Roofing</text>
+  </g>
+  <g transform="translate(798 760)">
+    <rect class="soft" width="310" height="200" rx="5"/><rect class="dash" x="18" y="18" width="274" height="112"/><path class="thin" d="M42 113h228M60 96h190M80 78h150M105 60h100"/><circle class="dot" cx="245" cy="50" r="17"/>
+    <text class="small" x="20" y="158">RENOVATION</text><text class="h3" x="20" y="184">House Renovation Works</text><text class="tiny" x="20" y="207">Source: Boon Chye Renovation</text>
+  </g>
+  <g transform="translate(92 1000)">
+    <rect class="soft" width="310" height="200" rx="5"/><rect class="dash" x="18" y="18" width="274" height="112"/><path class="thin" d="M70 104c25-60 80-60 105 0M174 104c22-45 58-45 78 0"/><circle class="dot" cx="241" cy="51" r="17"/>
+    <text class="small" x="20" y="158">PLUMBING / WATER PUMP</text><text class="h3" x="20" y="184">Leak Repair and Pump Work</text><text class="tiny" x="20" y="207">Source: Boon Chye Plumbing, Total Plumbing</text>
+  </g>
+  <g transform="translate(445 1000)">
+    <rect class="soft" width="310" height="200" rx="5"/><rect class="dash" x="18" y="18" width="274" height="112"/><path class="thin" d="M60 72h190M80 48h75v72H80zM178 48h55v72h-55z"/><circle class="dot" cx="244" cy="50" r="17"/>
+    <text class="small" x="20" y="158">ELECTRICAL</text><text class="h3" x="20" y="184">Wiring and Maintenance</text><text class="tiny" x="20" y="207">Source: Boon Chye, Perfect Plumbing Electrical</text>
+  </g>
+  <g transform="translate(798 1000)">
+    <rect class="soft" width="310" height="200" rx="5"/><rect class="dash" x="18" y="18" width="274" height="112"/><path class="thin" d="M47 99h230M66 80h190M87 61h150M108 42h110"/><circle class="dot" cx="245" cy="50" r="17"/>
+    <text class="small" x="20" y="158">SEWERAGE / DRAINAGE</text><text class="h3" x="20" y="184">Blockage and Drainage Work</text><text class="tiny" x="20" y="207">Source: TT Sewer, Sewerage Pro</text>
+  </g>
+
+  <!-- 5 Before during after -->
+  <rect class="label" x="18" y="1265" width="34" height="34" rx="5"/><text class="labelText" x="35" y="1289" text-anchor="middle">5</text>
+  <rect class="panel" x="64" y="1265" width="1086" height="300" rx="5"/>
+  <text class="h2" x="607" y="1310" text-anchor="middle">Before / During / After Work Flow</text>
+  <text class="p" x="607" y="1338" text-anchor="middle">Use this strip to show project progress instead of random photos.</text>
+  <g transform="translate(92 1378)">
+    <rect class="dash" width="310" height="130" rx="5"/><text class="h3" x="155" y="62" text-anchor="middle">Before Inspection</text><text class="small" x="155" y="88" text-anchor="middle">Leak / blockage / renovation issue</text>
+  </g>
+  <g transform="translate(445 1378)">
+    <rect class="dash" width="310" height="130" rx="5"/><text class="h3" x="155" y="62" text-anchor="middle">Work In Progress</text><text class="small" x="155" y="88" text-anchor="middle">Repair, installation or maintenance</text>
+  </g>
+  <g transform="translate(798 1378)">
+    <rect class="dash" width="310" height="130" rx="5"/><text class="h3" x="155" y="62" text-anchor="middle">Completed Result</text><text class="small" x="155" y="88" text-anchor="middle">Ready for customer review</text>
+  </g>
+
+  <!-- 6 Service sections -->
+  <rect class="label" x="18" y="1588" width="34" height="34" rx="5"/><text class="labelText" x="35" y="1612" text-anchor="middle">6</text>
+  <rect class="panel" x="64" y="1588" width="1086" height="365" rx="5"/>
+  <text class="h2" x="607" y="1632" text-anchor="middle">Service-Based Gallery Sections</text>
+  <text class="p" x="607" y="1660" text-anchor="middle">Short rows let users scan the exact work type from the source sites.</text>
+  <g transform="translate(92 1700)">
+    <rect class="soft" width="485" height="92" rx="6"/><text class="h3" x="24" y="35">Roofing &amp; Waterproofing</text><text class="small" x="24" y="62">Roof leaking, ceiling leaking, roof replacement, membrane, PU injection, coating.</text>
+    <rect class="soft" x="520" width="485" height="92" rx="6"/><text class="h3" x="544" y="35">Plumbing &amp; Water Pump</text><text class="small" x="544" y="62">Plumbing repair, tap installation, heater, water tank, pump, drain cleaning.</text>
+  </g>
+  <g transform="translate(92 1815)">
+    <rect class="soft" width="310" height="92" rx="6"/><text class="h3" x="24" y="35">Electrical</text><text class="small" x="24" y="62">Wiring, lighting, plug point, fuse box, maintenance.</text>
+    <rect class="soft" x="352" width="310" height="92" rx="6"/><text class="h3" x="376" y="35">Renovation</text><text class="small" x="376" y="62">Kitchen, bathroom, plaster ceiling, painting, extensions.</text>
+    <rect class="soft" x="694" width="310" height="92" rx="6"/><text class="h3" x="718" y="35">Sewerage / Drainage</text><text class="small" x="718" y="62">Blockage, grease trap, desludging, water jetting, CCTV inspection.</text>
+  </g>
+
+  <!-- 7 Sources -->
+  <rect class="label" x="18" y="1976" width="34" height="34" rx="5"/><text class="labelText" x="35" y="2000" text-anchor="middle">7</text>
+  <rect class="panel" x="64" y="1976" width="1086" height="210" rx="5"/>
+  <text class="h2" x="607" y="2020" text-anchor="middle">9 Source Website References</text>
+  <text class="p" x="607" y="2048" text-anchor="middle">All gallery labels and service groupings are based on these source websites.</text>
+  <g transform="translate(92 2082)">
+    <rect class="tag" width="300" height="28" rx="4"/><text class="tiny" x="12" y="19">1. bcplumbingroofleaking.com.my</text>
+    <rect class="tag" y="38" width="300" height="28" rx="4"/><text class="tiny" x="12" y="57">2. roofingandplumbing.com.my</text>
+    <rect class="tag" y="76" width="300" height="28" rx="4"/><text class="tiny" x="12" y="95">3. roofingandwaterproofing.com.my</text>
+    <rect class="tag" x="340" width="300" height="28" rx="4"/><text class="tiny" x="352" y="19">4. perfectplumbingelectrical.com.my</text>
+    <rect class="tag" x="340" y="38" width="300" height="28" rx="4"/><text class="tiny" x="352" y="57">5. boonchyerenovation.com.my</text>
+    <rect class="tag" x="340" y="76" width="300" height="28" rx="4"/><text class="tiny" x="352" y="95">6. aquaproofmembrane.com.my</text>
+    <rect class="tag" x="680" width="300" height="28" rx="4"/><text class="tiny" x="692" y="19">7. ttsewer.com.my</text>
+    <rect class="tag" x="680" y="38" width="300" height="28" rx="4"/><text class="tiny" x="692" y="57">8. pakarbumbung.com.my</text>
+    <rect class="tag" x="680" y="76" width="300" height="28" rx="4"/><text class="tiny" x="692" y="95">9. seweragepro.com.my</text>
+  </g>
+
+  <!-- 8 CTA -->
+  <rect class="label" x="18" y="2208" width="34" height="34" rx="5"/><text class="labelText" x="35" y="2232" text-anchor="middle">8</text>
+  <rect class="panel" x="64" y="2208" width="1086" height="145" rx="5"/>
+  <text class="h3" x="100" y="2253">Have a Similar Project?</text>
+  <text class="p" x="100" y="2282">Send project photos for roof leak, plumbing, wiring, renovation or drainage issues.</text>
+  <rect class="btnDark" x="100" y="2305" width="230" height="38" rx="5"/><text class="btnDarkText" x="215" y="2329" text-anchor="middle">WhatsApp +6012 796 0061</text>
+  <line class="thin" x1="460" y1="2228" x2="460" y2="2333"/>
+  <rect class="soft" x="520" y="2230" width="560" height="98" rx="6"/>
+  <text class="h3" x="548" y="2259">Get a Free Quote</text>
+  <rect class="btn" x="548" y="2275" width="230" height="28" rx="3"/><text class="tiny" x="560" y="2294">Your Name</text>
+  <rect class="btn" x="792" y="2275" width="180" height="28" rx="3"/><text class="tiny" x="804" y="2294">Phone Number</text>
+  <rect class="btnDark" x="988" y="2275" width="70" height="28" rx="3"/><text class="btnDarkText" x="1023" y="2294" text-anchor="middle">Send</text>
+
+  <!-- 9 Footer -->
+  <rect class="label" x="18" y="2375" width="34" height="34" rx="5"/><text class="labelText" x="35" y="2399" text-anchor="middle">9</text>
+  <rect class="panel" x="64" y="2375" width="1086" height="65" rx="5"/>
+  <text class="h3" x="96" y="2407">About Us</text><text class="tiny" x="96" y="2428">Reliable plumbing, roofing, renovation and sewerage solutions.</text>
+  <text class="h3" x="350" y="2407">Our Services</text><text class="tiny" x="350" y="2428">Roof / Plumbing / Electrical / Renovation / Sewerage</text>
+  <text class="h3" x="670" y="2407">Contact Directory</text><text class="tiny" x="670" y="2428">Main WhatsApp, service team lines and office number.</text>
+  <text class="h3" x="955" y="2407">Get In Touch</text><text class="tiny" x="955" y="2428">Subang Jaya, Selangor</text>
+</svg>

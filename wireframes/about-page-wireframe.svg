@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="3000" viewBox="0 0 1200 3000">
+  <defs>
+    <style>
+      .bg{fill:#fff}.panel{fill:#fff;stroke:#111;stroke-width:1.5}.soft{fill:#fafafa;stroke:#111;stroke-width:1.2}.dash{fill:#fff;stroke:#777;stroke-width:1.2;stroke-dasharray:7 6}.label{fill:#050505}.labelText{font-family:Arial,sans-serif;font-size:22px;font-weight:700;fill:#fff}.h1{font-family:Arial,sans-serif;font-size:48px;font-weight:800;fill:#111}.h2{font-family:Arial,sans-serif;font-size:30px;font-weight:800;fill:#111}.h3{font-family:Arial,sans-serif;font-size:20px;font-weight:800;fill:#111}.p{font-family:Arial,sans-serif;font-size:16px;fill:#333}.small{font-family:Arial,sans-serif;font-size:13px;fill:#444}.tiny{font-family:Arial,sans-serif;font-size:11px;fill:#555}.nav{font-family:Arial,sans-serif;font-size:14px;fill:#111}.btn{fill:#fff;stroke:#111;stroke-width:1.2}.btnDark{fill:#222;stroke:#222}.btnDarkText{font-family:Arial,sans-serif;font-size:14px;font-weight:700;fill:#fff}.line{stroke:#222;stroke-width:1.2;fill:none}.thin{stroke:#aaa;stroke-width:1;fill:none}.dot{fill:#ddd}.iconCircle{fill:#fff;stroke:#111;stroke-width:1.2}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="3000"/>
+
+  <!-- 1 Header from BaseLayout/Header.astro -->
+  <rect class="label" x="18" y="18" width="34" height="34" rx="5"/><text class="labelText" x="35" y="42" text-anchor="middle">1</text>
+  <rect class="panel" x="64" y="18" width="1086" height="74" rx="5"/>
+  <rect class="soft" x="88" y="34" width="74" height="42"/><path class="line" d="M88 34l74 42M162 34L88 76"/>
+  <text class="h3" x="182" y="61">Boon Chye logo</text>
+  <text class="nav" x="414" y="61">Home</text>
+  <text class="nav" x="496" y="61">About</text>
+  <text class="nav" x="578" y="61">Services v</text>
+  <text class="nav" x="686" y="61">Gallery</text>
+  <text class="nav" x="790" y="61">Contact Us</text>
+  <rect class="btn" x="946" y="36" width="168" height="38" rx="6"/><text class="nav" x="1030" y="61" text-anchor="middle">Get a free quote</text>
+
+  <!-- 2 HeroSimple.astro -->
+  <rect class="label" x="18" y="118" width="34" height="34" rx="5"/><text class="labelText" x="35" y="142" text-anchor="middle">2</text>
+  <rect class="panel" x="64" y="118" width="1086" height="440" rx="5"/>
+  <rect class="dash" x="84" y="138" width="1046" height="400" rx="8"/>
+  <text class="small" x="607" y="228" text-anchor="middle">about us</text>
+  <text class="h1" x="607" y="296" text-anchor="middle">About Boon Chye</text>
+  <text class="p" x="607" y="342" text-anchor="middle">Unified website for roof leaking, plumbing, electrical, renovation,</text>
+  <text class="p" x="607" y="368" text-anchor="middle">waterproofing, sewerage and drainage services.</text>
+  <path class="thin" d="M120 500q220-110 420 0t420 0t150-25"/>
+
+  <!-- 3 About card wrapper: three existing columns with alternating card/image blocks -->
+  <rect class="label" x="18" y="586" width="34" height="34" rx="5"/><text class="labelText" x="35" y="610" text-anchor="middle">3</text>
+  <rect class="panel" x="64" y="586" width="1086" height="650" rx="5"/>
+  <text class="h2" x="92" y="648">About card section</text>
+  <text class="p" x="92" y="678">Current layout uses three vertical columns, each pairing a text card with a service image.</text>
+  <g transform="translate(92 728)">
+    <rect class="soft" width="320" height="190" rx="8"/>
+    <text class="h3" x="24" y="48">Our Commitment</text>
+    <text class="small" x="24" y="84">Practical inspection, clear quotation</text>
+    <text class="small" x="24" y="108">and workmanship-led support.</text>
+    <rect class="dash" y="220" width="320" height="300" rx="8"/>
+    <path class="thin" d="M28 474l82-90 70 60 50-86 66 116"/><circle class="dot" cx="268" cy="262" r="22"/>
+
+    <rect class="dash" x="350" width="320" height="300" rx="8"/>
+    <path class="thin" d="M378 254l82-90 70 60 50-86 66 116"/><circle class="dot" cx="618" cy="42" r="22"/>
+    <rect class="soft" x="350" y="330" width="320" height="190" rx="8"/>
+    <text class="h3" x="374" y="378">Who We Are</text>
+    <text class="small" x="374" y="414">Umbrella brand absorbing useful</text>
+    <text class="small" x="374" y="438">content from related websites.</text>
+
+    <rect class="soft" x="700" width="320" height="190" rx="8"/>
+    <text class="h3" x="724" y="48">Our Mission</text>
+    <text class="small" x="724" y="84">Help property owners solve roof,</text>
+    <text class="small" x="724" y="108">plumbing, electrical and drainage issues.</text>
+    <rect class="dash" x="700" y="220" width="320" height="300" rx="8"/>
+    <path class="thin" d="M728 474l82-90 70 60 50-86 66 116"/><circle class="dot" cx="968" cy="262" r="22"/>
+  </g>
+
+  <!-- 4 Inline about CTA -->
+  <rect class="label" x="18" y="1264" width="34" height="34" rx="5"/><text class="labelText" x="35" y="1288" text-anchor="middle">4</text>
+  <rect class="panel" x="64" y="1264" width="1086" height="160" rx="5"/>
+  <text class="h2" x="92" y="1332">One clear Boon Chye website, built from nine overlapping source sites.</text>
+  <rect class="btnDark" x="914" y="1310" width="160" height="46" rx="6"/><text class="btnDarkText" x="994" y="1338" text-anchor="middle">View services</text>
+
+  <!-- 5 What We Preserved / trustPoints cards -->
+  <rect class="label" x="18" y="1452" width="34" height="34" rx="5"/><text class="labelText" x="35" y="1476" text-anchor="middle">5</text>
+  <rect class="panel" x="64" y="1452" width="1086" height="440" rx="5"/>
+  <text class="h2" x="607" y="1516" text-anchor="middle">What We Preserved</text>
+  <text class="p" x="607" y="1546" text-anchor="middle">Strongest recurring trust and service signals from source websites.</text>
+  <g transform="translate(92 1602)">
+    <rect class="soft" width="320" height="100" rx="8"/><text class="h3" x="22" y="40">Trust point</text><text class="small" x="22" y="68">Title and supporting copy from data/site.ts.</text>
+    <rect class="soft" x="350" width="320" height="100" rx="8"/><text class="h3" x="372" y="40">Trust point</text><text class="small" x="372" y="68">Title and supporting copy from data/site.ts.</text>
+    <rect class="soft" x="700" width="320" height="100" rx="8"/><text class="h3" x="722" y="40">Trust point</text><text class="small" x="722" y="68">Title and supporting copy from data/site.ts.</text>
+    <rect class="soft" y="126" width="320" height="100" rx="8"/><text class="h3" x="22" y="166">Trust point</text><text class="small" x="22" y="194">Title and supporting copy from data/site.ts.</text>
+    <rect class="soft" x="350" y="126" width="320" height="100" rx="8"/><text class="h3" x="372" y="166">Trust point</text><text class="small" x="372" y="194">Title and supporting copy from data/site.ts.</text>
+    <rect class="soft" x="700" y="126" width="320" height="100" rx="8"/><text class="h3" x="722" y="166">Trust point</text><text class="small" x="722" y="194">Title and supporting copy from data/site.ts.</text>
+  </g>
+
+  <!-- 6 Source Websites Crawled / sourceSites cards -->
+  <rect class="label" x="18" y="1920" width="34" height="34" rx="5"/><text class="labelText" x="35" y="1944" text-anchor="middle">6</text>
+  <rect class="panel" x="64" y="1920" width="1086" height="440" rx="5"/>
+  <text class="h2" x="607" y="1984" text-anchor="middle">Source Websites Crawled</text>
+  <text class="p" x="607" y="2014" text-anchor="middle">Nine sites treated as references, then deduplicated into one content structure.</text>
+  <g transform="translate(92 2070)">
+    <rect class="soft" width="300" height="76" rx="8"/><text class="h3" x="22" y="34">Source</text><text class="tiny" x="22" y="56">boonchye source URL</text>
+    <rect class="soft" x="360" width="300" height="76" rx="8"/><text class="h3" x="382" y="34">Source</text><text class="tiny" x="382" y="56">boonchye source URL</text>
+    <rect class="soft" x="720" width="300" height="76" rx="8"/><text class="h3" x="742" y="34">Source</text><text class="tiny" x="742" y="56">boonchye source URL</text>
+    <rect class="soft" y="100" width="300" height="76" rx="8"/><text class="h3" x="22" y="134">Source</text><text class="tiny" x="22" y="156">boonchye source URL</text>
+    <rect class="soft" x="360" y="100" width="300" height="76" rx="8"/><text class="h3" x="382" y="134">Source</text><text class="tiny" x="382" y="156">boonchye source URL</text>
+    <rect class="soft" x="720" y="100" width="300" height="76" rx="8"/><text class="h3" x="742" y="134">Source</text><text class="tiny" x="742" y="156">boonchye source URL</text>
+    <rect class="soft" y="200" width="300" height="76" rx="8"/><text class="h3" x="22" y="234">Source</text><text class="tiny" x="22" y="256">boonchye source URL</text>
+    <rect class="soft" x="360" y="200" width="300" height="76" rx="8"/><text class="h3" x="382" y="234">Source</text><text class="tiny" x="382" y="256">boonchye source URL</text>
+    <rect class="soft" x="720" y="200" width="300" height="76" rx="8"/><text class="h3" x="742" y="234">Source</text><text class="tiny" x="742" y="256">boonchye source URL</text>
+  </g>
+
+  <!-- 7 Global CTA component -->
+  <rect class="label" x="18" y="2388" width="34" height="34" rx="5"/><text class="labelText" x="35" y="2412" text-anchor="middle">7</text>
+  <rect class="panel" x="64" y="2388" width="1086" height="330" rx="5"/>
+  <g transform="translate(92 2440)">
+    <text class="h2" x="0" y="48">Ready to discuss your property work?</text>
+    <text class="p" x="0" y="86">Share your service type, location and photos for a clearer inspection or quotation.</text>
+    <rect class="soft" x="0" y="132" width="300" height="78" rx="8"/><circle class="iconCircle" cx="38" cy="171" r="22"/><text class="h3" x="76" y="166">Call / WhatsApp</text><text class="small" x="76" y="190">Brand phone number</text>
+    <rect class="soft" x="630" width="390" height="244" rx="8"/>
+    <text class="h3" x="654" y="38">Get a free quote</text>
+    <rect class="dash" x="654" y="62" width="342" height="38" rx="5"/>
+    <rect class="dash" x="654" y="116" width="342" height="38" rx="5"/>
+    <rect class="dash" x="654" y="170" width="342" height="52" rx="5"/>
+  </g>
+
+  <!-- 8 Footer from BaseLayout/Footer.astro -->
+  <rect class="label" x="18" y="2746" width="34" height="34" rx="5"/><text class="labelText" x="35" y="2770" text-anchor="middle">8</text>
+  <rect class="panel" x="64" y="2746" width="1086" height="220" rx="5"/>
+  <g transform="translate(92 2806)">
+    <rect class="soft" width="220" height="110" rx="8"/><text class="h3" x="20" y="36">About Us</text><text class="small" x="20" y="64">Short footer copy + logo</text>
+    <rect class="soft" x="260" width="220" height="110" rx="8"/><text class="h3" x="280" y="36">Our Services</text><text class="small" x="280" y="64">Service links list</text>
+    <rect class="soft" x="520" width="220" height="110" rx="8"/><text class="h3" x="540" y="36">Contact Directory</text><text class="small" x="540" y="64">Phone rows + copy buttons</text>
+    <rect class="soft" x="780" width="240" height="110" rx="8"/><text class="h3" x="800" y="36">Get In Touch</text><text class="small" x="800" y="64">Address, email, hours</text>
+  </g>
+</svg>

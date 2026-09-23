@@ -1,0 +1,121 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import HeroSimple from "../components/HeroSimple.astro";
+import { brand, services, trustPoints } from "../data/site";
+
+const overviewFacts = ["Subang Jaya based", "20+ Years", "Homes / Shops / Industrial"];
+
+const workSteps = [
+  {
+    title: "Share the Issue",
+    text: "Customers can call or WhatsApp with photos, location and the service needed, whether it is roof leaking, plumbing, electrical, renovation or sewerage work.",
+  },
+  {
+    title: "Inspect & Recommend",
+    text: "The team checks the site condition, explains the likely cause and recommends a practical repair or renovation scope before quotation.",
+  },
+  {
+    title: "Quote Clearly",
+    text: "A clear quotation is provided before work begins, with cost-conscious options where possible and no hidden charges.",
+  },
+  {
+    title: "Repair & Support",
+    text: "The relevant trade team completes the work, from waterproofing to wiring or drainage cleaning, with workmanship support where applicable.",
+  },
+];
+---
+<BaseLayout
+  title="About"
+  description="Learn about Boon Chye Renovation & Construction, a KL and Selangor contractor for roof leaks, waterproofing, plumbing, electrical, renovation, sewerage and drainage work."
+  path="/about"
+>
+  <HeroSimple label="about us" title="About Boon Chye" subtitle="A practical contractor team helping homes, shops, offices and industrial properties across KL and Selangor with roof leaks, waterproofing, plumbing, electrical, renovation, sewerage and drainage work." />
+
+  <section class="about-overview-section padding-bottom">
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="about-overview-grid" style="opacity:1">
+        <div class="about-overview-content">
+          <div class="title-wrapper">
+            <h2 class="section-title">Local Contractor for <span class="highlight-title">Property Repairs</span></h2>
+            <p class="section-subtitle about">Boon Chye helps property owners arrange reliable repair, maintenance and renovation work through local trade teams. We support homes, shops, offices and industrial properties across Kuala Lumpur, Selangor and the Klang Valley.</p>
+          </div>
+          <p class="about-overview-text">Our work covers practical site inspection, leak tracing, repair planning, clear quotation and follow-up support where applicable. Whether the issue is a roof leak, plumbing fault, electrical concern, renovation upgrade or drainage blockage, the goal is the same: identify the right scope and complete the work properly.</p>
+          <div class="about-fact-row">
+            {overviewFacts.map((fact) => <span class="about-fact-chip">{fact}</span>)}
+          </div>
+        </div>
+        <div class="about-overview-image-wrap">
+          <img alt="Boon Chye contractor at property repair site" class="about-overview-image" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 620px" src="/images/man-working-roof-front-view.png" srcset="/images/man-working-roof-front-view-p-500.png 500w, /images/man-working-roof-front-view-p-800.png 800w, /images/man-working-roof-front-view.png 820w" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-section section-padding">
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="section-content-wrapper">
+        <div class="title-wrapper style-02" style="opacity:1">
+          <h2 class="section-title">Our Core Services</h2>
+          <p class="section-subtitle">Boon Chye handles common property repair, maintenance and renovation needs through five main service areas for residential, commercial and industrial properties.</p>
+        </div>
+        <div class="about-service-grid" style="opacity:1">
+          {services.map((service) => (
+            <a class="about-service-card w-inline-block" href={service.href}>
+              <div class="about-service-icon-wrap">
+                <img alt="" class="about-service-icon" loading="lazy" src={service.hoverImage || "/images/Group-4.svg"} />
+              </div>
+              <div>
+                <h4 class="choose-us-card-title">{service.title}</h4>
+                <p class="choose-us-card-subtitle">{service.excerpt}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose-us section-padding">
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="section-content-wrapper">
+        <div class="title-wrapper style-02" style="opacity:1">
+          <h2 class="section-title">Why Customers Choose Us</h2>
+          <p class="section-subtitle">Property owners work with us for local experience, free inspection or site visits, transparent quotations, cost-effective options and workmanship support.</p>
+        </div>
+        <div class="why-choose-card-wrapper" style="opacity:1">
+          {trustPoints.map((point) => (
+            <div class="single-choose-us-card">
+              <h4 class="choose-us-card-title">{point.title}</h4>
+              <p class="choose-us-card-subtitle">{point.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works-section padding">
+    <div class="w-layout-blockcontainer container-large how-it-works section-padding w-container">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="section-content-wrapper">
+          <div class="title-wrapper style-02" style="opacity:1">
+            <h2 class="section-title">How We Work</h2>
+            <p class="section-subtitle">A simple service flow for urgent repairs, planned renovation work and ongoing property maintenance.</p>
+          </div>
+          <div class="about-process-grid" style="opacity:1">
+            {workSteps.map((step, index) => (
+              <div class="about-process-card">
+                <span class="about-process-number">{String(index + 1).padStart(2, "0")}</span>
+                <h4 class="choose-us-card-title">{step.title}</h4>
+                <p class="choose-us-card-subtitle">{step.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA title="Ready to discuss your property work?" text="Share your service type, location and photos so Boon Chye can advise the next step and prepare a clearer inspection or quotation." />
+</BaseLayout>

@@ -1,0 +1,66 @@
+---
+import { brand, navItems, services } from "../data/site";
+const current = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isCurrent = (href: string) => {
+  if (href === "/") return current === "/";
+  return current === href || current.startsWith(`${href}/`);
+};
+---
+<div class="header w-nav" data-animation="default" data-collapse="medium" data-doc-height="1" data-duration="400" data-easing="ease" data-easing2="ease" data-w-id="ede5c3aa-da71-d6d7-55e7-0dc71b5d6950" role="banner">
+  <div class="container w-container">
+    <div class="nav-wrapper">
+      <a class="nav-logo w-nav-brand" href="/">
+        <img alt={`${brand.shortName} logo`} class="site-logo boon-logo" loading="eager" src={brand.logo} />
+      </a>
+      <nav class="menu-wrapper w-nav-menu" role="navigation">
+        <div class="menu-content-wrapper">
+          <div class="menu-item-wrapper">
+            <div class="menu-items">
+              {navItems.map((item) => (
+                item.href === "/service" ? (
+                  <div class="services-pages w-dropdown" data-delay="0" data-hover="true">
+                    <div
+                      aria-current={isCurrent(item.href) ? "page" : undefined}
+                      class:list={["dropdown-toggle service-dropdown-toggle", "w-dropdown-toggle", { "w--current": isCurrent(item.href), "nav-link-active": isCurrent(item.href) }]}
+                      onclick="window.location.href='/service'"
+                    >
+                      <div>Services</div>
+                      <div class="dropdown-icon w-icon-dropdown-toggle"></div>
+                    </div>
+                    <nav class="dropdown-list w-dropdown-list">
+                      <div class="megamenu-wrapper service-megamenu">
+                        <div class="nav-list-wrapper">
+                          <div class="nav-list">
+                            {services.map((service) => (
+                              <a class="single-nav style-02 w-nav-link" href={service.href}>{service.title}</a>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </nav>
+                  </div>
+                ) : (
+                  <div class="single-nav-wrapper">
+                    <a
+                      aria-current={isCurrent(item.href) ? "page" : undefined}
+                      class:list={["single-nav", "w-nav-link", { "w--current": isCurrent(item.href), "nav-link-active": isCurrent(item.href) }]}
+                      href={item.href}
+                    >
+                      {item.label === "Contact" ? "Contact Us" : item.label}
+                    </a>
+                  </div>
+                )
+              ))}
+            </div>
+          </div>
+          <div class="nav-button-wrapper">
+            <a class="button-style-05 w-button" href="/contact">Get a free quote</a>
+          </div>
+        </div>
+      </nav>
+      <div class="nav-trigger w-nav-button">
+        <div class="trigger-icon" data-is-ix2-target="1" data-w-id="ede5c3aa-da71-d6d7-55e7-0dc71b5d6983"></div>
+      </div>
+    </div>
+  </div>
+</div>

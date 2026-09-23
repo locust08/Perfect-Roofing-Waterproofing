@@ -1,0 +1,193 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import HeroSimple from "../components/HeroSimple.astro";
+import { absorbedServices, services } from "../data/site";
+---
+<BaseLayout
+  title="Services"
+  description="Explore Boon Chye's consolidated services: roof leaking and waterproofing, plumbing and water pump, electrical, renovation, sewerage and drainage."
+  path="/service"
+>
+  <div class="service-themed-blueprint">
+    <HeroSimple label="our services" title="Consolidated Services" subtitle="Useful content from all nine source sites has been grouped into one practical service menu." />
+
+    <section class="roof-product-section section-padding">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="section-content-wrapper">
+          <div class="section-header style-03" style="opacity:1">
+            <div class="title-wrapper style-02">
+              <h2 class="section-title">Service Coverage</h2>
+              <p class="section-subtitle">Grouped by the work customers actually search for, not by the old microsite structure.</p>
+            </div>
+          </div>
+          <div class="roof-products" style="opacity:1">
+            {services.map((service) => (
+              <div class="single-roof-products">
+                <div class="roof-product-image-wrapper">
+                  <img alt={`${service.title} service image`} class="roof-product-image" loading="lazy" sizes="100vw" src={service.image} srcset={service.imageSet} />
+                </div>
+                <div class="roof-product-content">
+                  <div class="roof-product-title-wrapper">
+                    <p class="roof-product-title">{service.title}</p>
+                    <p class="roof-product-subtitle">{service.excerpt}</p>
+                  </div>
+                  <div class="roof-product-prices">
+                    <a class="button-style-04 w-button" href={service.href}>Details</a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose-us section-padding">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="section-content-wrapper">
+          <div class="title-wrapper style-02" style="opacity:1">
+            <h2 class="section-title">All Absorbed Services</h2>
+            <p class="section-subtitle">The top of the page shows 5 umbrella categories. These are the individual services consolidated from the 9 old websites.</p>
+          </div>
+          <div class="why-choose-card-wrapper" style="opacity:1">
+            {absorbedServices.map((group) => (
+              <div class="single-choose-us-card absorbed-service-card">
+                <h4 class="choose-us-card-title">{group.category}</h4>
+                <p class="choose-us-card-subtitle">{group.items.join(" / ")}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTA title="Not sure which service you need?" text="Call or WhatsApp Boon Chye. The team can inspect the issue and route it to the right trade service." />
+  </div>
+
+  <style is:global>
+    .service-themed-blueprint .hero-section {
+      padding-bottom: 0;
+    }
+
+    .service-themed-blueprint .hero-content-wrapper {
+      gap: 32px;
+      min-height: auto;
+    }
+
+    .service-themed-blueprint .hero-top-content {
+      gap: 18px;
+    }
+
+    .service-themed-blueprint .roof-product-section.section-padding {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+
+    .service-themed-blueprint .why-choose-us.section-padding {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+
+    .service-themed-blueprint .roof-products {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 32px;
+    }
+
+    .service-themed-blueprint .single-roof-products {
+      background-color: var(--neutral-01);
+      border: 1px solid var(--stroke-color);
+      border-radius: 20px;
+      grid-column: span 2;
+      overflow: hidden;
+      padding: 14px;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .service-themed-blueprint .single-roof-products:hover {
+      box-shadow: 0 24px 60px #00000012;
+      transform: translateY(-4px);
+    }
+
+    .service-themed-blueprint .single-roof-products:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+
+    .service-themed-blueprint .single-roof-products:nth-child(5) {
+      grid-column: 4 / span 2;
+    }
+
+    .service-themed-blueprint .roof-product-image-wrapper {
+      border-radius: 16px;
+      aspect-ratio: 16 / 9;
+    }
+
+    .service-themed-blueprint .roof-product-image {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .service-themed-blueprint .roof-product-content {
+      padding: 6px 4px 4px;
+    }
+
+    .service-themed-blueprint .roof-product-title {
+      font-family: var(--body-font);
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 125%;
+    }
+
+    .service-themed-blueprint .roof-product-subtitle {
+      font-size: 15px;
+      line-height: 155%;
+    }
+
+    .service-themed-blueprint .why-choose-card-wrapper {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px 32px;
+    }
+
+    .service-themed-blueprint .absorbed-service-card {
+      background-color: var(--neutral-01);
+      border: 1px solid var(--stroke-color);
+      border-radius: 18px;
+      box-shadow: 0 18px 45px #00000008;
+    }
+
+    .service-themed-blueprint .absorbed-service-card:last-child {
+      grid-column: 1 / -1;
+      justify-self: center;
+      max-width: 720px;
+      width: 100%;
+    }
+
+    .service-themed-blueprint .cta-section.padding {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    @media screen and (max-width: 991px) {
+      .service-themed-blueprint .roof-products,
+      .service-themed-blueprint .why-choose-card-wrapper {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .service-themed-blueprint .single-roof-products,
+      .service-themed-blueprint .single-roof-products:nth-child(4),
+      .service-themed-blueprint .single-roof-products:nth-child(5),
+      .service-themed-blueprint .absorbed-service-card:last-child {
+        grid-column: auto;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .service-themed-blueprint .roof-products,
+      .service-themed-blueprint .why-choose-card-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+    }
+  </style>
+</BaseLayout>

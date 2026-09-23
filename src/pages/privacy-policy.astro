@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSimple from "../components/HeroSimple.astro";
+import CTA from "../components/CTA.astro";
+import { brand } from "../data/site";
+---
+<BaseLayout
+  title="Privacy Policy"
+  description="Privacy policy for Boon Chye Renovation & Construction contact and quotation enquiries."
+  path="/privacy-policy"
+>
+  <HeroSimple label="privacy" title="Privacy Policy" subtitle="How Boon Chye handles enquiry information submitted through this website." />
+  <section class="service-details-section section-padding">
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="service-rich-text w-richtext">
+        <h3>Information We Collect</h3>
+        <p>When you contact {brand.shortName}, we may collect your name, phone number, email address, service type, property area, photos or message details needed to respond to your enquiry.</p>
+        <h3>How We Use It</h3>
+        <p>We use enquiry information to arrange inspection, prepare quotations, respond to service questions and follow up on roof, plumbing, electrical, renovation, sewerage or drainage work.</p>
+        <h3>Contact</h3>
+        <p>For privacy questions, contact us at <a href={`mailto:${brand.email}`}>{brand.email}</a> or call <a href={`tel:${brand.phone.replace(/\s/g, "")}`}>{brand.phone}</a>.</p>
+      </div>
+    </div>
+  </section>
+  <CTA />
+</BaseLayout>
