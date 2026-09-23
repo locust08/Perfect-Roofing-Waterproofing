@@ -48,6 +48,8 @@ npm run preview:cloudflare
 
 `wrangler.jsonc` is the source of truth. It selects the authenticated Cloudflare account, names the Worker `perfect-roofting`, and publishes `dist/` using Workers Static Assets.
 
+The current workflow uses Wrangler's existing OAuth login; it does not require a Doppler API token. Before deploying from a new machine or shell, run `npx wrangler whoami` and confirm that the login can access **Eason CF Main**. The non-secret account ID pinned in `wrangler.jsonc` prevents Wrangler from silently choosing the other account available to this login. If authentication is absent or that account is unavailable, stop and restore the approved Wrangler login rather than substituting a different account or credential.
+
 From a clean `revamp-foundation` branch:
 
 ```bash
@@ -104,4 +106,3 @@ For a bad preview/staging deployment:
 4. Re-run route, asset, browser-console, and 404 checks.
 
 For production, use the same version rollback pattern against the future isolated production Worker, then restore Git history through a reviewed revert. Never repair production by making uncommitted dashboard-only changes.
-
