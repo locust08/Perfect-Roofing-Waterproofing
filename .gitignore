@@ -2,6 +2,7 @@ node_modules/
 dist/
 .astro/
 .playwright-mcp/
+.playwright-cli/
 .env
 .env.*
 !.env.example
