@@ -149,12 +149,12 @@ const iconPaths = {
             <div class="contact-form-block w-form">
               <form class="form" data-name="Contact Form" method="get" name="contact-form">
                 <div class="field-row">
-                  <div class="single-field-wrapper"><h4>Name</h4><input class="single-field w-input" maxlength="256" name="name" placeholder="Enter full name" required type="text" /></div>
-                  <div class="single-field-wrapper"><h4>Email Address</h4><input class="single-field w-input" maxlength="256" name="email" placeholder="Enter email address" required type="email" /></div>
-                  <div class="single-field-wrapper"><h4>Phone Number</h4><input class="single-field w-input" maxlength="256" name="phone" placeholder="Enter phone number" type="tel" /></div>
-                  <div class="single-field-wrapper"><h4>Service</h4><select class="single-field w-input" name="service">{services.map((service) => <option value={service.slug}>{service.title}</option>)}</select></div>
+                  <div class="single-field-wrapper"><label for="contact-name">Name</label><input class="single-field w-input" id="contact-name" maxlength="256" name="name" placeholder="Enter full name" required type="text" /></div>
+                  <div class="single-field-wrapper"><label for="contact-email">Email Address</label><input class="single-field w-input" id="contact-email" maxlength="256" name="email" placeholder="Enter email address" required type="email" /></div>
+                  <div class="single-field-wrapper"><label for="contact-phone">Phone Number</label><input class="single-field w-input" id="contact-phone" maxlength="256" name="phone" placeholder="Enter phone number" type="tel" /></div>
+                  <div class="single-field-wrapper"><label for="contact-service">Service</label><select class="single-field w-input" id="contact-service" name="service">{services.map((service) => <option value={service.slug}>{service.title}</option>)}</select></div>
                 </div>
-                <div class="single-field-wrapper"><h4>Message</h4><textarea class="single-field text-area w-input" maxlength="5000" name="message" placeholder="Tell us what happened, your area, and preferred visit time"></textarea></div>
+                <div class="single-field-wrapper"><label for="contact-message">Message</label><textarea class="single-field text-area w-input" id="contact-message" maxlength="5000" name="message" placeholder="Tell us what happened, your area, and preferred visit time"></textarea></div>
                 <input class="form-button w-button" data-wait="Please wait..." type="submit" value="Send message" />
               </form>
               <div class="w-form-done"><div>Thank you. Your submission has been prepared.</div></div>

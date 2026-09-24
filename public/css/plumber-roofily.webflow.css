@@ -1583,7 +1583,15 @@ strong {
 }
 
 .section-label {
+  font-family: var(--heading-font);
   color: var(--theme-color);
+  letter-spacing: -.5px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 140%;
 }
 
 .service-duration-wrapper {
@@ -2152,6 +2160,14 @@ strong {
 
 .question-title {
   width: 88%;
+  font-family: var(--heading-font);
+  color: var(--neutral-04);
+  letter-spacing: -.5px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 140%;
 }
 
 .faq-icon {
@@ -3176,7 +3192,8 @@ strong {
   margin-bottom: 22px;
 }
 
-.contact-form-block .single-field-wrapper h4 {
+.contact-form-block .single-field-wrapper h4,
+.contact-form-block .single-field-wrapper label {
   color: var(--neutral-04);
   margin-top: 0;
   margin-bottom: 0;
@@ -4403,6 +4420,10 @@ strong {
     letter-spacing: 0;
   }
 
+  .question-title {
+    letter-spacing: 0;
+  }
+
   .color-wrapper {
     grid-template-columns: 1fr 1fr;
   }
@@ -4799,6 +4820,10 @@ strong {
   }
 
   h4 {
+    font-size: 24px;
+  }
+
+  .question-title {
     font-size: 24px;
   }
 

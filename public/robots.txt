@@ -7,5 +7,3 @@ Disallow: /appointment
 Disallow: /license
 Disallow: /changelog
 Disallow: /styleguide
-
-Sitemap: https://bcplumbingroofleaking.com.my/sitemap.xml

@@ -9,7 +9,9 @@ export const brand = {
   email: "boonchyeplumbing@live.com.my",
   address: "8, Jalan USJ 1/6B, 47620 Subang Jaya, Selangor, Malaysia.",
   serviceArea: "Kuala Lumpur, Selangor and Klang Valley, with service coverage around Subang Jaya and nearby areas.",
-  canonicalBase: "https://bcplumbingroofleaking.com.my",
+  // Set this once the production hostname is confirmed. Do not use a staging
+  // Workers domain as the public canonical source of truth.
+  productionUrl: undefined as string | undefined,
 };
 
 export const navItems = [

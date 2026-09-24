@@ -12,21 +12,21 @@ const isCurrent = (href: string) => {
       <a class="nav-logo w-nav-brand" href="/">
         <span class="brand-wordmark">{brand.shortName}</span>
       </a>
-      <nav class="menu-wrapper w-nav-menu" role="navigation">
+      <nav class="menu-wrapper w-nav-menu" id="primary-navigation" role="navigation">
         <div class="menu-content-wrapper">
           <div class="menu-item-wrapper">
             <div class="menu-items">
               {navItems.map((item) => (
                 item.href === "/service" ? (
                   <div class="services-pages w-dropdown" data-delay="0" data-hover="true">
-                    <div
+                    <a
                       aria-current={isCurrent(item.href) ? "page" : undefined}
                       class:list={["dropdown-toggle service-dropdown-toggle", "w-dropdown-toggle", { "w--current": isCurrent(item.href), "nav-link-active": isCurrent(item.href) }]}
-                      onclick="window.location.href='/service'"
+                      href="/service"
                     >
                       <div>Services</div>
                       <div class="dropdown-icon w-icon-dropdown-toggle"></div>
-                    </div>
+                    </a>
                     <nav class="dropdown-list w-dropdown-list">
                       <div class="megamenu-wrapper service-megamenu">
                         <div class="nav-list-wrapper">
@@ -58,9 +58,9 @@ const isCurrent = (href: string) => {
           </div>
         </div>
       </nav>
-      <div class="nav-trigger w-nav-button">
+      <button aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu" class="nav-trigger w-nav-button" type="button">
         <div class="trigger-icon" data-is-ix2-target="1" data-w-id="ede5c3aa-da71-d6d7-55e7-0dc71b5d6983"></div>
-      </div>
+      </button>
     </div>
   </div>
 </div>

@@ -54,7 +54,7 @@ const visibleFaqs = serviceFaqs.slice(0, 3);
       <div class="w-layout-blockcontainer container w-container">
         <div class="service-hero-content">
           <div class="hero-title-wrapper" style="opacity:1">
-            <h5 class="section-label">our services</h5>
+            <p class="section-label">our services</p>
             <div class="title-wrapper">
               <h1 class="hero-title">{service.title}</h1>
               <div class="service-duration-wrapper">
@@ -172,19 +172,19 @@ const visibleFaqs = serviceFaqs.slice(0, 3);
           </div>
         </div>
         <div class="faq-s" style="opacity:1">
-          {visibleFaqs.map((faq) => (
+          {visibleFaqs.map((faq, index) => (
             <div class="single-faq w-dropdown" data-delay="0" data-hover="false">
-              <div class="question w-dropdown-toggle">
-                <div class="question-content-wrapper">
-                  <h4 class="question-title">{faq.question}</h4>
-                  <img alt="Open answer" class="faq-icon" loading="lazy" src="/images/arrow-down.svg" />
-                </div>
-              </div>
-              <nav class="answer w-dropdown-list">
+              <button aria-controls={`faq-answer-${index}`} class="question w-dropdown-toggle" type="button">
+                <span class="question-content-wrapper">
+                  <span class="question-title">{faq.question}</span>
+                  <img alt="" aria-hidden="true" class="faq-icon" loading="lazy" src="/images/arrow-down.svg" />
+                </span>
+              </button>
+              <div class="answer w-dropdown-list" id={`faq-answer-${index}`}>
                 <div class="answer-content-wrapper">
                   <p class="answer-content">{faq.answer}</p>
                 </div>
-              </nav>
+              </div>
             </div>
           ))}
         </div>

@@ -226,10 +226,10 @@ const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
           <div class="faq-bottom-content"><div class="faq-bottom-title-wrapper"><p class="faq-contact-title">Need help with your property?</p><p>Contact Perfect Roofing & Waterproofing with your photos, location and service needed.</p></div><a class="button-style-01 w-button" href="/contact">Contact us</a></div>
         </div>
         <div class="faq-s">
-          {faqs.map((faq) => (
+          {faqs.map((faq, index) => (
             <div class="single-faq w-dropdown" data-delay="0" data-hover="false">
-              <div class="question w-dropdown-toggle"><div class="question-content-wrapper"><h4 class="question-title">{faq.question}</h4><img alt="Open answer" class="faq-icon" loading="lazy" src="/images/arrow-down.svg" /></div></div>
-              <nav class="answer w-dropdown-list"><div class="answer-content-wrapper"><p class="answer-content">{faq.answer}</p></div></nav>
+              <button aria-controls={`faq-answer-${index}`} class="question w-dropdown-toggle" type="button"><span class="question-content-wrapper"><span class="question-title">{faq.question}</span><img alt="" aria-hidden="true" class="faq-icon" loading="lazy" src="/images/arrow-down.svg" /></span></button>
+              <div class="answer w-dropdown-list" id={`faq-answer-${index}`}><div class="answer-content-wrapper"><p class="answer-content">{faq.answer}</p></div></div>
             </div>
           ))}
         </div>
