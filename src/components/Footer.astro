@@ -1,5 +1,6 @@
 ---
 import { brand, footerContactDirectory, services } from "../data/site";
+const googleMapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
 ---
 <section class="footer-section padding-bottom">
   <div class="w-layout-blockcontainer container w-container">
@@ -45,7 +46,7 @@ import { brand, footerContactDirectory, services } from "../data/site";
               <span class="footer-touch-icon" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 21s7-5.3 7-12A7 7 0 1 0 5 9c0 6.7 7 12 7 12Zm0-9a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" fill="currentColor"/></svg>
               </span>
-              <p class="footer-touch-text">{brand.address}</p>
+              <a class="footer-touch-text footer-address-link" href={googleMapsHref} target="_blank" rel="noopener">{brand.address}</a>
             </div>
             <div class="footer-touch-row">
               <span class="footer-touch-icon" aria-hidden="true">

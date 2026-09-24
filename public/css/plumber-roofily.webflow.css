@@ -2485,6 +2485,16 @@ strong {
   line-height: 1.5;
 }
 
+.footer-address-link {
+  text-decoration: none;
+  transition: color .3s ease-in-out;
+}
+
+.footer-address-link:hover,
+.footer-address-link:focus-visible {
+  color: var(--theme-color);
+}
+
 .footer-touch-link {
   font-size: 14px;
   line-height: 1.5;

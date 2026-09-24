@@ -261,7 +261,7 @@ const openGraphImage = brand.productionUrl
 
           const target = Number(counter.dataset.countTarget || 0);
           const suffix = counter.dataset.countSuffix || "";
-          const duration = 900;
+          const duration = Number(counter.dataset.countDuration || 900);
           const startTime = performance.now();
 
           const tick = (now) => {
