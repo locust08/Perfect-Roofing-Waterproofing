@@ -1,8 +1,8 @@
 ---
 import { brand } from "../data/site";
 import { turnstileSiteKey } from "../data/security";
-const title = Astro.props.title ?? "Need roof, plumbing, electrical, renovation or sewerage support?";
-const text = Astro.props.text ?? "Call Perfect Roofing & Waterproofing for a free inspection, consultation or transparent quotation across KL and Selangor.";
+const title = Astro.props.title ?? "Need Help With a Roof Leak or Waterproofing Problem?";
+const text = Astro.props.text ?? "Call or WhatsApp Perfect Roofing & Waterproofing for roofing advice, a free consultation, and a clear quotation across Kuala Lumpur and Selangor.";
 const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
 ---
 <section class="cta-section padding">
@@ -28,29 +28,29 @@ const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
         </div>
       </div>
       <div class="cta-contact-area">
-        <p class="cta-contact-title">Get a free quote</p>
+        <p class="cta-contact-title">Request for Quotation</p>
         <div class="contact-form-area w-form">
           <form action="/api/enquiries" class="cta-contact-form" data-enquiry-form data-name="Quote Form" method="post" name="quote-form">
             <input name="form_type" type="hidden" value="quote" />
             <div class="single-form-field-wrapper">
-              <label class="field-label" for="quote-name">Name</label>
-              <input class="field w-input" id="quote-name" maxlength="100" name="name" placeholder="Enter full name" required type="text" />
+              <label class="field-label" for="quote-name">Your Name</label>
+              <input class="field w-input" id="quote-name" maxlength="100" name="name" placeholder="Enter your full name" required type="text" />
             </div>
             <div class="single-form-field-wrapper">
               <label class="field-label" for="quote-email">Email address</label>
               <input class="field w-input" id="quote-email" maxlength="254" name="email" placeholder="Enter email address (optional)" type="email" />
             </div>
             <div class="single-form-field-wrapper">
-              <label class="field-label" for="quote-phone">Phone number</label>
-              <input class="field w-input" id="quote-phone" maxlength="30" name="phone" placeholder="Enter phone number" required type="tel" />
+              <label class="field-label" for="quote-phone">Phone / WhatsApp Number</label>
+              <input class="field w-input" id="quote-phone" maxlength="30" name="phone" placeholder="Enter phone or WhatsApp number" required type="tel" />
             </div>
             <div class="single-form-field-wrapper">
-              <label class="field-label" for="quote-message">Message</label>
-              <textarea class="field text-area w-input" id="quote-message" maxlength="2000" minlength="10" name="message" placeholder="Tell us what you need" required></textarea>
+              <label class="field-label" for="quote-message">Roofing or Waterproofing Enquiry</label>
+              <textarea class="field text-area w-input" id="quote-message" maxlength="2000" minlength="10" name="message" placeholder="Tell us about your roof or waterproofing issue" required></textarea>
             </div>
             <div aria-hidden="true" class="enquiry-honeypot"><label for="quote-company">Company website</label><input autocomplete="off" id="quote-company" name="company" tabindex="-1" type="text" /></div>
             <div class="cf-turnstile" data-action="turnstile-spin-v2" data-sitekey={turnstileSiteKey}></div>
-            <input class="form-button w-button" data-wait="Please wait..." type="submit" value="Submit" />
+            <input class="form-button w-button" data-wait="Please wait..." type="submit" value="Send Enquiry" />
           </form>
           <div aria-live="polite" class="w-form-done" role="status"><div>Thank you. Your enquiry was sent successfully.</div></div>
           <div aria-live="assertive" class="w-form-fail" role="alert"><div>We could not send your enquiry. Please try again or call us directly.</div></div>

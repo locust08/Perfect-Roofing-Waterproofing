@@ -5253,3 +5253,57 @@ strong {
   }
 }
 
+/* Homepage six-step process within the existing process visual system */
+.home-process {
+  flex-flow: column;
+  min-width: 0;
+}
+
+.home-process-grid {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.home-process-grid .single-process,
+.home-process-grid .process-title-wrapper {
+  min-width: 0;
+  height: 100%;
+}
+
+.home-process-grid .point-wrapper {
+  flex: none;
+}
+
+.home-process-grid .process-title {
+  overflow-wrap: anywhere;
+}
+
+.home-process .process-image-wrapper {
+  width: 100%;
+  min-width: 0;
+}
+
+.home-process .process-image {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 991px) {
+  .home-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-process-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+}
+
