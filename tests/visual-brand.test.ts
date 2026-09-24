@@ -26,6 +26,16 @@ describe("Perfect Roofing public brand data", () => {
     expect(services.every(({ href }) => href.startsWith("/service/"))).toBe(true);
   });
 
+  test("uses the supplied hover artwork for services 02 through 06 in order", () => {
+    expect(services.slice(1).map(({ hoverImage }) => hoverImage)).toEqual([
+      "/images/service-02-roof-replacement.png",
+      "/images/service-03-roof-maintenance-inspection.png",
+      "/images/service-04-new-roof-installation.png",
+      "/images/service-05-roof-waterproofing.png",
+      "/images/service-06-pu-injection.png",
+    ]);
+  });
+
   test("centralized homepage collections contain no unrelated services", () => {
     expect(JSON.stringify({ services, trustPoints, testimonials, faqs, projectImages })).not.toMatch(forbidden);
   });
