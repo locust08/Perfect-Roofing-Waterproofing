@@ -45,6 +45,25 @@ interface EnquirySubmission {
   pagePath: string;
   turnstileToken: string;
   company: string;
+  attribution: Attribution;
+}
+
+interface Attribution {
+  utmSource: string;
+  utmMedium: string;
+  utmCampaign: string;
+  utmContent: string;
+  utmTerm: string;
+  gclid: string;
+  gbraid: string;
+  wbraid: string;
+  fbclid: string;
+  ttclid: string;
+  landingPage: string;
+  referrer: string;
+  conversionPage: string;
+  conversionType: string;
+  timestamp: string;
 }
 
 interface TurnstileResult {
@@ -72,6 +91,87 @@ function readString(source: Record<string, unknown>, key: string) {
   return typeof value === "string" ? value.trim() : "";
 }
 
+function emptyAttribution(): Attribution {
+  return {
+    utmSource: "",
+    utmMedium: "",
+    utmCampaign: "",
+    utmContent: "",
+    utmTerm: "",
+    gclid: "",
+    gbraid: "",
+    wbraid: "",
+    fbclid: "",
+    ttclid: "",
+    landingPage: "",
+    referrer: "",
+    conversionPage: "",
+    conversionType: "",
+    timestamp: "",
+  };
+}
+
+function readAttribution(source: Record<string, unknown>) {
+  const value = source.attribution;
+  if (value === undefined) return { attribution: emptyAttribution(), errors: {} };
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    return { attribution: emptyAttribution(), errors: { attribution: "Invalid attribution." } };
+  }
+
+  const body = value as Record<string, unknown>;
+  const attribution: Attribution = {
+    utmSource: readString(body, "utm_source"),
+    utmMedium: readString(body, "utm_medium"),
+    utmCampaign: readString(body, "utm_campaign"),
+    utmContent: readString(body, "utm_content"),
+    utmTerm: readString(body, "utm_term"),
+    gclid: readString(body, "gclid"),
+    gbraid: readString(body, "gbraid"),
+    wbraid: readString(body, "wbraid"),
+    fbclid: readString(body, "fbclid"),
+    ttclid: readString(body, "ttclid"),
+    landingPage: readString(body, "landing_page"),
+    referrer: readString(body, "referrer"),
+    conversionPage: readString(body, "conversion_page"),
+    conversionType: readString(body, "conversion_type"),
+    timestamp: readString(body, "timestamp"),
+  };
+  const errors: Record<string, string> = {};
+  const campaignValues = [
+    attribution.utmSource,
+    attribution.utmMedium,
+    attribution.utmCampaign,
+    attribution.utmContent,
+    attribution.utmTerm,
+    attribution.gclid,
+    attribution.gbraid,
+    attribution.wbraid,
+    attribution.fbclid,
+    attribution.ttclid,
+  ];
+  if (campaignValues.some((item) => item.length > 256)) errors.attribution = "Invalid attribution.";
+  if (
+    attribution.landingPage.length > 200
+    || attribution.conversionPage.length > 200
+    || [attribution.landingPage, attribution.conversionPage].some((item) => item && (!item.startsWith("/") || /[?#]/.test(item)))
+  ) errors.attribution = "Invalid attribution.";
+  if (attribution.referrer.length > 512) errors.attribution = "Invalid attribution.";
+  if (attribution.referrer) {
+    try {
+      const referrer = new URL(attribution.referrer);
+      if (!/^https?:$/.test(referrer.protocol) || referrer.search || referrer.hash) errors.attribution = "Invalid attribution.";
+    } catch {
+      errors.attribution = "Invalid attribution.";
+    }
+  }
+  if (attribution.conversionType.length > 32) errors.attribution = "Invalid attribution.";
+  if (attribution.timestamp && (attribution.timestamp.length > 40 || Number.isNaN(Date.parse(attribution.timestamp)))) {
+    errors.attribution = "Invalid attribution.";
+  }
+
+  return { attribution, errors };
+}
+
 function validateSubmission(source: unknown) {
   if (!source || typeof source !== "object" || Array.isArray(source)) {
     return { errors: { form: "Invalid submission." } };
@@ -88,9 +188,11 @@ function validateSubmission(source: unknown) {
     pagePath: readString(body, "page_path"),
     turnstileToken: readString(body, "cf-turnstile-response"),
     company: readString(body, "company"),
+    attribution: emptyAttribution(),
   };
 
   const errors: Record<string, string> = {};
+  const attributionResult = readAttribution(body);
   if (submission.name.length < 2 || submission.name.length > 100) {
     errors.name = "Enter a name between 2 and 100 characters.";
   }
@@ -127,6 +229,9 @@ function validateSubmission(source: unknown) {
   if (!submission.turnstileToken || submission.turnstileToken.length > 2_048) {
     errors.turnstile = "Complete the security check.";
   }
+
+  Object.assign(errors, attributionResult.errors);
+  submission.attribution = attributionResult.attribution;
 
   return Object.keys(errors).length ? { errors } : { submission };
 }
@@ -168,6 +273,31 @@ async function verifyTurnstile(
 }
 
 function leadText(leadId: string, submission: EnquirySubmission) {
+  const attribution = submission.attribution;
+  const campaignLines = [
+    ["UTM source", attribution.utmSource],
+    ["UTM medium", attribution.utmMedium],
+    ["UTM campaign", attribution.utmCampaign],
+    ["UTM content", attribution.utmContent],
+    ["UTM term", attribution.utmTerm],
+  ].filter(([, value]) => value);
+  const clickIds = [
+    ["gclid", attribution.gclid],
+    ["gbraid", attribution.gbraid],
+    ["wbraid", attribution.wbraid],
+    ["fbclid", attribution.fbclid],
+    ["ttclid", attribution.ttclid],
+  ].filter(([, value]) => value);
+  const attributionLines = [
+    ...campaignLines.map(([label, value]) => `${label}: ${value}`),
+    ...(clickIds.length ? [`Click IDs: ${clickIds.map(([label, value]) => `${label}=${value}`).join(", ")}`] : []),
+    ...(attribution.landingPage ? [`Landing page: ${attribution.landingPage}`] : []),
+    ...(attribution.referrer ? [`Referrer: ${attribution.referrer}`] : []),
+    ...(attribution.conversionPage ? [`Conversion page: ${attribution.conversionPage}`] : []),
+    ...(attribution.conversionType ? [`Conversion type: ${attribution.conversionType}`] : []),
+    ...(attribution.timestamp ? [`Timestamp: ${attribution.timestamp}`] : []),
+  ];
+
   return [
     `Lead ID: ${leadId}`,
     `Name: ${submission.name}`,
@@ -176,6 +306,7 @@ function leadText(leadId: string, submission: EnquirySubmission) {
     `Service: ${submission.service || "Not provided"}`,
     `Form: ${submission.formType || "Not provided"}`,
     `Page: ${submission.pagePath || "Not provided"}`,
+    ...(attributionLines.length ? ["", "Attribution:", ...attributionLines] : []),
     "",
     "Message:",
     submission.message,

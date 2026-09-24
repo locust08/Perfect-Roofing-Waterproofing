@@ -84,6 +84,42 @@ describe("POST /api/enquiries", () => {
     expect(deliveryBody.text).toContain(validSubmission.name);
   });
 
+  it("includes validated attribution in the Resend lead notification", async () => {
+    const fetcher = externalFetch();
+    const submission = {
+      ...validSubmission,
+      attribution: {
+        utm_source: "google",
+        utm_medium: "cpc",
+        utm_campaign: "spring-roofing",
+        utm_content: "responsive-search-ad",
+        utm_term: "roof-repair",
+        gclid: "test-gclid",
+        gbraid: "test-gbraid",
+        wbraid: "test-wbraid",
+        fbclid: "test-fbclid",
+        ttclid: "test-ttclid",
+        landing_page: "/service/roof-leaking-waterproofing/",
+        referrer: "https://www.google.com",
+        conversion_page: "/contact/",
+        conversion_type: "contact",
+        timestamp: "2026-09-24T04:00:00.000Z",
+      },
+    };
+
+    const response = await handleRequest(request(submission), env(), { fetch: fetcher });
+    const deliveryBody = JSON.parse(String(fetcher.mock.calls[1][1]?.body));
+
+    expect(response.status).toBe(201);
+    expect(deliveryBody.text).toContain("UTM source: google");
+    expect(deliveryBody.text).toContain("Click IDs: gclid=test-gclid, gbraid=test-gbraid, wbraid=test-wbraid, fbclid=test-fbclid, ttclid=test-ttclid");
+    expect(deliveryBody.text).toContain("Landing page: /service/roof-leaking-waterproofing/");
+    expect(deliveryBody.text).toContain("Referrer: https://www.google.com");
+    expect(deliveryBody.text).toContain("Conversion page: /contact/");
+    expect(deliveryBody.text).toContain("Conversion type: contact");
+    expect(deliveryBody.text).toContain("Timestamp: 2026-09-24T04:00:00.000Z");
+  });
+
   it("does not rebind the outbound fetch function", async () => {
     const fetcher = vi.fn(function (this: unknown, input: RequestInfo | URL) {
       if (this !== undefined) throw new TypeError("Illegal invocation");
