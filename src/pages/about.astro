@@ -4,16 +4,16 @@ import CTA from "../components/CTA.astro";
 import HeroSimple from "../components/HeroSimple.astro";
 import { brand, services, trustPoints } from "../data/site";
 
-const overviewFacts = ["Subang Jaya based", "20+ Years", "Homes / Shops / Industrial"];
+const overviewFacts = ["31 Years of Industry Experience", "Kuala Lumpur & Selangor", "Residential & Commercial Roofs"];
 
 const workSteps = [
   {
     title: "Share the Issue",
-    text: "Customers can call or WhatsApp with photos, location and the service needed, whether it is roof leaking, plumbing, electrical, renovation or sewerage work.",
+    text: "Call or WhatsApp with your location, photos, and details of the roof leak or waterproofing concern.",
   },
   {
     title: "Inspect & Recommend",
-    text: "The team checks the site condition, explains the likely cause and recommends a practical repair or renovation scope before quotation.",
+    text: "Our team checks the roof condition, explains the likely cause, and recommends a practical repair scope before quotation.",
   },
   {
     title: "Quote Clearly",
@@ -21,32 +21,32 @@ const workSteps = [
   },
   {
     title: "Repair & Support",
-    text: "The relevant trade team completes the work, from waterproofing to wiring or drainage cleaning, with workmanship support where applicable.",
+    text: "Our roofing team completes the agreed repair, installation, or waterproofing work and checks the finished area.",
   },
 ];
 ---
 <BaseLayout
   title="About"
-  description="Learn about Perfect Roofing & Waterproofing, a KL and Selangor contractor for roof leaks, waterproofing, plumbing, electrical, renovation, sewerage and drainage work."
+  description="Learn about Perfect Roofing & Waterproofing and our roof repair, installation, maintenance, and waterproofing services in Kuala Lumpur and Selangor."
   path="/about"
 >
-  <HeroSimple label="about us" title="About Perfect Roofing & Waterproofing" subtitle="A practical contractor team helping homes, shops, offices and industrial properties across KL and Selangor with roof leaks, waterproofing, plumbing, electrical, renovation, sewerage and drainage work." />
+  <HeroSimple label="about us" title="About Perfect Roofing & Waterproofing" subtitle="Roofing and waterproofing specialists helping homes and businesses across Kuala Lumpur and Selangor." />
 
   <section class="about-overview-section padding-bottom">
     <div class="w-layout-blockcontainer container w-container">
       <div class="about-overview-grid" style="opacity:1">
         <div class="about-overview-content">
           <div class="title-wrapper">
-            <h2 class="section-title">Local Contractor for <span class="highlight-title">Property Repairs</span></h2>
-            <p class="section-subtitle about">Perfect Roofing & Waterproofing helps property owners arrange reliable repair, maintenance and renovation work through local trade teams. We support homes, shops, offices and industrial properties across Kuala Lumpur, Selangor and the Klang Valley.</p>
+            <h2 class="section-title">Roofing Solutions <span class="highlight-title">You Can Rely On</span></h2>
+            <p class="section-subtitle about">Perfect Roofing & Waterproofing brings 31 years of industry experience to residential and commercial roofing and waterproofing needs. We serve property owners across Kuala Lumpur and Selangor.</p>
           </div>
-          <p class="about-overview-text">Our work covers practical site inspection, leak tracing, repair planning, clear quotation and follow-up support where applicable. Whether the issue is a roof leak, plumbing fault, electrical concern, renovation upgrade or drainage blockage, the goal is the same: identify the right scope and complete the work properly.</p>
+          <p class="about-overview-text">From leak detection and maintenance to waterproofing and roof replacement, we inspect the site, explain the recommended solution, provide a clear quotation, and check the completed work.</p>
           <div class="about-fact-row">
             {overviewFacts.map((fact) => <span class="about-fact-chip">{fact}</span>)}
           </div>
         </div>
         <div class="about-overview-image-wrap">
-          <img alt="Perfect Roofing & Waterproofing contractor at property repair site" class="about-overview-image" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 620px" src="/images/man-working-roof-front-view.png" srcset="/images/man-working-roof-front-view-p-500.png 500w, /images/man-working-roof-front-view-p-800.png 800w, /images/man-working-roof-front-view.png 820w" />
+          <img alt="Roof installation work by Perfect Roofing & Waterproofing" class="about-overview-image" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 620px" src="/images/man-working-roof-front-view.png" srcset="/images/man-working-roof-front-view-p-500.png 500w, /images/man-working-roof-front-view-p-800.png 800w, /images/man-working-roof-front-view.png 820w" />
         </div>
       </div>
     </div>
@@ -57,7 +57,7 @@ const workSteps = [
       <div class="section-content-wrapper">
         <div class="title-wrapper style-02" style="opacity:1">
           <h2 class="section-title">Our Core Services</h2>
-          <p class="section-subtitle">Perfect Roofing & Waterproofing handles common property repair, maintenance and renovation needs through five main service areas for residential, commercial and industrial properties.</p>
+          <p class="section-subtitle">Explore six roofing and waterproofing services, from finding leaks and maintaining roofs to replacement, installation, and water leakage repair.</p>
         </div>
         <div class="about-service-grid" style="opacity:1">
           {services.map((service) => (
@@ -81,7 +81,7 @@ const workSteps = [
       <div class="section-content-wrapper">
         <div class="title-wrapper style-02" style="opacity:1">
           <h2 class="section-title">Why Customers Choose Us</h2>
-          <p class="section-subtitle">Property owners work with us for local experience, free inspection or site visits, transparent quotations, cost-effective options and workmanship support.</p>
+          <p class="section-subtitle">Property owners choose our practical roof inspections, clear quotations, and roofing and waterproofing experience across Kuala Lumpur and Selangor.</p>
         </div>
         <div class="why-choose-card-wrapper" style="opacity:1">
           {trustPoints.map((point) => (
@@ -101,7 +101,7 @@ const workSteps = [
         <div class="section-content-wrapper">
           <div class="title-wrapper style-02" style="opacity:1">
             <h2 class="section-title">How We Work</h2>
-            <p class="section-subtitle">A simple service flow for urgent repairs, planned renovation work and ongoing property maintenance.</p>
+            <p class="section-subtitle">A clear process for roof leaks, planned roofing work, and waterproofing projects.</p>
           </div>
           <div class="about-process-grid" style="opacity:1">
             {workSteps.map((step, index) => (
@@ -117,5 +117,5 @@ const workSteps = [
     </div>
   </section>
 
-  <CTA title="Ready to discuss your property work?" text="Share your service type, location and photos so Perfect Roofing & Waterproofing can advise the next step and prepare a clearer inspection or quotation." />
+  <CTA title="Need help with your roof?" text="Share your location and photos so Perfect Roofing & Waterproofing can advise the next inspection or quotation step." />
 </BaseLayout>

@@ -2,158 +2,63 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import HeroSimple from "../components/HeroSimple.astro";
-import { services } from "../data/site";
+import { projectImages, services } from "../data/site";
 
-const galleryCategories = [
-  { key: "roof-waterproofing", title: "Roof Leaking / Waterproofing", text: "Roof leak, ceiling leak, membrane and PU injection." },
-  { key: "plumbing-water-pump", title: "Plumbing / Water Pump", text: "Leaks, pipe repair, water tank and pump." },
-  { key: "electrical", title: "Electrical", text: "Wiring, lighting, plug point and fuse box." },
-  { key: "renovation", title: "Renovation", text: "Kitchen, bathroom and extension works." },
-  { key: "sewerage-drainage", title: "Sewerage / Drainage", text: "Blockage, grease trap, jetting and CCTV inspection." },
+const galleryCategories = services.map((service) => ({
+  key: service.slug,
+  title: service.title,
+  text: service.excerpt,
+  image: service.hoverImage,
+}));
+
+const featuredProjects = services.map((service, index) => {
+  const image = projectImages[index % projectImages.length];
+  return {
+    filter: service.slug,
+    category: service.title,
+    title: service.title,
+    source: "Illustrative roofing image",
+    image: image.src,
+    imageSet: image.set,
+    alt: image.alt,
+  };
+});
+
+const workflowStages = [
+  { title: "Inspection", text: "We inspect the roof and identify the affected area.", image: projectImages[1] },
+  { title: "Recommended Work", text: "We explain a suitable repair or waterproofing scope.", image: projectImages[3] },
+  { title: "Final Check", text: "We check the completed work before handover.", image: projectImages[2] },
 ];
-
-const projectGroups = [
-  {
-    filter: "roof-waterproofing",
-    category: "Roof Leaking / Waterproofing",
-    titles: [
-      "Roof Leak Inspection",
-      "Flat Roof Membrane Work",
-      "Ceiling Leak Repair Area",
-      "Roof Flashing Sealant Work",
-      "Completed Waterproofing Finish",
-    ],
-  },
-  {
-    filter: "plumbing-water-pump",
-    category: "Plumbing / Water Pump",
-    titles: [
-      "Sink Pipe Leak Repair",
-      "Water Pump Installation",
-      "Tap and Pipe Replacement",
-      "Rooftop Tank Piping Check",
-      "Completed Pump Setup",
-    ],
-  },
-  {
-    filter: "electrical",
-    category: "Electrical",
-    titles: [
-      "Distribution Board Check",
-      "Plug Point Replacement",
-      "Ceiling Light Installation",
-      "Surface Conduit Wiring",
-      "Completed Lighting Setup",
-    ],
-  },
-  {
-    filter: "renovation",
-    category: "Renovation",
-    titles: [
-      "Bathroom Tile Preparation",
-      "Kitchen Renovation Works",
-      "Plaster Ceiling Repair",
-      "Room Extension Framing",
-      "Completed Interior Renovation",
-    ],
-  },
-  {
-    filter: "sewerage-drainage",
-    category: "Sewerage / Drainage",
-    titles: [
-      "Outdoor Drain Inspection",
-      "Drain Jetting Service",
-      "Grease Trap Cleaning",
-      "CCTV Drain Inspection",
-      "Completed Drainage Cleanup",
-    ],
-  },
-];
-
-const featuredProjects = projectGroups.flatMap((group) =>
-  group.titles.map((title, index) => {
-    const number = String(index + 1).padStart(2, "0");
-    const image = `/images/gallery/generated/${group.filter}-${number}.webp`;
-    return {
-      filter: group.filter,
-      category: group.category,
-      title,
-      source: "Boon Chye portfolio example",
-      image,
-      imageSet: `${image} 1200w`,
-      alt: `${title} example for ${group.category}`,
-    };
-  })
-);
-
-const workflowGroups = [
-  {
-    key: "roof-waterproofing",
-    title: "Roof / Waterproofing",
-    steps: [
-      { title: "Leak Area Inspection", text: "Roof tile or ceiling leak area checked before repair work.", image: "/images/gallery/generated/roof-waterproofing-01.webp", alt: "Roof leak inspection before repair" },
-      { title: "Waterproofing Work", text: "Membrane, sealant or waterproofing treatment applied on site.", image: "/images/gallery/generated/roof-waterproofing-02.webp", alt: "Flat roof waterproofing work in progress" },
-      { title: "Finished Surface", text: "Clean roof surface after waterproofing or leak repair.", image: "/images/gallery/generated/roof-waterproofing-05.webp", alt: "Completed roof waterproofing surface" },
-    ],
-  },
-  {
-    key: "plumbing-water-pump",
-    title: "Plumbing / Pump",
-    steps: [
-      { title: "Pipe Leak Check", text: "Pipe, tap or tank connection inspected before repair.", image: "/images/gallery/generated/plumbing-water-pump-01.webp", alt: "Sink pipe leak repair inspection" },
-      { title: "Tank Piping Work", text: "Technician checks piping, pump or water tank connection.", image: "/images/gallery/generated/plumbing-water-pump-04.webp", alt: "Rooftop tank piping work in progress" },
-      { title: "Completed Pump Setup", text: "Pump and pipe installation cleaned up for handover.", image: "/images/gallery/generated/plumbing-water-pump-05.webp", alt: "Completed water pump and pipe installation" },
-    ],
-  },
-  {
-    key: "electrical",
-    title: "Electrical",
-    steps: [
-      { title: "Electrical Check", text: "Distribution board, plug point or lighting issue inspected.", image: "/images/gallery/generated/electrical-01.webp", alt: "Distribution board electrical inspection" },
-      { title: "Installation Work", text: "Lighting, wiring or plug point work completed safely.", image: "/images/gallery/generated/electrical-03.webp", alt: "Ceiling light installation in progress" },
-      { title: "Finished Setup", text: "Switches, lights and fittings are tidied after testing.", image: "/images/gallery/generated/electrical-05.webp", alt: "Completed electrical lighting setup" },
-    ],
-  },
-  {
-    key: "renovation",
-    title: "Renovation",
-    steps: [
-      { title: "Area Preparation", text: "Bathroom, kitchen or ceiling area prepared before renovation.", image: "/images/gallery/generated/renovation-01.webp", alt: "Bathroom renovation area before work" },
-      { title: "Build In Progress", text: "Partition, ceiling, tiling or fitting works carried out.", image: "/images/gallery/generated/renovation-04.webp", alt: "Room extension framing work in progress" },
-      { title: "Completed Interior", text: "Renovated area cleaned and ready for use.", image: "/images/gallery/generated/renovation-05.webp", alt: "Completed interior renovation result" },
-    ],
-  },
-  {
-    key: "sewerage-drainage",
-    title: "Sewerage / Drainage",
-    steps: [
-      { title: "Drain Inspection", text: "Blocked drain, grease trap or pipe access checked first.", image: "/images/gallery/generated/sewerage-drainage-01.webp", alt: "Outdoor drain blockage inspection" },
-      { title: "Clearing Work", text: "Jetting, CCTV inspection or cleaning work carried out.", image: "/images/gallery/generated/sewerage-drainage-02.webp", alt: "Drain jetting service work in progress" },
-      { title: "Cleaned Drainage", text: "Drainage area cleaned after service and inspection.", image: "/images/gallery/generated/sewerage-drainage-05.webp", alt: "Completed drainage cleanup result" },
-    ],
-  },
-];
-
+const workflowGroups = services.map((service) => ({
+  key: service.slug,
+  title: service.title,
+  steps: workflowStages.map((stage) => ({
+    title: stage.title,
+    text: stage.text,
+    image: stage.image.src,
+    alt: stage.image.alt,
+  })),
+}));
 ---
 <BaseLayout
   title="Gallery"
-  description="View Perfect Roofing & Waterproofing project and service visuals for roofing, waterproofing, renovation, plumbing, electrical, sewerage and drainage work."
+  description="Explore illustrative roof repair, installation, maintenance, and waterproofing images for Perfect Roofing & Waterproofing in Kuala Lumpur and Selangor."
   path="/gallery"
 >
-  <HeroSimple label="gallery / portfolio" title="Our Project Portfolio" subtitle="Browse Perfect Roofing & Waterproofing work examples across roofing, waterproofing, renovation, plumbing, electrical, sewerage and drainage services." />
+  <HeroSimple label="gallery / portfolio" title="Our Roofing & Waterproofing Projects" subtitle="Browse roofing and waterproofing visuals while we prepare the final project photography." />
 
   <section class="gallery-portfolio-section section-padding">
     <div class="w-layout-blockcontainer container w-container">
       <div class="section-content-wrapper">
         <div class="title-wrapper style-02" style="opacity:1">
           <h2 class="section-title">Browse Work by Service</h2>
-          <p class="section-subtitle">Select a service category to view related project examples.</p>
+          <p class="section-subtitle">Select a roofing or waterproofing service to view a related visual example.</p>
         </div>
         <div class="gallery-category-grid" data-gallery-filters style="opacity:1">
-          {galleryCategories.map((category, index) => (
+          {galleryCategories.map((category) => (
             <button class="gallery-category-card" type="button" data-gallery-filter={category.key} aria-pressed="false">
               <div class="gallery-category-icon">
-                <img alt="" aria-hidden="true" loading="lazy" src={category.image ?? services.find((service) => service.slug === category.key || (category.key === "roof-waterproofing" && service.slug === "roof-leaking-waterproofing"))?.hoverImage} />
+                <img alt="" aria-hidden="true" loading="lazy" src={category.image} />
               </div>
               <div class="gallery-category-content">
                 <p class="gallery-category-title">{category.title}</p>
@@ -184,8 +89,8 @@ const workflowGroups = [
     <div class="w-layout-blockcontainer container w-container">
       <div class="section-content-wrapper">
         <div class="title-wrapper style-02" style="opacity:1">
-          <h2 class="section-title">Project Progress Examples</h2>
-          <p class="section-subtitle">See how photos can show the issue, repair process and completed result.</p>
+          <h2 class="section-title">How Our Work Progresses</h2>
+          <p class="section-subtitle">An illustrative view of roof inspection, recommended work, and final checking.</p>
         </div>
         <div class="gallery-workflow-tabs" data-workflow-filters style="opacity:1">
           {workflowGroups.map((group) => (
@@ -260,9 +165,9 @@ const workflowGroups = [
         });
       });
 
-      setServiceFilter("roof-waterproofing");
+      setServiceFilter(galleryFilters[0]?.getAttribute("data-gallery-filter"));
     })();
   </script>
 
-  <CTA title="Have a similar project?" text="Send photos of the roof, leak area, plumbing fault, wiring area, renovation space or drainage issue for a clearer first response." />
+  <CTA title="Have a roofing or waterproofing project?" text="Share your location and photos of the roof or leak area so we can advise the next inspection or quotation step." />
 </BaseLayout>
