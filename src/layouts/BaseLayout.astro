@@ -45,6 +45,107 @@ const openGraphImage = brand.productionUrl
     <script src="/js/webflow.js" type="text/javascript"></script>
     <script is:inline>
       (() => {
+        const widgets = new WeakMap();
+
+        const statusElements = (form) => {
+          const wrapper = form.closest(".w-form");
+          return {
+            success: wrapper?.querySelector(".w-form-done"),
+            error: wrapper?.querySelector(".w-form-fail"),
+          };
+        };
+
+        const showStatus = (form, state, message) => {
+          const status = statusElements(form);
+          if (status.success) status.success.style.display = state === "success" ? "block" : "none";
+          if (status.error) {
+            const content = status.error.querySelector("div");
+            if (content && message) content.textContent = message;
+            status.error.style.display = state === "error" ? "block" : "none";
+          }
+          form.style.display = state === "success" ? "none" : "block";
+        };
+
+        const renderWidgets = () => {
+          if (!window.turnstile) return;
+          document.querySelectorAll("[data-enquiry-form] .cf-turnstile").forEach((element) => {
+            if (widgets.has(element)) return;
+            const widgetId = window.turnstile.render(element, {
+              sitekey: element.dataset.sitekey,
+              action: element.dataset.action,
+              theme: "auto",
+              "error-callback": () => {
+                const form = element.closest("form");
+                if (form) showStatus(form, "error", "The security check could not load. Please refresh and try again.");
+              },
+            });
+            widgets.set(element, widgetId);
+          });
+        };
+
+        window.onTurnstileReady = () => {
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", renderWidgets, { once: true });
+          } else {
+            renderWidgets();
+          }
+        };
+
+        document.addEventListener("submit", async (event) => {
+          const form = event.target.closest?.("[data-enquiry-form]");
+          if (!form) return;
+          event.preventDefault();
+          event.stopImmediatePropagation();
+
+          const submit = form.querySelector('[type="submit"]');
+          const originalLabel = submit?.value || submit?.textContent || "Submit";
+          if (submit) {
+            submit.disabled = true;
+            if ("value" in submit) submit.value = submit.dataset.wait || "Please wait...";
+            else submit.textContent = submit.dataset.wait || "Please wait...";
+          }
+          showStatus(form, "idle");
+
+          try {
+            const formData = new FormData(form);
+            const payload = Object.fromEntries(formData.entries());
+            payload.page_path = window.location.pathname;
+            const response = await fetch(form.action, {
+              method: "POST",
+              credentials: "same-origin",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload),
+            });
+            const result = await response.json();
+            if (!response.ok || result.ok !== true) {
+              const message = result.error === "rate_limited"
+                ? "Too many attempts. Please wait one minute and try again."
+                : result.error === "turnstile_failed"
+                  ? "The security check expired or failed. Please try again."
+                  : "We could not send your enquiry. Please check the form and try again.";
+              throw new Error(message);
+            }
+
+            form.reset();
+            const widget = form.querySelector(".cf-turnstile");
+            const widgetId = widget ? widgets.get(widget) : undefined;
+            if (widgetId !== undefined) window.turnstile?.reset(widgetId);
+            showStatus(form, "success");
+          } catch (error) {
+            showStatus(form, "error", error instanceof Error ? error.message : "We could not send your enquiry. Please try again.");
+          } finally {
+            if (submit) {
+              submit.disabled = false;
+              if ("value" in submit) submit.value = originalLabel;
+              else submit.textContent = originalLabel;
+            }
+          }
+        }, true);
+      })();
+    </script>
+    <script async defer src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileReady&amp;render=explicit"></script>
+    <script is:inline>
+      (() => {
         const animatedSelectors = [
           ".section-header",
           ".title-wrapper",
@@ -359,6 +460,15 @@ const openGraphImage = brand.productionUrl
         color: inherit;
         font: inherit;
         text-align: inherit;
+      }
+
+      .enquiry-honeypot {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
       }
     </style>
   </body>

@@ -1,10 +1,28 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "perfect-roofing-waterproofing",
+  "main": "./worker/index.ts",
   "account_id": "e7c515dde995479daacd82ad79dfc3e8",
   "compatibility_date": "2026-09-23",
+  "vars": {
+    "TURNSTILE_EXPECTED_HOSTNAME": "perfect-roofing-waterproofing.easondev.workers.dev",
+    "LEAD_RECIPIENT_EMAIL": "boonchyeplumbing@live.com.my",
+    "LEAD_SENDER_EMAIL": "Perfect Roofing Website <website-enquiries@locus-t.com.my>"
+  },
+  "ratelimits": [
+    {
+      "name": "ENQUIRY_RATE_LIMITER",
+      "namespace_id": "20260924",
+      "simple": {
+        "limit": 5,
+        "period": 60
+      }
+    }
+  ],
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"],
     "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash"
   }

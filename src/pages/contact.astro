@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import HeroSimple from "../components/HeroSimple.astro";
 import { brand, contactTeams, officeContact, services } from "../data/site";
+import { turnstileSiteKey } from "../data/security";
 
 const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
 const iconPaths = {
@@ -142,23 +143,26 @@ const iconPaths = {
       <div class="section-content-wrapper">
         <div class="title-wrapper style-02 align-center">
           <h2 class="section-title">Send Us Your Message</h2>
-          <p class="section-subtitle">This static form prepares a contact request. For urgent work, call or WhatsApp directly.</p>
+          <p class="section-subtitle">Send your enquiry securely. For urgent work, call or WhatsApp directly.</p>
         </div>
         <div class="contact-form-wrapper">
           <div class="contact-form-content">
             <div class="contact-form-block w-form">
-              <form class="form" data-name="Contact Form" method="get" name="contact-form">
+              <form action="/api/enquiries" class="form" data-enquiry-form data-name="Contact Form" method="post" name="contact-form">
+                <input name="form_type" type="hidden" value="contact" />
                 <div class="field-row">
-                  <div class="single-field-wrapper"><label for="contact-name">Name</label><input class="single-field w-input" id="contact-name" maxlength="256" name="name" placeholder="Enter full name" required type="text" /></div>
-                  <div class="single-field-wrapper"><label for="contact-email">Email Address</label><input class="single-field w-input" id="contact-email" maxlength="256" name="email" placeholder="Enter email address" required type="email" /></div>
-                  <div class="single-field-wrapper"><label for="contact-phone">Phone Number</label><input class="single-field w-input" id="contact-phone" maxlength="256" name="phone" placeholder="Enter phone number" type="tel" /></div>
+                  <div class="single-field-wrapper"><label for="contact-name">Name</label><input class="single-field w-input" id="contact-name" maxlength="100" name="name" placeholder="Enter full name" required type="text" /></div>
+                  <div class="single-field-wrapper"><label for="contact-email">Email Address</label><input class="single-field w-input" id="contact-email" maxlength="254" name="email" placeholder="Enter email address (optional)" type="email" /></div>
+                  <div class="single-field-wrapper"><label for="contact-phone">Phone Number</label><input class="single-field w-input" id="contact-phone" maxlength="30" name="phone" placeholder="Enter phone number" required type="tel" /></div>
                   <div class="single-field-wrapper"><label for="contact-service">Service</label><select class="single-field w-input" id="contact-service" name="service">{services.map((service) => <option value={service.slug}>{service.title}</option>)}</select></div>
                 </div>
-                <div class="single-field-wrapper"><label for="contact-message">Message</label><textarea class="single-field text-area w-input" id="contact-message" maxlength="5000" name="message" placeholder="Tell us what happened, your area, and preferred visit time"></textarea></div>
+                <div class="single-field-wrapper"><label for="contact-message">Message</label><textarea class="single-field text-area w-input" id="contact-message" maxlength="2000" minlength="10" name="message" placeholder="Tell us what happened, your area, and preferred visit time" required></textarea></div>
+                <div aria-hidden="true" class="enquiry-honeypot"><label for="contact-company">Company website</label><input autocomplete="off" id="contact-company" name="company" tabindex="-1" type="text" /></div>
+                <div class="cf-turnstile" data-action="turnstile-spin-v2" data-sitekey={turnstileSiteKey}></div>
                 <input class="form-button w-button" data-wait="Please wait..." type="submit" value="Send message" />
               </form>
-              <div class="w-form-done"><div>Thank you. Your submission has been prepared.</div></div>
-              <div class="w-form-fail"><div>Please call us directly if the form does not submit.</div></div>
+              <div aria-live="polite" class="w-form-done" role="status"><div>Thank you. Your enquiry was sent successfully.</div></div>
+              <div aria-live="assertive" class="w-form-fail" role="alert"><div>We could not send your enquiry. Please try again or call us directly.</div></div>
             </div>
             <aside class="contact-response-note" aria-label="Response time note">
               <span class="contact-response-icon" aria-hidden="true">
