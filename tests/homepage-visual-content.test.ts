@@ -9,7 +9,7 @@ const forbidden = /Boon Chye|general contractor|plumb|electrical|renovation|sewe
 
 describe("roofing-only homepage presentation", () => {
   test("uses the approved hero and about copy", () => {
-    expect(home).toContain("Roofing & Waterproofing Specialists in KL & Selangor");
+    expect(home).not.toContain('class="hero-label"');
     expect(home).toContain("Your Trusted Experts for Roofing & Waterproofing in KL & Selangor");
     expect(home).toContain("Reliable roof repair and waterproofing solutions backed by decades of industry experience.");
     expect(home).toContain("31 Years");
