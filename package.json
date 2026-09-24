@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev --host 127.0.0.1",
     "build": "astro build",
+    "postbuild": "node scripts/assert-redirect-destinations.mjs",
     "test": "vitest run",
     "preview": "astro preview --host 127.0.0.1",
     "preview:cloudflare": "npm run build && wrangler dev",

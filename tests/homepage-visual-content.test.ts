@@ -22,15 +22,17 @@ describe("roofing-only homepage presentation", () => {
 
   test("shows the approved gallery, metrics, process, and FAQ anchor", () => {
     expect(home).toContain("Our Roofing & Waterproofing Projects");
-    for (const [value, label] of [
+    const metricBlocks = [...home.matchAll(/<div class="single-metrics(?: last)?">([\s\S]*?)<\/div>/g)]
+      .map(([, block]) => [
+        block.match(/<h2[^>]*>([^<]+)<\/h2>/)?.[1],
+        block.match(/<p[^>]*>([^<]+)<\/p>/)?.[1],
+      ]);
+    expect(metricBlocks).toEqual([
       ["31 Years", "Industry Experience"],
       ["24/7", "Emergency Support"],
       ["6", "Core Roofing & Waterproofing Services"],
       ["KL & Selangor", "Service Coverage"],
-    ]) {
-      expect(home).toContain(value);
-      expect(home).toContain(label);
-    }
+    ]);
     for (const title of [
       "Contact Us via WhatsApp or Call",
       "Schedule a Free Consultation",
