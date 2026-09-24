@@ -11,9 +11,9 @@
     "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
-    "astro": "^5.16.4"
+    "astro": "^5.18.2"
   },
   "devDependencies": {
-    "wrangler": "^4.136.3"
+    "wrangler": "^4.137.0"
   }
 }
