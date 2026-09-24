@@ -1,4 +1,4 @@
-# Perfect Roofting architecture
+# Perfect Roofing & Waterproofing architecture
 
 Date: 2026-09-23
 
@@ -9,7 +9,7 @@ Astro 5
 ↓
 Static build (`npm run build`)
 ↓
-Cloudflare Worker: `perfect-roofting`
+Cloudflare Worker: `perfect-roofing-waterproofing`
 ↓
 Workers Static Assets (`dist/`)
 ```
@@ -26,7 +26,7 @@ Used for code changes, component work, and local QA. Astro's development server 
 
 ### Preview/staging
 
-The `perfect-roofting` Worker at its `workers.dev` URL is used to verify Cloudflare asset routing, future form/backend behaviour, Turnstile, analytics, and client/internal review. Test submissions must use designated test data once a backend exists.
+The `perfect-roofing-waterproofing` Worker at its `workers.dev` URL is used to verify Cloudflare asset routing, future form/backend behaviour, Turnstile, analytics, and client/internal review. Test submissions must use designated test data once a backend exists.
 
 ### Production
 
@@ -72,7 +72,7 @@ Public values may be exposed to browser code; private values must exist only in 
 | Future database/storage identifiers | Server configuration | No database or storage selected |
 | Future database/storage credentials | Private server secret | Not applicable yet |
 
-The current shell can access an authenticated Doppler project whose runtime config classifies as development-like, but this repository has no directory-scoped Doppler project/config selection. Do not rely on the shared implicit scope for deployment. Before backend or analytics work, the owner must confirm the dedicated Perfect Roofting Doppler project and the development/staging config names.
+The current shell can access an authenticated Doppler project whose runtime config classifies as development-like, but this repository has no directory-scoped Doppler project/config selection. Do not rely on the shared implicit scope for deployment. Before backend or analytics work, the owner must confirm the dedicated Perfect Roofing & Waterproofing Doppler project and the development/staging config names.
 
 ## Deliberately absent
 

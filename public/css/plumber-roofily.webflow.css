@@ -10,18 +10,14 @@
   --stroke-color: #f0f0f0;
 }
 
-.boon-logo {
-  object-fit: contain;
-  width: 76px;
-  height: 76px;
-  border-radius: 6px;
-}
-
-.boon-footer-logo {
-  object-fit: contain;
-  width: 86px;
-  height: 86px;
-  border-radius: 6px;
+.brand-wordmark,
+.footer-brand-wordmark {
+  color: var(--neutral-01);
+  font-family: var(--heading-font);
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: .02em;
+  text-transform: uppercase;
 }
 
 .service-details-content-wrapper {
@@ -2437,10 +2433,10 @@ strong {
   line-height: 1.55;
 }
 
-.footer-about-logo-image {
-  object-fit: contain;
-  width: 82px;
-  height: auto;
+.footer-brand-wordmark {
+  color: var(--neutral-04);
+  display: inline-block;
+  max-width: 250px;
 }
 
 .footer-touch-wrapper {
@@ -3627,7 +3623,7 @@ strong {
 
 .nav-logo {
   width: 100%;
-  max-width: 160px;
+  max-width: 260px;
   padding-left: 0;
 }
 
@@ -5162,7 +5158,11 @@ strong {
   }
 
   .nav-logo {
-    max-width: 130px;
+    max-width: 190px;
+  }
+
+  .brand-wordmark {
+    font-size: 19px;
   }
 
   .nav-trigger, .nav-trigger.w--open {
@@ -5174,5 +5174,4 @@ strong {
     padding-bottom: 15px;
   }
 }
-
 

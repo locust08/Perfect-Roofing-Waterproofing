@@ -1,6 +1,6 @@
 export const brand = {
-  name: "Boon Chye Renovation & Construction (M) Sdn Bhd",
-  shortName: "Boon Chye",
+  name: "Perfect Roofing & Waterproofing",
+  shortName: "Perfect Roofing & Waterproofing",
   registration: "1350531-M",
   phone: "+6012 796 0061",
   phoneAlt: "+6017 765 0061",
@@ -10,7 +10,6 @@ export const brand = {
   address: "8, Jalan USJ 1/6B, 47620 Subang Jaya, Selangor, Malaysia.",
   serviceArea: "Kuala Lumpur, Selangor and Klang Valley, with service coverage around Subang Jaya and nearby areas.",
   canonicalBase: "https://bcplumbingroofleaking.com.my",
-  logo: "/images/boon-chye-logo-transparent.png",
 };
 
 export const navItems = [
@@ -43,9 +42,9 @@ export const services = [
     budgetRange: "Quotation after site inspection",
     detailCopy: {
       coverageIntro: "This service covers the common roof and water seepage problems customers usually group together: roof leaks, ceiling leaks, gutter issues, flat roof seepage and waterproofing failures.",
-      handling: "Boon Chye starts by checking the affected area, leak pattern and roof condition. The team can then recommend whether the job needs targeted repair, recoating, membrane waterproofing, PU injection or a larger replacement scope.",
+      handling: "Perfect Roofing & Waterproofing starts by checking the affected area, leak pattern and roof condition. The team can then recommend whether the job needs targeted repair, recoating, membrane waterproofing, PU injection or a larger replacement scope.",
       umbrellaReason: "Roof leaking and waterproofing appeared across several older specialist sites, so this page brings the overlapping roofing, waterproofing and repair information into one clearer service path.",
-      ctaText: "Call or WhatsApp Boon Chye with your leak location, ceiling photos or roof photos so the team can advise the next inspection or repair step.",
+      ctaText: "Call or WhatsApp Perfect Roofing & Waterproofing with your leak location, ceiling photos or roof photos so the team can advise the next inspection or repair step.",
     },
     detailArticle: {
       introTitle: "When Do You Need Roof Leak Repair or Waterproofing?",
@@ -61,15 +60,15 @@ export const services = [
       timingParagraphs: [
         "If the same leak keeps returning, the repair should start with a source inspection rather than another surface patch. The team checks the visible water mark, roof condition, drainage path and affected waterproofing layer before recommending the right scope.",
         "Some issues can be handled with targeted tile, gutter or downpipe repair. Other cases may need membrane waterproofing, PU injection, epoxy coating, roof recoating or replacement of weak roof sections.",
-        "Boon Chye keeps the page under one umbrella because roof leaking, roofing and waterproofing often overlap in real projects. Customers can explain the symptom once, then the team can route the job to the right repair method.",
+        "Perfect Roofing & Waterproofing keeps the page under one umbrella because roof leaking, roofing and waterproofing often overlap in real projects. Customers can explain the symptom once, then the team can route the job to the right repair method.",
       ],
       processIntro: "For roof leak and waterproofing work, the process is inspection-led so the repair method matches the actual water path.",
-      benefitsTitle: "Benefits of Choosing Boon Chye for Roof Leak & Waterproofing",
-      benefitsText: "Boon Chye brings related roof repair and waterproofing services into one flow, making it easier to inspect, quote and complete the work without sending customers between separate microsites.",
+      benefitsTitle: "Benefits of Choosing Perfect Roofing & Waterproofing for Roof Leak & Waterproofing",
+      benefitsText: "Perfect Roofing & Waterproofing brings related roof repair and waterproofing services into one flow, making it easier to inspect, quote and complete the work without sending customers between separate microsites.",
       figureImage: "/images/full-shot-man-with-helmet-sitting-roof-2.png",
       figureImageSet: "/images/full-shot-man-with-helmet-sitting-roof-2-p-500.png 500w, /images/full-shot-man-with-helmet-sitting-roof-2.png 620w",
       closingTitle: "Stop the Leak Before It Spreads",
-      closingText: "A roof leak can damage ceilings, wiring, plaster, paint and built-in furniture if it is left too long. Share your photos, property location and leak pattern so Boon Chye can advise the next inspection or quotation step.",
+      closingText: "A roof leak can damage ceilings, wiring, plaster, paint and built-in furniture if it is left too long. Share your photos, property location and leak pattern so Perfect Roofing & Waterproofing can advise the next inspection or quotation step.",
     },
     visualSigns: [
       { title: "Ceiling Stains", text: "Water marks after rain.", image: "/images/gallery/generated/roof-waterproofing-01.webp" },
@@ -124,9 +123,9 @@ export const services = [
     budgetRange: "Quotation after site inspection",
     detailCopy: {
       coverageIntro: "This service covers common plumbing and water pressure issues for homes, shops and commercial properties, from small fixture leaks to pump and tank repair work.",
-      handling: "Boon Chye checks the symptom, affected fixture or pipe route, water pressure and urgency before recommending repair, replacement, cleaning or pump-related work.",
+      handling: "Perfect Roofing & Waterproofing checks the symptom, affected fixture or pipe route, water pressure and urgency before recommending repair, replacement, cleaning or pump-related work.",
       umbrellaReason: "Plumbing and water pump services were previously spread across related source sites, so this page groups them into one clearer service path.",
-      ctaText: "Call or WhatsApp Boon Chye with your plumbing issue, photos and property location so the team can advise the next inspection or repair step.",
+      ctaText: "Call or WhatsApp Perfect Roofing & Waterproofing with your plumbing issue, photos and property location so the team can advise the next inspection or repair step.",
     },
     detailArticle: {
       introTitle: "When Do You Need Plumbing or Water Pump Help?",
@@ -141,7 +140,7 @@ export const services = [
       timingParagraphs: [
         "If the leak repeats, pressure drops, drainage slows or the pump keeps cycling, the team should inspect the source before recommending repair, replacement or cleaning work.",
       ],
-      benefitsText: "Boon Chye keeps plumbing, water tank and water pump support in one flow so customers can describe the issue once and get routed to the right repair scope.",
+      benefitsText: "Perfect Roofing & Waterproofing keeps plumbing, water tank and water pump support in one flow so customers can describe the issue once and get routed to the right repair scope.",
     },
     visualSigns: [
       { title: "Pipe Leaks", text: "Water marks or dripping.", image: "/images/gallery/generated/plumbing-water-pump-01.webp" },
@@ -196,9 +195,9 @@ export const services = [
     budgetRange: "Quotation after site inspection",
     detailCopy: {
       coverageIntro: "This service covers electrical maintenance, wiring, plug points, lighting, fuse box issues and lightning protection for residential and commercial properties.",
-      handling: "Boon Chye checks the affected circuit, fixture, switchboard or installation point before recommending the safest repair, replacement or wiring scope.",
+      handling: "Perfect Roofing & Waterproofing checks the affected circuit, fixture, switchboard or installation point before recommending the safest repair, replacement or wiring scope.",
       umbrellaReason: "Electrical support is grouped under the umbrella site so customers can coordinate related renovation, plumbing or repair work with fewer handoffs.",
-      ctaText: "Call or WhatsApp Boon Chye with your electrical issue, photos and location so the team can advise the next inspection or quotation step.",
+      ctaText: "Call or WhatsApp Perfect Roofing & Waterproofing with your electrical issue, photos and location so the team can advise the next inspection or quotation step.",
     },
     detailArticle: {
       introTitle: "When Do You Need Electrical Service?",
@@ -213,7 +212,7 @@ export const services = [
       timingParagraphs: [
         "If a circuit trips repeatedly, a fixture overheats, a plug point becomes loose or new wiring is needed, the team should inspect the condition before confirming the safe work scope.",
       ],
-      benefitsText: "Boon Chye keeps electrical work connected to the wider contractor flow, which helps when electrical items are part of renovation, repair or waterproofing jobs.",
+      benefitsText: "Perfect Roofing & Waterproofing keeps electrical work connected to the wider contractor flow, which helps when electrical items are part of renovation, repair or waterproofing jobs.",
     },
     visualSigns: [
       { title: "Fuse Trips", text: "Repeated circuit problems.", image: "/images/gallery/generated/electrical-01.webp" },
@@ -268,9 +267,9 @@ export const services = [
     budgetRange: "Quotation after site discussion",
     detailCopy: {
       coverageIntro: "This service covers planned renovation and improvement work for kitchens, bathrooms, plaster ceilings, painting, doors, windows, glass and home extensions.",
-      handling: "Boon Chye reviews the space, requested scope, materials, sequencing and related trades before preparing a practical renovation quotation.",
+      handling: "Perfect Roofing & Waterproofing reviews the space, requested scope, materials, sequencing and related trades before preparing a practical renovation quotation.",
       umbrellaReason: "Renovation often overlaps with plumbing, electrical, roofing and waterproofing work, so it fits naturally inside the same contractor flow.",
-      ctaText: "Call or WhatsApp Boon Chye with your renovation idea, photos and property location so the team can advise the next site discussion or quotation step.",
+      ctaText: "Call or WhatsApp Perfect Roofing & Waterproofing with your renovation idea, photos and property location so the team can advise the next site discussion or quotation step.",
     },
     detailArticle: {
       introTitle: "When Do You Need Renovation Support?",
@@ -285,7 +284,7 @@ export const services = [
       timingParagraphs: [
         "If the work involves multiple trades, material choices, site constraints or extension planning, a site discussion helps define the right sequence and quotation before work begins.",
       ],
-      benefitsText: "Boon Chye keeps renovation under the same umbrella so customers can coordinate related plumbing, electrical, waterproofing and repair work with one team.",
+      benefitsText: "Perfect Roofing & Waterproofing keeps renovation under the same umbrella so customers can coordinate related plumbing, electrical, waterproofing and repair work with one team.",
     },
     visualSigns: [
       { title: "Kitchen Works", text: "Cabinets and upgrades.", image: "/images/gallery/generated/renovation-01.webp" },
@@ -340,9 +339,9 @@ export const services = [
     budgetRange: "Quotation after blockage or site assessment",
     detailCopy: {
       coverageIntro: "This service covers sewerage blockages, drainage maintenance, grease trap cleaning, desludging, water jetting and CCTV drain inspection.",
-      handling: "Boon Chye checks the blockage symptom, access point, drainage condition and site use before recommending cleaning, jetting, CCTV inspection or desludging.",
+      handling: "Perfect Roofing & Waterproofing checks the blockage symptom, access point, drainage condition and site use before recommending cleaning, jetting, CCTV inspection or desludging.",
       umbrellaReason: "Sewerage and drainage support is grouped here so urgent blockage and maintenance enquiries can be routed clearly from one service page.",
-      ctaText: "Call or WhatsApp Boon Chye with your blockage issue, photos and location so the team can advise the next inspection or clearing step.",
+      ctaText: "Call or WhatsApp Perfect Roofing & Waterproofing with your blockage issue, photos and location so the team can advise the next inspection or clearing step.",
     },
     detailArticle: {
       introTitle: "When Do You Need Sewerage or Drainage Service?",
@@ -357,7 +356,7 @@ export const services = [
       timingParagraphs: [
         "If the same drain blocks repeatedly, sewage backs up, grease trap capacity is affected or the cause is unclear, the team should inspect the access point before confirming the correct clearing method.",
       ],
-      benefitsText: "Boon Chye keeps drainage, sewerage, grease trap and desludging support together so customers can explain the site issue once and get routed to the right crew.",
+      benefitsText: "Perfect Roofing & Waterproofing keeps drainage, sewerage, grease trap and desludging support together so customers can explain the site issue once and get routed to the right crew.",
     },
     visualSigns: [
       { title: "Blocked Lines", text: "Sewerage or drain backup.", image: "/images/gallery/generated/sewerage-drainage-01.webp" },
@@ -571,10 +570,10 @@ export const testimonials = [
 export const faqs = [
   {
     question: "Do you handle urgent roof leaks and plumbing issues?",
-    answer: "Yes. Boon Chye supports urgent roof leaking, plumbing and sewerage issues across KL and Selangor. Call or WhatsApp with photos and your location so the team can advise faster.",
+    answer: "Yes. Perfect Roofing & Waterproofing supports urgent roof leaking, plumbing and sewerage issues across KL and Selangor. Call or WhatsApp with photos and your location so the team can advise faster.",
   },
   {
-    question: "Can Boon Chye handle multiple repair services?",
+    question: "Can Perfect Roofing & Waterproofing handle multiple repair services?",
     answer: "Yes. The team covers roof leaking, waterproofing, plumbing, electrical, renovation, sewerage and drainage work, so related issues can be inspected and quoted together where practical.",
   },
   {
@@ -583,7 +582,7 @@ export const faqs = [
   },
   {
     question: "Which areas do you cover?",
-    answer: "Boon Chye covers Kuala Lumpur, Selangor and Klang Valley areas including Subang Jaya, Petaling Jaya, Puchong, Shah Alam, Cheras, Ampang, Kepong, Seri Kembangan and nearby locations.",
+    answer: "Perfect Roofing & Waterproofing covers Kuala Lumpur, Selangor and Klang Valley areas including Subang Jaya, Petaling Jaya, Puchong, Shah Alam, Cheras, Ampang, Kepong, Seri Kembangan and nearby locations.",
   },
   {
     question: "Do waterproofing works include toilets and kitchens?",

@@ -1,4 +1,4 @@
-# Perfect Roofting foundation roadmap
+# Perfect Roofing & Waterproofing foundation roadmap
 
 Assessment date: 2026-09-23
 
@@ -13,7 +13,7 @@ This is a non-destructive technical assessment of the existing Astro site. It do
 - Hashing 434 image files found 178 duplicate groups and about 68.5 MiB of reclaimable duplicate data.
 - The deployed asset set includes several multi-megabyte images plus a 568.7 KiB Webflow JavaScript bundle.
 - Contact-page form controls lack programmatic labels; several navigation/focus behaviours rely on Webflow JavaScript and non-native controls.
-- Canonicals, Open Graph URLs, sitemap URLs, and robots sitemap reference the old Boon Chye domain. The Perfect Roofting production domain is **TBC — production domain required**.
+- Canonicals, Open Graph URLs, sitemap URLs, and robots sitemap reference the old Boon Chye domain. The Perfect Roofing & Waterproofing production domain is **TBC — production domain required**.
 - Astro redirect pages become HTTP 200 meta-refresh pages in the static Worker deployment instead of true HTTP redirects.
 
 ## Dependency and security assessment
@@ -193,9 +193,9 @@ Priority functional findings:
 - Validation: deterministic local and CI runs, failure injection, branch protection review, and least-privilege credentials.
 - Rollback: disable only the faulty check while retaining reproducible local commands; never bypass all release verification.
 
-### Phase 11 — Perfect Roofting content and visual revamp
+### Phase 11 — Perfect Roofing & Waterproofing content and visual revamp
 
-- Objective: replace inherited Boon Chye presentation with owner-approved Perfect Roofting branding, content, services, media, and domain.
+- Objective: replace inherited Boon Chye presentation with owner-approved Perfect Roofing & Waterproofing branding, content, services, media, and domain.
 - Files/components: all pages/components, `site.ts`, design tokens/CSS, images, metadata, legal pages, sitemap/robots, analytics.
 - Risk: high; business accuracy, conversion, accessibility, SEO, and brand consistency change together.
 - Validation: owner fact sheet, design approval, content/legal approval, full responsive/accessibility/SEO/performance QA, staging sign-off, and exact-commit production release.
@@ -204,4 +204,3 @@ Priority functional findings:
 ## Recommended next implementation task
 
 Create a focused Phase 1 branch for the non-forced compatible dependency update batch shown by `npm audit fix --dry-run`. Verify the build and every staging route, then reassess the remaining advisories. Do not combine that work with Astro 7; treat the major migration as a separately scoped change with visual and route regression coverage.
-

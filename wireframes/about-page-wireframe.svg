@@ -10,7 +10,7 @@
   <rect class="label" x="18" y="18" width="34" height="34" rx="5"/><text class="labelText" x="35" y="42" text-anchor="middle">1</text>
   <rect class="panel" x="64" y="18" width="1086" height="74" rx="5"/>
   <rect class="soft" x="88" y="34" width="74" height="42"/><path class="line" d="M88 34l74 42M162 34L88 76"/>
-  <text class="h3" x="182" y="61">Boon Chye logo</text>
+  <text class="h3" x="182" y="61">Perfect Roofing &amp; Waterproofing logo</text>
   <text class="nav" x="414" y="61">Home</text>
   <text class="nav" x="496" y="61">About</text>
   <text class="nav" x="578" y="61">Services v</text>
@@ -23,7 +23,7 @@
   <rect class="panel" x="64" y="118" width="1086" height="440" rx="5"/>
   <rect class="dash" x="84" y="138" width="1046" height="400" rx="8"/>
   <text class="small" x="607" y="228" text-anchor="middle">about us</text>
-  <text class="h1" x="607" y="296" text-anchor="middle">About Boon Chye</text>
+  <text class="h1" x="607" y="296" text-anchor="middle">About Perfect Roofing &amp; Waterproofing</text>
   <text class="p" x="607" y="342" text-anchor="middle">Unified website for roof leaking, plumbing, electrical, renovation,</text>
   <text class="p" x="607" y="368" text-anchor="middle">waterproofing, sewerage and drainage services.</text>
   <path class="thin" d="M120 500q220-110 420 0t420 0t150-25"/>
@@ -59,7 +59,7 @@
   <!-- 4 Inline about CTA -->
   <rect class="label" x="18" y="1264" width="34" height="34" rx="5"/><text class="labelText" x="35" y="1288" text-anchor="middle">4</text>
   <rect class="panel" x="64" y="1264" width="1086" height="160" rx="5"/>
-  <text class="h2" x="92" y="1332">One clear Boon Chye website, built from nine overlapping source sites.</text>
+  <text class="h2" x="92" y="1332">One clear Perfect Roofing &amp; Waterproofing website, built from nine overlapping source sites.</text>
   <rect class="btnDark" x="914" y="1310" width="160" height="46" rx="6"/><text class="btnDarkText" x="994" y="1338" text-anchor="middle">View services</text>
 
   <!-- 5 What We Preserved / trustPoints cards -->

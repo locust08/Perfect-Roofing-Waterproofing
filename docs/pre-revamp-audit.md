@@ -1,4 +1,4 @@
-# Perfect Roofting pre-revamp audit
+# Perfect Roofing & Waterproofing pre-revamp audit
 
 Date: 2026-09-23
 
@@ -31,7 +31,7 @@ This document records the inherited baseline before technical foundation work. I
 | Legacy frontend | Webflow-generated CSS/JavaScript and jQuery-era resources remain in the project. | Classify usage before removing or replacing them. |
 | Accessibility | Forms and inherited templates contain label, semantics, focus, heading, and alternative-text issues requiring a dedicated audit. | Prioritize functional accessibility fixes without changing the visual design prematurely. |
 | SEO/legal | Sitemap, canonical, redirect, and legal-page coverage require verification. | Preserve current behaviour until the final domain and business requirements are confirmed. |
-| Business information | Company identity, service claims, contact details, legal text, and geographic coverage have not been owner-verified for Perfect Roofting. | Obtain owner approval before changing or publishing business content. |
+| Business information | Company identity, service claims, contact details, legal text, and geographic coverage have not been owner-verified for Perfect Roofing & Waterproofing. | Obtain owner approval before changing or publishing business content. |
 
 ## Security handling
 

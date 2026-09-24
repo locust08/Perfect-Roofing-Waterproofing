@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Migrate the static Perfect Roofting site from Astro 5.18.2 through Astro 6 to Astro 7.3.4, eliminating the remaining dependency audit findings without changing design, content, routes, or Cloudflare deployment architecture.
+**Goal:** Migrate the static Perfect Roofing & Waterproofing site from Astro 5.18.2 through Astro 6 to Astro 7.3.4, eliminating the remaining dependency audit findings without changing design, content, routes, or Cloudflare deployment architecture.
 
 **Architecture:** Keep Astro's `output: "static"` build and continue publishing `dist/` through Cloudflare Workers Static Assets. Upgrade one Astro major at a time, require a successful 22-page build at the Astro 6 checkpoint, commit it, then repeat validation on Astro 7.
 

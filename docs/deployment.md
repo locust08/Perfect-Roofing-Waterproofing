@@ -1,4 +1,4 @@
-# Perfect Roofting deployment guide
+# Perfect Roofing & Waterproofing deployment guide
 
 Date: 2026-09-23
 
@@ -7,7 +7,7 @@ Date: 2026-09-23
 | Environment | Source | Destination | Purpose |
 | --- | --- | --- | --- |
 | Local | Feature branch or `revamp-foundation` | Developer machine | Implementation and local QA |
-| Preview/staging | `revamp-foundation` after verification | `perfect-roofting.easondev.workers.dev` | Cloudflare and stakeholder verification |
+| Preview/staging | `revamp-foundation` after verification | `perfect-roofing-waterproofing.easondev.workers.dev` | Cloudflare and stakeholder verification |
 | Production | `main` after explicit approval | **TBC — production Worker/domain required** | Approved public release only |
 
 No production domain is connected. Do not use the current preview/staging Worker as the final production release target.
@@ -46,7 +46,7 @@ npm run preview:cloudflare
 
 ## Preview/staging deployment
 
-`wrangler.jsonc` is the source of truth. It selects the authenticated Cloudflare account, names the Worker `perfect-roofting`, and publishes `dist/` using Workers Static Assets.
+`wrangler.jsonc` is the source of truth. It selects the authenticated Cloudflare account, names the Worker `perfect-roofing-waterproofing`, and publishes `dist/` using Workers Static Assets.
 
 The current workflow uses Wrangler's existing OAuth login; it does not require a Doppler API token. Before deploying from a new machine or shell, run `npx wrangler whoami` and confirm that the login can access **Eason CF Main**. The non-secret account ID pinned in `wrangler.jsonc` prevents Wrangler from silently choosing the other account available to this login. If authentication is absent or that account is unavailable, stop and restore the approved Wrangler login rather than substituting a different account or credential.
 
@@ -65,7 +65,7 @@ npm run deploy
 Production configuration is intentionally absent. Before the first production release:
 
 1. Confirm the final production domain and verified business information.
-2. Confirm a production Worker/environment isolated from `perfect-roofting` preview/staging.
+2. Confirm a production Worker/environment isolated from `perfect-roofing-waterproofing` preview/staging.
 3. Add production-only Wrangler configuration and secrets without reusing staging secrets.
 4. Verify the exact commit on preview/staging.
 5. Merge the approved pull request to `main`.
@@ -92,7 +92,7 @@ Do not merge branches automatically. `main` preserves the accepted baseline/rele
 
 ## Doppler usage
 
-Doppler authentication is available, and the currently reachable runtime config is development-like. This folder does not yet have a directory-scoped Doppler project/config selection, so deployments must not assume that the implicit shared scope belongs to Perfect Roofting.
+Doppler authentication is available, and the currently reachable runtime config is development-like. This folder does not yet have a directory-scoped Doppler project/config selection, so deployments must not assume that the implicit shared scope belongs to Perfect Roofing & Waterproofing.
 
 Before secret-dependent work, confirm and scope a dedicated project/config for local development and preview/staging. Use `doppler run -- <command>` so values remain in the process environment. Never print, commit, or place private values in `wrangler.jsonc`, `.env`, client JavaScript, build logs, or documentation. Production must use a separately approved configuration.
 
@@ -100,7 +100,7 @@ Before secret-dependent work, confirm and scope a dedicated project/config for l
 
 For a bad preview/staging deployment:
 
-1. Stop further deployment work and identify the last healthy Worker version with `npx wrangler deployments list --name perfect-roofting`.
+1. Stop further deployment work and identify the last healthy Worker version with `npx wrangler deployments list --name perfect-roofing-waterproofing`.
 2. Use `npx wrangler rollback <version-id>` for an immediate Cloudflare rollback when appropriate.
 3. Revert the offending Git commit on its working branch, rebuild, and redeploy so source control again matches the live Worker.
 4. Re-run route, asset, browser-console, and 404 checks.
