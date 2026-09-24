@@ -5,7 +5,7 @@ const limit = Astro.props.limit ?? services.length;
 <div class="w-dyn-list">
   <div class="service-list w-dyn-items" role="list">
     {services.slice(0, limit).map((service) => (
-      <div class="w-dyn-item" role="listitem">
+      <div class="w-dyn-item service-grid-item" role="listitem">
         <div class="single-service" data-w-id="52ca6c80-044d-e7a0-139b-3e972dac8bc4">
           <div class="service-top">
             <p class="service-number">{service.number}</p>
