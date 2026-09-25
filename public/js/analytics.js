@@ -11,6 +11,8 @@ const eventNames = new Set([
   "service_view",
 ]);
 
+const siteName = "Perfect Roofing & Waterproofing";
+
 const safeDimensions = new Set([
   "lead_id",
   "form_id",
@@ -20,23 +22,58 @@ const safeDimensions = new Set([
   "service_slug",
 ]);
 
+function safeEvent(eventName, details = {}) {
+  if (!eventNames.has(eventName)) return null;
+
+  const event = { event: eventName };
+  Object.entries(details).forEach(([key, value]) => {
+    if (!safeDimensions.has(key) || typeof value !== "string") return;
+    const safeValue = value.trim().slice(0, 128);
+    if (safeValue) event[key] = safeValue;
+  });
+  return event;
+}
+
 export function createDataLayerTracker(dataLayer) {
   return (eventName, details = {}) => {
-    if (!eventNames.has(eventName)) return;
-
-    const event = { event: eventName };
-    Object.entries(details).forEach(([key, value]) => {
-      if (!safeDimensions.has(key) || typeof value !== "string") return;
-      const safeValue = value.trim().slice(0, 128);
-      if (safeValue) event[key] = safeValue;
-    });
+    const event = safeEvent(eventName, details);
+    if (!event) return;
     dataLayer.push(event);
   };
 }
 
+export function createPostHogTracker(capture, hostname) {
+  return (eventName, details = {}) => {
+    const event = safeEvent(eventName, details);
+    if (!event) return;
+    const { event: name, ...properties } = event;
+    capture(name, {
+      ...properties,
+      site_name: siteName,
+      hostname: String(hostname || "").slice(0, 255),
+    });
+  };
+}
+
+export function flushPostHogEvents(capture, hostname) {
+  const queue = window.__perfectPostHogQueue || [];
+  window.__perfectPostHogQueue = [];
+  const track = createPostHogTracker(capture, hostname);
+  queue.forEach(({ event, ...details }) => track(event, details));
+}
+
 export function trackEvent(eventName, details = {}) {
   window.dataLayer = window.dataLayer || [];
+  const event = safeEvent(eventName, details);
+  if (!event) return;
   createDataLayerTracker(window.dataLayer)(eventName, details);
+
+  if (window.posthog && typeof window.posthog.capture === "function") {
+    createPostHogTracker(window.posthog.capture.bind(window.posthog), window.location.hostname)(eventName, details);
+  } else {
+    window.__perfectPostHogQueue = window.__perfectPostHogQueue || [];
+    window.__perfectPostHogQueue.push(event);
+  }
 }
 
 function clickArea(target) {
@@ -103,7 +140,7 @@ export function initAutomaticEvents() {
 }
 
 if (typeof window !== "undefined") {
-  window.PerfectRoofingAnalytics = { formDetails, initAutomaticEvents, trackEvent };
+  window.PerfectRoofingAnalytics = { flushPostHogEvents, formDetails, initAutomaticEvents, trackEvent };
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initAutomaticEvents, { once: true });
   } else {

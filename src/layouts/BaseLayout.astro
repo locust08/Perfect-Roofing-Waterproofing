@@ -57,6 +57,12 @@ const openGraphImage = brand.productionUrl
     <script src="/js/webflow.js" type="text/javascript"></script>
     <script type="module" src="/js/analytics.js"></script>
     <script>
+      import posthog from "posthog-js";
+      import { initializePostHog } from "../scripts/posthog";
+
+      void initializePostHog({ client: posthog, fetcher: window.fetch.bind(window), browserWindow: window });
+    </script>
+    <script>
       import { attributionForConversion, captureFirstTouchAttribution } from "../scripts/attribution";
 
       (() => {

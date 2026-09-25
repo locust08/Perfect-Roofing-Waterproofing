@@ -27,6 +27,8 @@ export interface EnquiryEnv {
   RESEND_API_KEY?: string;
   LEAD_RECIPIENT_EMAIL?: string;
   LEAD_SENDER_EMAIL?: string;
+  POSTHOG_PROJECT_TOKEN?: string;
+  POSTHOG_HOST?: string;
 }
 
 interface EnquiryDependencies {
@@ -89,6 +91,21 @@ function json(payload: unknown, status: number, extraHeaders: Record<string, str
 function readString(source: Record<string, unknown>, key: string) {
   const value = source[key];
   return typeof value === "string" ? value.trim() : "";
+}
+
+function postHogConfig(env: EnquiryEnv) {
+  const projectToken = env.POSTHOG_PROJECT_TOKEN?.trim();
+  if (!projectToken) {
+    return new Response(null, {
+      status: 204,
+      headers: { ...responseHeaders, "Content-Type": "text/plain; charset=utf-8" },
+    });
+  }
+
+  return json({
+    projectToken,
+    host: env.POSTHOG_HOST?.trim() || "https://us.i.posthog.com",
+  }, 200);
 }
 
 function emptyAttribution(): Attribution {
@@ -428,6 +445,10 @@ export async function handleRequest(
 export default {
   async fetch(request: Request, env: EnquiryEnv) {
     const url = new URL(request.url);
+    if (url.pathname === "/api/posthog-config") {
+      if (request.method !== "GET") return json({ ok: false, error: "method_not_allowed" }, 405, { Allow: "GET" });
+      return postHogConfig(env);
+    }
     if (url.pathname === "/api/enquiries") {
       return handleRequest(request, env);
     }

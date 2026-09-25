@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { handleRequest, type EnquiryEnv } from "../worker/index";
+import worker, { handleRequest, type EnquiryEnv } from "../worker/index";
 
 const validSubmission = {
   name: "Test Customer",
@@ -193,5 +193,25 @@ describe("POST /api/enquiries", () => {
     expect(text).not.toContain(validSubmission.name);
     expect(text).not.toContain(validSubmission.email);
     expect(text).not.toContain(validSubmission.phone);
+  });
+});
+
+describe("GET /api/posthog-config", () => {
+  it("returns only the browser-safe shared project configuration", async () => {
+    const response = await worker.fetch(
+      new Request("https://perfect-roofing-waterproofing.easondev.workers.dev/api/posthog-config"),
+      {
+        ...env(),
+        POSTHOG_PROJECT_TOKEN: "phc_shared_project",
+        POSTHOG_HOST: "https://us.i.posthog.com",
+      },
+    );
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get("cache-control")).toBe("no-store");
+    expect(await response.json()).toEqual({
+      projectToken: "phc_shared_project",
+      host: "https://us.i.posthog.com",
+    });
   });
 });
