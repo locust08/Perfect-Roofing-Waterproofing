@@ -5,10 +5,18 @@ import ServiceList from "../components/ServiceList.astro";
 import { brand, faqs, projectImages, services, testimonials, trustPoints } from "../data/site";
 
 const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
+const processSteps = [
+  { title: "Contact Us via WhatsApp or Call", text: "Share your location, roof concern, and photos so we can understand what needs attention." },
+  { title: "Schedule a Free Consultation", text: "We arrange a convenient time to discuss the leak, roof work, or waterproofing need." },
+  { title: "Site Inspection & Assessment", text: "Our team checks the affected area and identifies the likely cause before recommending work." },
+  { title: "Quotation & Repair Plan", text: "We explain the proposed solution and provide a clear quotation for your approval." },
+  { title: "Repair & Solution Implementation", text: "Our roofing team carries out the agreed repair, installation, or waterproofing work." },
+  { title: "Final Checking & Completion", text: "We review the finished work and check the repaired area before completion." },
+];
 ---
 <BaseLayout
-  title="Perfect Roofing & Waterproofing Contractor Services"
-  description="Perfect Roofing & Waterproofing contractor services for roof leaking, waterproofing, plumbing, electrical, renovation, sewerage and drainage work in KL and Selangor."
+  title="Perfect Roofing & Waterproofing | Roofing Specialists in KL & Selangor"
+  description="Roof repair, roof installation, maintenance, and waterproofing services across Kuala Lumpur and Selangor from Perfect Roofing & Waterproofing."
 >
   <section class="hero-section home">
     <img alt="Sky background" class="sky-bg" loading="lazy" src="/images/Sky.svg" />
@@ -17,16 +25,15 @@ const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
         <div class="hero-content-wrapper" data-w-id="610939f4-60e3-968d-4b41-565332ab7711">
           <div class="hero-content-left">
             <div class="hero-top-content" data-w-id="4cdf8785-4f09-71ec-c480-bb8d669951b1" style="opacity:1">
-              <p class="hero-label">one-stop contractor in KL & Selangor</p>
               <div class="title-wrapper">
-                <h1 class="display-heading-01">Perfect Roofing & Waterproofing Contractor Services</h1>
-                <p class="hero-subtitle home">Reliable repairs and renovation support for homes and businesses across KL and Selangor, from roof leaks and waterproofing to plumbing, electrical, drainage and general works.</p>
+                <h1 class="display-heading-01">Your Trusted Experts for Roofing & Waterproofing in KL & Selangor</h1>
+                <p class="hero-subtitle home">Reliable roof repair and waterproofing solutions backed by decades of industry experience.</p>
               </div>
             </div>
             <div class="hero-bottom-content" data-w-id="941497c9-4a24-2891-d5d5-ca61040f5106" style="opacity:1">
               <div class="hero-button-wrapper">
-                <a class="button-style-01 w-button" href="/contact">Get a free quote</a>
-                <a class="button-style-02 w-button" href="/service">Explore services</a>
+                <a class="button-style-01 w-button" href="/contact">Request for Quotation</a>
+                <a class="button-style-02 w-button" href="/service">Explore Our Services</a>
               </div>
               <div class="call-wrapper whatsapp-contact">
                 <div class="call-title-wrapper">
@@ -42,8 +49,8 @@ const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
           <div class="hero-right-content" data-w-id="5c69c059-55ad-2ec6-0e08-0dc5e7c15336" style="opacity:1">
             <img alt="Verified service mark" class="verified-logo" loading="lazy" src="/images/Group-3.svg" />
             <div class="varified-title-wrapper">
-              <h4>20+</h4>
-              <p class="verified-subtitle">Years of hands-on repair and renovation experience across KL and Selangor.</p>
+              <h4>31 Years</h4>
+              <p class="verified-subtitle">Industry experience in roofing and waterproofing solutions.</p>
             </div>
           </div>
         </div>
@@ -75,25 +82,26 @@ const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
     <div class="w-layout-blockcontainer container-large about section-padding w-container">
       <div class="w-layout-blockcontainer container w-container">
         <div class="about-content-wrapper">
-          <img alt="Roof and property repair work" class="about-image" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px" src="/images/red-roof-with-clouds.png" srcset="/images/red-roof-with-clouds-p-500.png 500w, /images/red-roof-with-clouds-p-800.png 800w, /images/red-roof-with-clouds-p-1080.png 1080w, /images/red-roof-with-clouds.png 1380w" style="opacity:1" />
+          <img alt="Residential roof" class="about-image" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px" src="/images/red-roof-with-clouds.png" srcset="/images/red-roof-with-clouds-p-500.png 500w, /images/red-roof-with-clouds-p-800.png 800w, /images/red-roof-with-clouds-p-1080.png 1080w, /images/red-roof-with-clouds.png 1380w" style="opacity:1" />
           <div class="about-content">
             <div class="title-wrapper" style="opacity:1">
-              <h2 class="section-title">One contractor team <span class="highlight-title">for property repairs.</span></h2>
-              <p class="section-subtitle about">From urgent leaks to planned renovation work, Perfect Roofing & Waterproofing helps property owners coordinate the right trade team, inspect the issue clearly and complete repairs with practical, transparent recommendations.</p>
+              <h2 class="section-title">Roofing & Waterproofing Solutions <span class="highlight-title">You Can Rely On.</span></h2>
+              <p class="section-subtitle about">With 31 years of industry experience, Perfect Roofing & Waterproofing helps homeowners protect their properties through dependable roof repair and waterproofing solutions.</p>
+              <p class="section-subtitle about">From leaks and routine maintenance to waterproofing and roof replacement, we inspect the problem and recommend practical work suited to your roof.</p>
             </div>
             <div class="about-icon-box-wrapper" style="opacity:1">
               <div class="single-about-icon-box">
-                <img alt="Tool icon" class="about-icon" loading="lazy" src="/images/Circular-Saw-Tool-1.png" />
+                <img alt="Roof waterproofing" class="about-icon" loading="lazy" src="/images/roof.png" />
                 <div class="about-icon-box-title-wrapper">
-                  <h4>Free Inspection</h4>
-                  <p>Share your issue and location so the team can assess the right repair path before quotation.</p>
+                  <h4>Free Consultation</h4>
+                  <p>Tell us about your roofing or waterproofing concern and we will help plan the next step.</p>
                 </div>
               </div>
               <div class="single-about-icon-box">
-                <img alt="Construction icon" class="about-icon" loading="lazy" src="/images/Construction-Helmet-Tool.png" />
+                <img alt="Quotation icon" class="about-icon" loading="lazy" src="/images/Construction-Helmet-Tool.png" />
                 <div class="about-icon-box-title-wrapper">
-                  <h4>No Hidden Costs</h4>
-                  <p>Clear scope, practical recommendations and transparent pricing before work begins.</p>
+                  <h4>No Hidden Fees</h4>
+                  <p>Receive a clear scope and quotation before roofing or waterproofing work begins.</p>
                 </div>
               </div>
             </div>
@@ -109,7 +117,7 @@ const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
         <div class="section-header" style="opacity:1">
           <div class="title-wrapper style-02">
             <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Get help for common property issues through one experienced team, including roof leaks, waterproofing, plumbing, electrical, renovation, sewerage and drainage work.</p>
+            <p class="section-subtitle">Explore roof leak repair, replacement, maintenance, new installation, waterproofing, and PU injection solutions for homes and businesses.</p>
           </div>
           <div><a class="button-style-03 w-button" href="/service">View all</a></div>
         </div>
@@ -123,7 +131,7 @@ const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
       <div class="section-content-wrapper">
         <div class="title-wrapper style-02" style="opacity:1">
           <h2 class="section-title">Why Choose Perfect Roofing & Waterproofing?</h2>
-          <p class="section-subtitle">Property owners choose Perfect Roofing & Waterproofing for practical advice, clear quotations and dependable repair support across multiple trades.</p>
+          <p class="section-subtitle">Get practical roofing advice, clear quotations, and dependable leak repair and waterproofing support across Kuala Lumpur and Selangor.</p>
         </div>
         <div class="why-choose-card-wrapper" style="opacity:1">
           {trustPoints.map((point) => (
@@ -141,8 +149,8 @@ const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
     <div class="w-layout-blockcontainer container w-container">
       <div class="section-content-wrapper">
         <div class="title-wrapper style-02" style="opacity:1">
-          <h2 class="section-title">Project Gallery</h2>
-          <p class="section-subtitle">View examples of roof repair, waterproofing, renovation and property maintenance work completed for homes and commercial sites.</p>
+          <h2 class="section-title">Our Roofing & Waterproofing Projects</h2>
+          <p class="section-subtitle">Explore roof repairs, inspections, installations, replacements, and waterproofing work for residential and commercial properties.</p>
         </div>
         <div class="project-gallery w-slider" data-animation="slide" data-autoplay="false" data-duration="500" data-hide-arrows="false" data-infinite="true" style="opacity:1">
           <div class="project-gallery-mask w-slider-mask">
@@ -157,10 +165,10 @@ const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
           <div class="testimonial-slider-nav w-slider-nav w-slider-nav-invert w-round"></div>
         </div>
         <div class="metrics" style="opacity:1">
-          <div class="single-metrics"><h2 class="metrics-title js-count" data-count-target="20" data-count-suffix="+">20+</h2><p class="metrics-subtitle">years of hands-on experience</p></div>
-          <div class="single-metrics"><h2 class="metrics-title js-count" data-count-target="24" data-count-suffix="/7">24/7</h2><p class="metrics-subtitle">WhatsApp support for urgent enquiries</p></div>
-          <div class="single-metrics"><h2 class="metrics-title js-count" data-count-target="5">5</h2><p class="metrics-subtitle">core service categories</p></div>
-          <div class="single-metrics last"><h2 class="metrics-title">KL</h2><p class="metrics-subtitle">and Selangor service coverage</p></div>
+          <div class="single-metrics"><h2 class="metrics-title js-count" data-count-target="31" data-count-suffix=" Years" data-count-duration="1600">31 Years</h2><p class="metrics-subtitle">Industry Experience</p></div>
+          <div class="single-metrics"><h2 class="metrics-title js-count" data-count-target="24" data-count-suffix="/7" data-count-duration="1600">24/7</h2><p class="metrics-subtitle">Emergency Support</p></div>
+          <div class="single-metrics"><h2 class="metrics-title js-count" data-count-target="6" data-count-duration="1600">6</h2><p class="metrics-subtitle">Core Roofing & Waterproofing Services</p></div>
+          <div class="single-metrics last"><h2 class="metrics-title">KL & Selangor</h2><p class="metrics-subtitle">Service Coverage</p></div>
         </div>
       </div>
     </div>
@@ -172,17 +180,19 @@ const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
         <div class="section-content-wrapper">
           <div class="title-wrapper style-02" style="opacity:1">
             <h2 class="section-title">How Perfect Roofing & Waterproofing Works</h2>
-            <p class="section-subtitle">A practical service flow based on Perfect Roofing & Waterproofing's roofing, waterproofing, plumbing, electrical, renovation and sewerage support across KL and Selangor.</p>
+            <p class="section-subtitle">A clear path from your first call to the final check, with an inspection and quotation before roofing or waterproofing work begins.</p>
           </div>
-          <div class="how-it-works-content-wrapper" style="opacity:1">
-            <div class="how-it-works-content-left">
-              <div class="single-process"><div class="point-wrapper"><div class="circle-point"><img alt="Process step icon" class="point-icon" loading="lazy" src="/images/Group-1597884498-1.svg" /></div></div><div class="process-title-wrapper"><h4 class="process-title">Call or WhatsApp</h4><p class="process-subtitle">Send your photos, location and service needed, whether it is roof leaking, waterproofing, plumbing, electrical, renovation or sewerage work.</p></div></div>
-              <div class="single-process"><div class="point-wrapper"><div class="circle-point"><img alt="Process step icon" class="point-icon" loading="lazy" src="/images/Group-1597884498-1.svg" /></div></div><div class="process-title-wrapper"><h4 class="process-title">Inspection & Quotation</h4><p class="process-subtitle">The team checks the site condition, explains the recommended repair method and provides a clear quotation before work begins.</p></div></div>
-              <div class="single-process"><div class="point-wrapper"><div class="circle-point"><img alt="Process step icon" class="point-icon" loading="lazy" src="/images/Group-1597884498-1.svg" /></div></div><div class="process-title-wrapper"><h4 class="process-title">Repair & Follow-Up</h4><p class="process-subtitle">The relevant trade team completes the work, from leak repair to renovation or drainage service, with after-sales support where applicable.</p></div></div>
-              <div class="border-line"></div>
+          <div class="how-it-works-content-wrapper home-process" style="opacity:1">
+            <div class="how-it-works-content-left home-process-grid">
+              {processSteps.map((step) => (
+                <div class="single-process">
+                  <div class="point-wrapper"><div class="circle-point"><img alt="Process step icon" class="point-icon" loading="lazy" src="/images/Group-1597884498-1.svg" /></div></div>
+                  <div class="process-title-wrapper"><h4 class="process-title">{step.title}</h4><p class="process-subtitle">{step.text}</p></div>
+                </div>
+              ))}
             </div>
             <div class="process-image-wrapper">
-              <img alt="Perfect Roofing & Waterproofing site inspection process" class="process-image" loading="lazy" sizes="100vw" src="/images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam.png" srcset="/images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam-p-500.png 500w, /images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam-p-800.png 800w, /images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam-p-1080.png 1080w, /images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam.png 1100w" />
+              <img alt="Worker applying polyurethane foam insulation to a roof" class="process-image" loading="lazy" sizes="100vw" src="/images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam.png" srcset="/images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam-p-500.png 500w, /images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam-p-800.png 800w, /images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam-p-1080.png 1080w, /images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam.png 1100w" />
             </div>
           </div>
         </div>
@@ -194,7 +204,7 @@ const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
     <div class="w-layout-blockcontainer container w-container">
       <div class="section-content-wrapper">
         <div class="section-header" style="opacity:1">
-          <div class="title-wrapper style-02"><h2 class="section-title">What Clients Say</h2><p class="section-subtitle">Hear from customers who trusted Perfect Roofing & Waterproofing for roof leak repairs, waterproofing, plumbing, renovation and drainage work.</p></div>
+          <div class="title-wrapper style-02"><h2 class="section-title">What Clients Say</h2><p class="section-subtitle">Hear from customers who contacted Perfect Roofing & Waterproofing for roof leak repair, roofing advice, and waterproofing solutions.</p></div>
           <div><a class="button-style-03 w-button" href="/contact">Contact us</a></div>
         </div>
         <div class="testimonial-slider w-slider" data-animation="slide" data-autoplay="false" data-duration="500" data-hide-arrows="false" data-infinite="true" style="opacity:1">
@@ -205,7 +215,7 @@ const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
                   <div class="rating-icon-wrapper"><img alt="Star" loading="lazy" src="/images/star-1-3.svg" /><img alt="Star" loading="lazy" src="/images/star-1-3.svg" /><img alt="Star" loading="lazy" src="/images/star-1-3.svg" /><img alt="Star" loading="lazy" src="/images/star-1-3.svg" /><img alt="Star" loading="lazy" src="/images/star-1-3.svg" /></div>
                   <div class="testimonial-content-wrapper"><p class="testimonial-title">{item.title}</p><p class="testimonial-content">"{item.quote}"</p></div>
                   <div class="testimonial-author">
-                    <img alt={`${item.name} testimonial`} class="testimonial-author-image" loading="lazy" src={item.avatar} />
+                    <img alt="Google review" class="testimonial-author-image" loading="lazy" src={item.avatar} />
                     <div class="testimonial-author-details"><p class="testimonial-author-name">{item.name}</p><p class="testimonial-author-designation">{item.role}</p></div>
                   </div>
                 </div>
@@ -218,12 +228,12 @@ const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
     </div>
   </section>
 
-  <section class="faq-section padding-bottom">
+  <section class="faq-section padding-bottom" id="faq">
     <div class="w-layout-blockcontainer container w-container">
       <div class="faq-content-wrapper">
         <div class="faq-content-left">
-          <div class="title-wrapper testimonial"><h2 class="section-title">Frequently Asked Questions</h2><p class="section-subtitle style-03">Quick answers before you book an inspection, request a quotation or arrange repair work.</p></div>
-          <div class="faq-bottom-content"><div class="faq-bottom-title-wrapper"><p class="faq-contact-title">Need help with your property?</p><p>Contact Perfect Roofing & Waterproofing with your photos, location and service needed.</p></div><a class="button-style-01 w-button" href="/contact">Contact us</a></div>
+          <div class="title-wrapper testimonial"><h2 class="section-title">Frequently Asked Questions</h2><p class="section-subtitle style-03">Find answers about roof inspections, emergency leaks, replacement, waterproofing, PU injection, and our service area.</p></div>
+          <div class="faq-bottom-content"><div class="faq-bottom-title-wrapper"><p class="faq-contact-title">Need help with your roof?</p><p>Send Perfect Roofing & Waterproofing your location, photos, and a description of the leak or roof work.</p></div><a class="button-style-01 w-button" href="/contact">Request for Quotation</a></div>
         </div>
         <div class="faq-s">
           {faqs.map((faq, index) => (

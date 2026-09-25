@@ -6,19 +6,19 @@ import { absorbedServices, services } from "../data/site";
 ---
 <BaseLayout
   title="Services"
-  description="Explore Perfect Roofing & Waterproofing's consolidated services: roof leaking and waterproofing, plumbing and water pump, electrical, renovation, sewerage and drainage."
+  description="Explore six roof repair, replacement, installation, maintenance, waterproofing, and water leakage repair services in Kuala Lumpur and Selangor."
   path="/service"
 >
   <div class="service-themed-blueprint">
-    <HeroSimple label="our services" title="Consolidated Services" subtitle="Useful content from all nine source sites has been grouped into one practical service menu." />
+    <HeroSimple label="our services" title="Roofing & Waterproofing Services" subtitle="Practical roof repair, maintenance, installation, and waterproofing solutions across Kuala Lumpur and Selangor." />
 
     <section class="roof-product-section section-padding">
       <div class="w-layout-blockcontainer container w-container">
         <div class="section-content-wrapper">
           <div class="section-header style-03" style="opacity:1">
             <div class="title-wrapper style-02">
-              <h2 class="section-title">Service Coverage</h2>
-              <p class="section-subtitle">Grouped by the work customers actually search for, not by the old microsite structure.</p>
+              <h2 class="section-title">Our Six Core Services</h2>
+              <p class="section-subtitle">Start with the roofing or waterproofing service that best matches your concern. We can confirm the right scope after inspection.</p>
             </div>
           </div>
           <div class="roof-products" style="opacity:1">
@@ -47,8 +47,8 @@ import { absorbedServices, services } from "../data/site";
       <div class="w-layout-blockcontainer container w-container">
         <div class="section-content-wrapper">
           <div class="title-wrapper style-02" style="opacity:1">
-            <h2 class="section-title">All Absorbed Services</h2>
-            <p class="section-subtitle">The top of the page shows 5 umbrella categories. These are the individual services consolidated from the 9 old websites.</p>
+            <h2 class="section-title">What Each Service Covers</h2>
+            <p class="section-subtitle">Our team inspects the site and recommends a suitable repair, roof system, or waterproofing method before quotation.</p>
           </div>
           <div class="why-choose-card-wrapper" style="opacity:1">
             {absorbedServices.map((group) => (
@@ -62,7 +62,7 @@ import { absorbedServices, services } from "../data/site";
       </div>
     </section>
 
-    <CTA title="Not sure which service you need?" text="Call or WhatsApp Perfect Roofing & Waterproofing. The team can inspect the issue and route it to the right trade service." />
+    <CTA title="Not sure which roofing service you need?" text="Call or WhatsApp Perfect Roofing & Waterproofing with your location and photos. Our team can inspect the issue and recommend the next step." />
   </div>
 
   <style is:global>
@@ -109,14 +109,6 @@ import { absorbedServices, services } from "../data/site";
       transform: translateY(-4px);
     }
 
-    .service-themed-blueprint .single-roof-products:nth-child(4) {
-      grid-column: 2 / span 2;
-    }
-
-    .service-themed-blueprint .single-roof-products:nth-child(5) {
-      grid-column: 4 / span 2;
-    }
-
     .service-themed-blueprint .roof-product-image-wrapper {
       border-radius: 16px;
       aspect-ratio: 16 / 9;
@@ -156,13 +148,6 @@ import { absorbedServices, services } from "../data/site";
       box-shadow: 0 18px 45px #00000008;
     }
 
-    .service-themed-blueprint .absorbed-service-card:last-child {
-      grid-column: 1 / -1;
-      justify-self: center;
-      max-width: 720px;
-      width: 100%;
-    }
-
     .service-themed-blueprint .cta-section.padding {
       padding-top: 0;
       padding-bottom: 0;
@@ -175,9 +160,7 @@ import { absorbedServices, services } from "../data/site";
       }
 
       .service-themed-blueprint .single-roof-products,
-      .service-themed-blueprint .single-roof-products:nth-child(4),
-      .service-themed-blueprint .single-roof-products:nth-child(5),
-      .service-themed-blueprint .absorbed-service-card:last-child {
+      .service-themed-blueprint .single-roof-products {
         grid-column: auto;
       }
     }

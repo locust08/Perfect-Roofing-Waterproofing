@@ -1,5 +1,6 @@
 ---
 import { brand, footerContactDirectory, services } from "../data/site";
+const googleMapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
 ---
 <section class="footer-section padding-bottom">
   <div class="w-layout-blockcontainer container w-container">
@@ -8,8 +9,8 @@ import { brand, footerContactDirectory, services } from "../data/site";
         <div class="single-footer-link-wrapper">
           <p class="footer-link-title">About Us</p>
           <div class="footer-links-wrapper footer-about-wrapper">
-            <p class="footer-about-text">Perfect Roofing & Waterproofing provides reliable plumbing, waterproofing, renovation and sewerage solutions for homes and businesses across Malaysia.</p>
-            <span class="footer-brand-wordmark">{brand.shortName}</span>
+            <p class="footer-about-text">Perfect Roofing & Waterproofing provides roof repair, maintenance, installation, waterproofing, and water leakage solutions across Kuala Lumpur and Selangor.</p>
+            <a class="footer-brand-lockup" href="/"><img class="footer-brand-logo" src="/images/perfect-roofing-logo.png" alt={brand.name} /></a>
           </div>
         </div>
         <div class="single-footer-link-wrapper">
@@ -19,7 +20,7 @@ import { brand, footerContactDirectory, services } from "../data/site";
           </div>
         </div>
         <div class="single-footer-link-wrapper footer-contact-directory">
-          <p class="footer-link-title">Contact Directory</p>
+          <p class="footer-link-title">Call / WhatsApp</p>
           <div class="footer-links-wrapper footer-directory-wrapper">
             <div class="footer-directory-card">
               {footerContactDirectory.map((contact) => (
@@ -35,7 +36,7 @@ import { brand, footerContactDirectory, services } from "../data/site";
               </div>
               ))}
             </div>
-            <a class="footer-directory-link" href="/contact">View all service contacts</a>
+            <a class="footer-directory-link" href="/contact">Get In Touch</a>
           </div>
         </div>
         <div class="single-footer-link-wrapper footer-get-in-touch">
@@ -45,19 +46,19 @@ import { brand, footerContactDirectory, services } from "../data/site";
               <span class="footer-touch-icon" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 21s7-5.3 7-12A7 7 0 1 0 5 9c0 6.7 7 12 7 12Zm0-9a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" fill="currentColor"/></svg>
               </span>
-              <p class="footer-touch-text">{brand.address}</p>
+              <a class="footer-touch-text footer-address-link" href={googleMapsHref} target="_blank" rel="noopener">{brand.address}</a>
             </div>
             <div class="footer-touch-row">
               <span class="footer-touch-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24"><path d="M3 6.5C3 5.1 4.1 4 5.5 4h13C19.9 4 21 5.1 21 6.5v11c0 1.4-1.1 2.5-2.5 2.5h-13C4.1 20 3 18.9 3 17.5v-11Zm2.7-.5 6.3 5 6.3-5H5.7Zm13.3 2.2-6.4 5.1a1 1 0 0 1-1.2 0L5 8.2v9.3c0 .3.2.5.5.5h13c.3 0 .5-.2.5-.5V8.2Z" fill="currentColor"/></svg>
+                <svg class="footer-service-area-icon" width="18" height="18" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm7.9 9h-3.1a16 16 0 0 0-1.6-6.2A8 8 0 0 1 19.9 11ZM12 4.1c1.1 1.4 2 3.8 2.2 6.9H9.8C10 7.9 10.9 5.5 12 4.1ZM8.8 4.8A16 16 0 0 0 7.2 11H4.1a8 8 0 0 1 4.7-6.2ZM4.1 13h3.1a16 16 0 0 0 1.6 6.2A8 8 0 0 1 4.1 13Zm7.9 6.9c-1.1-1.4-2-3.8-2.2-6.9h4.4c-.2 3.1-1.1 5.5-2.2 6.9Zm3.2-.7a16 16 0 0 0 1.6-6.2h3.1a8 8 0 0 1-4.7 6.2Z" fill="currentColor"/></svg>
               </span>
-              <a class="footer-link footer-touch-link" href={`mailto:${brand.email}`}>{brand.email}</a>
+              <p class="footer-touch-text">Kuala Lumpur &amp; Selangor</p>
             </div>
             <div class="footer-touch-row">
               <span class="footer-touch-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20Zm1-10.4V7h-2v5.4l4.3 3.1 1.2-1.6-3.5-2.3Z" fill="currentColor"/></svg>
+                <svg class="footer-registration-icon" width="18" height="18" viewBox="0 0 24 24"><path d="M5 2h10l4 4v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm0 2v16h12V7h-3V4H5Zm2 6h8v2H7v-2Zm0 4h8v2H7v-2Zm0 4h5v1H7v-1Z" fill="currentColor"/></svg>
               </span>
-              <p class="footer-touch-text">Mon - Sat: 8.30am - 6.00pm<br />Sun &amp; Public Holiday: Closed</p>
+              <p class="footer-touch-text">Company Registration: {brand.registration}</p>
             </div>
           </div>
         </div>

@@ -2,25 +2,22 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import HeroSimple from "../components/HeroSimple.astro";
-import { brand, contactTeams, officeContact, services } from "../data/site";
+import { brand, contactTeams, officeContact } from "../data/site";
 import { turnstileSiteKey } from "../data/security";
 
 const whatsappHref = `https://wa.me/${brand.phone.replace(/\D/g, "")}`;
 const iconPaths = {
   whatsapp: "M12 2a9.8 9.8 0 0 0-8.5 14.7L2.4 22l5.5-1.1A9.8 9.8 0 1 0 12 2Zm0 2a7.8 7.8 0 0 1 0 15.6 7.7 7.7 0 0 1-3.6-.9l-.3-.2-3 .6.6-2.9-.2-.3A7.8 7.8 0 0 1 12 4Zm-3 4.1c-.2 0-.5.1-.7.4-.2.3-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.6 4 3.5 2 .8 2.4.6 2.8.6.4 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.5-.3l-1.6-.8c-.2-.1-.4-.1-.6.1l-.7.9c-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.2-.7-.7-1.2-1.5-1.4-1.8-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4H9Z",
-  plumbing: "M9 3h6v4h4a3 3 0 0 1 3 3v3h-2v-3a1 1 0 0 0-1-1h-4v3H9V9H5a1 1 0 0 0-1 1v3H2v-3a3 3 0 0 1 3-3h4V3Zm2 2v5h2V5h-2Zm-8 9h4v7H3v-7Zm2 2v3h0v-3Zm12-2h4v7h-4v-7Zm2 2v3h0v-3Zm-9-1h4v6h-4v-6Zm2 2v2h0v-2Z",
   roof: "M3 11 12 3l9 8-1.3 1.5L12 5.7 4.3 12.5 3 11Zm3 1h12v9H6v-9Zm2 2v5h8v-5H8Zm1-1.5 2-4h2l2 4h-2.2L12 11l-.8 1.5H9Z",
-  renovation: "M4 4h11a3 3 0 1 1 0 6H8v3h2a3 3 0 0 1 3 3v5h-2v-5a1 1 0 0 0-1-1H6v-5h9a1 1 0 1 0 0-2H4V4Zm1 10h2v7H5v-7Z",
-  sewerage: "M5 4h6v5h2V6h4a3 3 0 0 1 3 3v3h-2V9a1 1 0 0 0-1-1h-2v3H9V6H7v8h4v2H5V4Zm10 9h4v7h-4v-7Zm2 2v3h0v-3Zm-8 2h4v3H9v-3Z",
   waterproofing: "M12 2s7 7.1 7 12a7 7 0 0 1-14 0c0-4.9 7-12 7-12Zm0 3.1C9.8 7.6 7 11.4 7 14a5 5 0 0 0 10 0c0-2.6-2.8-6.4-5-8.9Zm-1 5.4h2v5h-2v-5Zm0 6h2v2h-2v-2Z",
 };
 ---
 <BaseLayout
   title="Contact Us"
-  description="Contact Perfect Roofing & Waterproofing for roof leaking, waterproofing, plumbing, electrical, renovation, sewerage and drainage services in KL and Selangor."
+  description="Contact Perfect Roofing & Waterproofing for roof repair, installation, maintenance, waterproofing, or water leakage repair across Kuala Lumpur and Selangor."
   path="/contact"
 >
-  <HeroSimple label="contact us" title="Get in Touch with Perfect Roofing & Waterproofing" subtitle="Reach our team for roofing, plumbing, electrical, renovation and sewerage support across KL and Selangor." />
+  <HeroSimple label="contact us" title="Get In Touch" subtitle="Need help with a roof leak or waterproofing problem? Contact Perfect Roofing & Waterproofing across Kuala Lumpur and Selangor." />
 
   <section class="contact-section padding-top">
     <div class="w-layout-blockcontainer container w-container">
@@ -33,9 +30,9 @@ const iconPaths = {
             </span>
           </div>
           <div class="contact-card-content">
-            <div class="top-card-content"><p class="contact-card-title">Speak with our team today</p><p class="contact-card-subtitle">Use the main WhatsApp line for fast service triage.</p></div>
+            <div class="top-card-content"><p class="contact-card-title">Speak with our team today</p><p class="contact-card-subtitle">Call or WhatsApp about roof leaks, installation, maintenance, or waterproofing.</p></div>
             <div class="quick-contacts">
-              <div class="single-quick-contact"><p class="quick-contact-label">Mobile / WhatsApp:</p><a class="quick-contact-link whatsapp-link" href={whatsappHref} target="_blank" rel="noopener">{brand.phone}</a></div>
+              <div class="single-quick-contact"><p class="quick-contact-label">Call / WhatsApp:</p><a class="quick-contact-link whatsapp-link" href={whatsappHref} target="_blank" rel="noopener">{brand.phone}</a></div>
             </div>
           </div>
         </div>
@@ -47,20 +44,20 @@ const iconPaths = {
             </span>
           </div>
           <div class="contact-card-content">
-            <div class="top-card-content"><p class="contact-card-title active">We're open Monday to Saturday</p><p class="contact-card-subtitle active">Drop by our Subang Jaya service base or contact us first to arrange a visit.</p></div>
+            <div class="top-card-content"><p class="contact-card-title active">Our Subang Jaya address</p><p class="contact-card-subtitle active">Call or WhatsApp first to arrange a consultation or site inspection.</p></div>
             <div class="quick-contacts"><p class="quick-contact-label active contact-address-text">{brand.address}</p></div>
           </div>
         </div>
         <div class="single-contact-card">
           <div class="contact-card-label-box contact-card-label-with-icon">
-            <h4 class="contact-card-label">Email Us</h4>
+            <h4 class="contact-card-label">Service Coverage</h4>
             <span class="contact-card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24"><path d="M3 6.5C3 5.1 4.1 4 5.5 4h13C19.9 4 21 5.1 21 6.5v11c0 1.4-1.1 2.5-2.5 2.5h-13C4.1 20 3 18.9 3 17.5v-11Zm2.7-.5 6.3 5 6.3-5H5.7Zm13.3 2.2-6.4 5.1a1 1 0 0 1-1.2 0L5 8.2v9.3c0 .3.2.5.5.5h13c.3 0 .5-.2.5-.5V8.2Z" fill="currentColor"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 21s7-5.3 7-12A7 7 0 1 0 5 9c0 6.7 7 12 7 12Zm0-9a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" fill="currentColor"/></svg>
             </span>
           </div>
           <div class="contact-card-content">
-            <div class="top-card-content"><p class="contact-card-title">Have photos or documents?</p><p class="contact-card-subtitle">Send details by email or submit the form below.</p></div>
-            <div class="quick-contacts"><div class="single-quick-contact"><p class="quick-contact-label">Email:</p><a class="quick-contact-link" href={`mailto:${brand.email}`}>{brand.email}</a></div></div>
+            <div class="top-card-content"><p class="contact-card-title">KL & Selangor roofing support</p><p class="contact-card-subtitle">Share your location and photos through WhatsApp or the enquiry form below.</p></div>
+            <div class="quick-contacts"><div class="single-quick-contact"><p class="quick-contact-label">Service area:</p><p class="quick-contact-link">{brand.serviceArea}</p></div></div>
           </div>
         </div>
       </div>
@@ -71,8 +68,8 @@ const iconPaths = {
     <div class="w-layout-blockcontainer container w-container">
       <div class="section-content-wrapper">
         <div class="title-wrapper style-02 align-center">
-          <h2 class="section-title">Contact Our Service Teams</h2>
-          <p class="section-subtitle">Reach the right team directly for faster assistance.</p>
+          <h2 class="section-title">Contact Our Roofing Team</h2>
+          <p class="section-subtitle">One contact number for roof repair, installation, maintenance, and waterproofing enquiries.</p>
         </div>
         <div class="contact-teams-grid">
           {contactTeams.map((team) => (
@@ -99,7 +96,7 @@ const iconPaths = {
                 </a>
                 <a class="contact-team-button mobile-call-button" href={team.call}>Call</a>
               </div>
-              <p class="contact-team-source">Source: {team.source}</p>
+              <p class="contact-team-source">Serving {brand.serviceArea}</p>
             </article>
           ))}
         </div>
@@ -118,18 +115,10 @@ const iconPaths = {
                   </svg>
                 </button>
               </span>
-              <p class="contact-team-source">Source: {officeContact.source}</p>
+              <p class="contact-team-source">WhatsApp +60 11-1188 8828</p>
             </div>
           </div>
           <div class="office-contact-details">
-            <span class="copyable-contact">
-              <a href={`mailto:${officeContact.email}`}>{officeContact.email}</a>
-              <button class="contact-copy-button" type="button" data-copy-value={officeContact.email} aria-label="Copy office email address">
-                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M8 7V5a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-2v-2h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v2H8Zm-1 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1H7Zm0-2h8a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-8a3 3 0 0 1 3-3Z" fill="currentColor"/>
-                </svg>
-              </button>
-            </span>
             <p>{officeContact.address}</p>
           </div>
           <a class="contact-team-button office-call mobile-call-button" href={officeContact.call}>Call</a>
@@ -142,8 +131,8 @@ const iconPaths = {
     <div class="w-layout-blockcontainer container w-container">
       <div class="section-content-wrapper">
         <div class="title-wrapper style-02 align-center">
-          <h2 class="section-title">Send Us Your Message</h2>
-          <p class="section-subtitle">Send your enquiry securely. For urgent work, call or WhatsApp directly.</p>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Tell us about your roof or waterproofing concern. For urgent leaks, call or WhatsApp directly.</p>
         </div>
         <div class="contact-form-wrapper">
           <div class="contact-form-content">
@@ -154,12 +143,12 @@ const iconPaths = {
                   <div class="single-field-wrapper"><label for="contact-name">Name</label><input class="single-field w-input" id="contact-name" maxlength="100" name="name" placeholder="Enter full name" required type="text" /></div>
                   <div class="single-field-wrapper"><label for="contact-email">Email Address</label><input class="single-field w-input" id="contact-email" maxlength="254" name="email" placeholder="Enter email address (optional)" type="email" /></div>
                   <div class="single-field-wrapper"><label for="contact-phone">Phone Number</label><input class="single-field w-input" id="contact-phone" maxlength="30" name="phone" placeholder="Enter phone number" required type="tel" /></div>
-                  <div class="single-field-wrapper"><label for="contact-service">Service</label><select class="single-field w-input" id="contact-service" name="service">{services.map((service) => <option value={service.slug}>{service.title}</option>)}</select></div>
+                  <div class="single-field-wrapper"><label for="contact-service">Service</label><select class="single-field w-input" id="contact-service" name="service"><option value="">Not Sure / Need Inspection</option><option value="roof-leaking-waterproofing">Roof Leak Detection & Repair</option><option value="roof-leaking-waterproofing">Roof Replacement & Re-roofing</option><option value="roof-leaking-waterproofing">Roof Maintenance & Inspection</option><option value="roof-leaking-waterproofing">New Roof Installation</option><option value="roof-leaking-waterproofing">Roof Waterproofing</option><option value="roof-leaking-waterproofing">PU Injection & Water Leakage Repair</option></select></div>
                 </div>
                 <div class="single-field-wrapper"><label for="contact-message">Message</label><textarea class="single-field text-area w-input" id="contact-message" maxlength="2000" minlength="10" name="message" placeholder="Tell us what happened, your area, and preferred visit time" required></textarea></div>
                 <div aria-hidden="true" class="enquiry-honeypot"><label for="contact-company">Company website</label><input autocomplete="off" id="contact-company" name="company" tabindex="-1" type="text" /></div>
                 <div class="cf-turnstile" data-action="turnstile-spin-v2" data-sitekey={turnstileSiteKey}></div>
-                <input class="form-button w-button" data-wait="Please wait..." type="submit" value="Send message" />
+                <input class="form-button w-button" data-wait="Please wait..." type="submit" value="Send Enquiry" />
               </form>
               <div aria-live="polite" class="w-form-done" role="status"><div>Thank you. Your enquiry was sent successfully.</div></div>
               <div aria-live="assertive" class="w-form-fail" role="alert"><div>We could not send your enquiry. Please try again or call us directly.</div></div>
@@ -197,10 +186,9 @@ const iconPaths = {
                 <p>Services Covered</p>
               </div>
               <div class="service-map-mini-list">
-                <span><svg width="14" height="14" viewBox="0 0 24 24"><path d={iconPaths.plumbing} fill="currentColor" /></svg>Plumbing</span>
-                <span><svg width="14" height="14" viewBox="0 0 24 24"><path d={iconPaths.roof} fill="currentColor" /></svg>Roof Leaking & Waterproofing</span>
-                <span><svg width="14" height="14" viewBox="0 0 24 24"><path d={iconPaths.renovation} fill="currentColor" /></svg>Renovation</span>
-                <span><svg width="14" height="14" viewBox="0 0 24 24"><path d={iconPaths.sewerage} fill="currentColor" /></svg>Sewerage & Drainage</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24"><path d={iconPaths.roof} fill="currentColor" /></svg>Roof Repair & Replacement</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24"><path d={iconPaths.roof} fill="currentColor" /></svg>Roof Installation & Maintenance</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24"><path d={iconPaths.waterproofing} fill="currentColor" /></svg>Waterproofing & PU Injection</span>
               </div>
             </div>
             <div class="service-map-badge-row">
