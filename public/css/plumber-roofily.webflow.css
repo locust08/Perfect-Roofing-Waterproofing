@@ -5318,6 +5318,62 @@ strong {
   }
 }
 
+/* Keep the mobile header compact and every navigation item consistently centered. */
+@media screen and (max-width: 991px) {
+  .menu-items {
+    align-items: stretch;
+  }
+
+  .single-nav-wrapper,
+  .services-pages {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .menu-items > .single-nav-wrapper > .single-nav,
+  .menu-items > .services-pages > .service-dropdown-toggle {
+    justify-content: center;
+    width: auto;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .header {
+    padding: 14px 16px;
+  }
+
+  .nav-wrapper {
+    gap: 14px;
+    min-width: 0;
+  }
+
+  .nav-logo {
+    gap: 8px;
+    min-width: 0;
+    max-width: calc(100% - 42px);
+  }
+
+  .nav-logo .brand-logo {
+    width: min(158px, 100%);
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .cidb-logo {
+    width: 64px;
+    flex: 0 0 64px;
+  }
+
+  .nav-trigger,
+  .nav-trigger.w--open {
+    width: 28px;
+    flex: 0 0 28px;
+  }
+}
+
 /* Homepage six-step process within the existing process visual system */
 .home-process {
   flex-flow: column;
