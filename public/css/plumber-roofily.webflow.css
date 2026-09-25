@@ -5243,6 +5243,27 @@ strong {
   max-width: 260px;
 }
 
+/* CIDB accreditation mark, paired with the primary brand in the header. */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 370px;
+}
+
+.nav-logo .brand-logo {
+  width: 220px;
+  flex: 0 1 220px;
+}
+
+.cidb-logo {
+  display: block;
+  width: 92px;
+  height: auto;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
 .footer-brand-logo {
   max-width: 220px;
 }
@@ -5280,6 +5301,20 @@ strong {
 
   .brand-logo {
     max-width: 190px;
+  }
+
+  .nav-logo {
+    gap: 10px;
+    max-width: 280px;
+  }
+
+  .nav-logo .brand-logo {
+    width: 175px;
+    flex-basis: 175px;
+  }
+
+  .cidb-logo {
+    width: 76px;
   }
 }
 
