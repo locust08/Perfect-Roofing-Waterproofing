@@ -2689,9 +2689,22 @@ strong {
 
 .project-gallery {
   background-color: #ddd0;
+  cursor: grab;
   height: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   padding-bottom: 80px;
-  overflow: hidden;
+  scrollbar-width: none;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.project-gallery.is-dragging {
+  cursor: grabbing;
+}
+
+.project-gallery::-webkit-scrollbar {
+  display: none;
 }
 
 .project-gallery-mask {

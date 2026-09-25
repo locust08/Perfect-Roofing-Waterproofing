@@ -408,6 +408,92 @@ const openGraphImage = brand.productionUrl
     </script>
     <script is:inline>
       (() => {
+        const galleries = document.querySelectorAll("[data-auto-scroll]");
+        if (!galleries.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        galleries.forEach((gallery) => {
+          const mask = gallery.querySelector(".project-gallery-mask");
+          if (!mask || mask.dataset.autoScrollReady === "true") return;
+          mask.dataset.autoScrollReady = "true";
+
+          const slides = [...mask.children];
+          if (slides.length < 2) return;
+
+          const originalWidth = mask.scrollWidth;
+          slides.forEach((slide) => {
+            const copy = slide.cloneNode(true);
+            copy.setAttribute("aria-hidden", "true");
+            copy.querySelectorAll("[id]").forEach((element) => element.removeAttribute("id"));
+            mask.appendChild(copy);
+          });
+
+          let animationFrame = 0;
+          let lastTimestamp = 0;
+          let isInteracting = false;
+          let pointerId = null;
+          let startX = 0;
+          let startScroll = 0;
+          let hasDragged = false;
+          const speed = 28;
+
+          const normalizePosition = () => {
+            if (gallery.scrollLeft >= originalWidth) gallery.scrollLeft -= originalWidth;
+            if (gallery.scrollLeft < 0) gallery.scrollLeft += originalWidth;
+          };
+
+          const animate = (timestamp) => {
+            if (!lastTimestamp) lastTimestamp = timestamp;
+            const elapsed = timestamp - lastTimestamp;
+            lastTimestamp = timestamp;
+            if (!isInteracting && !document.hidden) {
+              gallery.scrollLeft += (speed * elapsed) / 1000;
+              normalizePosition();
+            }
+            animationFrame = window.requestAnimationFrame(animate);
+          };
+
+          const stopInteraction = () => {
+            if (!isInteracting) return;
+            isInteracting = false;
+            pointerId = null;
+            gallery.classList.remove("is-dragging");
+            normalizePosition();
+          };
+
+          gallery.addEventListener("pointerdown", (event) => {
+            if (event.button !== 0) return;
+            isInteracting = true;
+            pointerId = event.pointerId;
+            startX = event.clientX;
+            startScroll = gallery.scrollLeft;
+            hasDragged = false;
+            gallery.setPointerCapture?.(event.pointerId);
+            gallery.classList.add("is-dragging");
+          });
+
+          gallery.addEventListener("pointermove", (event) => {
+            if (!isInteracting || event.pointerId !== pointerId) return;
+            const distance = event.clientX - startX;
+            if (Math.abs(distance) > 4) hasDragged = true;
+            if (hasDragged) {
+              event.preventDefault();
+              gallery.scrollLeft = startScroll - distance;
+              normalizePosition();
+            }
+          });
+
+          gallery.addEventListener("pointerup", stopInteraction);
+          gallery.addEventListener("pointercancel", stopInteraction);
+          gallery.addEventListener("lostpointercapture", stopInteraction);
+          gallery.addEventListener("dragstart", (event) => event.preventDefault());
+          gallery.addEventListener("scroll", normalizePosition, { passive: true });
+          window.addEventListener("pagehide", () => window.cancelAnimationFrame(animationFrame), { once: true });
+          animationFrame = window.requestAnimationFrame(animate);
+        });
+      })();
+    </script>
+    <script is:inline>
+      (() => {
         const buttons = document.querySelectorAll("[data-copy]");
         if (!buttons.length) return;
 
