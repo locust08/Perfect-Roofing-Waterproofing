@@ -14,6 +14,8 @@ describe("global WhatsApp lead form", () => {
   it("provides a floating launcher and intercepts WhatsApp and enquiry actions", () => {
     const component = read("src/components/WhatsAppLeadForm.astro");
 
+    expect(component).toContain('"id":"8113993d-5ce8-41c8-8996-dca8275229fd"');
+    expect(component).not.toContain("d55b6a26-7985-4d29-ad9a-f0e1618c510a");
     expect(component).toContain('class="lr-launch" data-whatsapp-form-trigger');
     expect(component).not.toContain("<span>WhatsApp</span>");
     expect(component).toContain("background:#25d366;color:#fff");
