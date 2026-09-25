@@ -228,11 +228,12 @@ export const faqs = [
 ];
 
 export const projectImages = [
-  { src: "/images/full-shot-roof.png", set: "/images/full-shot-roof-p-500.png 500w, /images/full-shot-roof-p-800.png 800w, /images/full-shot-roof-p-1080.png 1080w", alt: "Roof repair and waterproofing work" },
-  { src: "/images/full-shot-man-with-helmet-sitting-roof-2.png", set: "/images/full-shot-man-with-helmet-sitting-roof-2-p-500.png 500w", alt: "Roof inspection work" },
-  { src: "/images/man-working-roof-front-view.png", set: "/images/man-working-roof-front-view-p-500.png 500w, /images/man-working-roof-front-view-p-800.png 800w", alt: "Roof installation work" },
-  { src: "/images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam.png", set: "/images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam-p-500.png 500w, /images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam-p-800.png 800w, /images/male-builder-doing-thermal-insulation-roof-wooden-frame-house-by-polyurethane-foam-p-1080.png 1080w", alt: "Roof waterproofing work" },
-  { src: "/images/red-roof-2-2.png", set: "/images/red-roof-2-2-p-500.png 500w, /images/red-roof-2-2-p-800.png 800w, /images/red-roof-2-2-p-1080.png 1080w", alt: "Roof replacement and maintenance work" },
+  { src: "/images/project-malaysia-roof-leak-repair.webp", set: "/images/project-malaysia-roof-leak-repair-p-800.webp 800w, /images/project-malaysia-roof-leak-repair.webp 1600w", alt: "Malaysian roofing workers repairing a tiled roof leak" },
+  { src: "/images/project-malaysia-roof-replacement.webp", set: "/images/project-malaysia-roof-replacement-p-800.webp 800w, /images/project-malaysia-roof-replacement.webp 1600w", alt: "Malaysian roofing workers replacing tiles and re-roofing a home" },
+  { src: "/images/project-malaysia-roof-inspection.webp", set: "/images/project-malaysia-roof-inspection-p-800.webp 800w, /images/project-malaysia-roof-inspection.webp 1600w", alt: "Malaysian roofing technician inspecting aged roof tiles" },
+  { src: "/images/project-malaysia-new-roof-installation.webp", set: "/images/project-malaysia-new-roof-installation-p-800.webp 800w, /images/project-malaysia-new-roof-installation.webp 1600w", alt: "Malaysian roofing workers installing a new tiled roof" },
+  { src: "/images/project-malaysia-waterproofing.webp", set: "/images/project-malaysia-waterproofing-p-800.webp 800w, /images/project-malaysia-waterproofing.webp 1600w", alt: "Malaysian worker applying roof waterproofing at a tiled-roof junction" },
+  { src: "/images/project-malaysia-pu-injection.webp", set: "/images/project-malaysia-pu-injection-p-800.webp 800w, /images/project-malaysia-pu-injection.webp 1600w", alt: "Malaysian technician carrying out PU injection leakage repair" },
 ];
 
 export const sourceSites = ["https://perfectroofing.com.my/"];

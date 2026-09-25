@@ -36,6 +36,17 @@ describe("Perfect Roofing public brand data", () => {
     ]);
   });
 
+  test("uses six generated Malaysian project visuals in service order", () => {
+    expect(projectImages.map(({ src }) => src)).toEqual([
+      "/images/project-malaysia-roof-leak-repair.webp",
+      "/images/project-malaysia-roof-replacement.webp",
+      "/images/project-malaysia-roof-inspection.webp",
+      "/images/project-malaysia-new-roof-installation.webp",
+      "/images/project-malaysia-waterproofing.webp",
+      "/images/project-malaysia-pu-injection.webp",
+    ]);
+  });
+
   test("centralized homepage collections contain no unrelated services", () => {
     expect(JSON.stringify({ services, trustPoints, testimonials, faqs, projectImages })).not.toMatch(forbidden);
   });

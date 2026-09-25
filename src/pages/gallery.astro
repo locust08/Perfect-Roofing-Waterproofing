@@ -4,11 +4,11 @@ import CTA from "../components/CTA.astro";
 import HeroSimple from "../components/HeroSimple.astro";
 import { projectImages, services } from "../data/site";
 
-const galleryCategories = services.map((service) => ({
+const galleryCategories = services.map((service, index) => ({
   key: service.slug,
   title: service.title,
   text: service.excerpt,
-  image: service.hoverImage,
+  image: projectImages[index].src,
 }));
 
 const featuredProjects = services.map((service, index) => {
@@ -17,7 +17,7 @@ const featuredProjects = services.map((service, index) => {
     filter: service.slug,
     category: service.title,
     title: service.title,
-    source: "Illustrative roofing image",
+    source: "Generated Malaysian project visual",
     image: image.src,
     imageSet: image.set,
     alt: image.alt,
@@ -25,9 +25,9 @@ const featuredProjects = services.map((service, index) => {
 });
 
 const workflowStages = [
-  { title: "Inspection", text: "We inspect the roof and identify the affected area.", image: projectImages[1] },
-  { title: "Recommended Work", text: "We explain a suitable repair or waterproofing scope.", image: projectImages[3] },
-  { title: "Final Check", text: "We check the completed work before handover.", image: projectImages[2] },
+  { title: "Inspection", text: "We inspect the roof and identify the affected area.", image: projectImages[2] },
+  { title: "Recommended Work", text: "We explain a suitable repair or waterproofing scope.", image: projectImages[4] },
+  { title: "Final Check", text: "We check the completed work before handover.", image: projectImages[3] },
 ];
 const workflowGroups = services.map((service) => ({
   key: service.slug,
@@ -42,17 +42,17 @@ const workflowGroups = services.map((service) => ({
 ---
 <BaseLayout
   title="Gallery"
-  description="Explore illustrative roof repair, installation, maintenance, and waterproofing images for Perfect Roofing & Waterproofing in Kuala Lumpur and Selangor."
+  description="Explore Malaysian roof repair, installation, maintenance, and waterproofing project visuals for Perfect Roofing & Waterproofing in Kuala Lumpur and Selangor."
   path="/gallery"
 >
-  <HeroSimple label="gallery / portfolio" title="Our Roofing & Waterproofing Projects" subtitle="Browse roofing and waterproofing visuals while we prepare the final project photography." />
+  <HeroSimple label="gallery / portfolio" title="Our Roofing & Waterproofing Projects" subtitle="Explore generated Malaysian project visuals based on typical roofing and waterproofing work while final project photography is prepared." />
 
   <section class="gallery-portfolio-section section-padding">
     <div class="w-layout-blockcontainer container w-container">
       <div class="section-content-wrapper">
         <div class="title-wrapper style-02" style="opacity:1">
           <h2 class="section-title">Browse Work by Service</h2>
-          <p class="section-subtitle">Select a roofing or waterproofing service to view a related visual example.</p>
+          <p class="section-subtitle">Select a roofing or waterproofing service to view a Malaysian project visual.</p>
         </div>
         <div class="gallery-category-grid" data-gallery-filters style="opacity:1">
           {galleryCategories.map((category) => (
@@ -90,7 +90,7 @@ const workflowGroups = services.map((service) => ({
       <div class="section-content-wrapper">
         <div class="title-wrapper style-02" style="opacity:1">
           <h2 class="section-title">How Our Work Progresses</h2>
-          <p class="section-subtitle">An illustrative view of roof inspection, recommended work, and final checking.</p>
+          <p class="section-subtitle">A visual overview of roof inspection, recommended work, and final checking.</p>
         </div>
         <div class="gallery-workflow-tabs" data-workflow-filters style="opacity:1">
           {workflowGroups.map((group) => (
