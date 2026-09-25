@@ -49,6 +49,10 @@ describe("roofing-only homepage presentation", () => {
     expect(cta).toContain("Need Help With a Roof Leak or Waterproofing Problem?");
     expect(cta).toContain("Request for Quotation");
     expect(cta).toContain('value="Send Enquiry"');
+    expect(cta).toContain('<label class="field-label" for="quote-phone">Phone Number</label>');
+    expect(cta).toContain('placeholder="Enter phone number"');
+    expect(cta).toContain('<label class="field-label" for="quote-message">Roofing or Waterproofing Enquiry (Optional)</label>');
+    expect(cta).not.toContain('Phone / WhatsApp Number');
     expect(`${home}\n${cta}`).not.toMatch(forbidden);
   });
 

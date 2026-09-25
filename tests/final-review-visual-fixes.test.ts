@@ -47,9 +47,9 @@ describe("final public presentation contracts", () => {
     expect(formSection).toContain('type="submit" value="Send Enquiry"');
   });
 
-  test("the process image describes the roof insulation work shown", () => {
+  test("the process image uses the supplied Malaysian roofing team visual", () => {
     expect(read("src/pages/index.astro"))
-      .toMatch(/<img alt="Worker applying polyurethane foam insulation to a roof" class="process-image"/);
+      .toMatch(/<img alt="Malaysian roofing team installing a new roof" class="process-image"[^>]*src="\/images\/process-malaysian-roofing-team.webp"/);
   });
 
   test("footer service area and registration rows use fitting decorative icons", () => {
